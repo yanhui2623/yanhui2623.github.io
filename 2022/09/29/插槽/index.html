@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Hexo</title>
-  <meta name="keywords" content="">
-  <meta name="description" content="Hexo">
+  <title>插槽 | Hexo</title>
+  <meta name="keywords" content=" vue ">
+  <meta name="description" content="插槽 | Hexo">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="准备工作  安装 node.js（下载地址https:&#x2F;&#x2F;nodejs.org&#x2F;en&#x2F;） git（下载地址https:&#x2F;&#x2F;git-scm.com&#x2F;downloads） win+R 进入 cmd 终端查看是否安装成功 node&#x2F;npm -v , git –version 出现版本号即安装成功  安装 hexo 利用node.js在 cmd 终端直接安装即可 npm install hexo-cli">
 <meta property="og:type" content="article">
@@ -57,7 +57,7 @@
 
 
 <body>
-<aside class="nav mobile">
+<aside class="nav">
     <div class="nav-left">
         <a href="/"
    class="avatar_target">
@@ -517,12 +517,58 @@
         </div>
     </div>
 </aside>
-<div id="post" class="index">
+<div id="post">
     <div class="pjax">
-        <article class="index">
-            <div class="toc-ref">
+        <article id="post-插槽" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Why-write"><span class="toc-text">Why write</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AF%B9%E5%8D%9A%E5%AE%A2%E7%9A%84%E7%90%86%E8%A7%A3"><span class="toc-text">对博客的理解</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%B8%A1%E6%B1%A41"><span class="toc-text">鸡汤1</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%B8%A1%E6%B1%A42"><span class="toc-text">鸡汤2</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%8D%E7%AB%AF%E8%B7%AF%E7%BA%BF"><span class="toc-text">前端路线</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%8D"><span class="toc-text">词</span></a></li></ol></li></ol>
+        <h1 class="article-title">插槽</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        <span class="book">
+            <i class="iconfont icon-category"></i>
+            
+            
+            <a  data-rel="Vue3">Vue3</a>
+            
+        </span>
+        
+        
+        <span class="tag">
+            <i class="iconfont icon-tag"></i>
+            
+            <a class="color4">vue</a>
+            
+        </span>
+        
+    </div>
+    <div class="article-meta">
+        
+            Created At : <time class="date" title='Updated At: 2022-09-29 11:44:40'>2022-09-29 10:04</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        
+        <span id="busuanzi_container_page_pv">
+            Views 👀 :<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E6%8F%92%E6%A7%BD"><span class="toc-text">什么是插槽</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%8F%92%E6%A7%BD%E7%9A%84%E5%9F%BA%E7%A1%80%E7%94%A8%E6%B3%95"><span class="toc-text">插槽的基础用法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%90%8E%E5%A4%87%E5%86%85%E5%AE%B9"><span class="toc-text">后备内容</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%B7%E5%90%8D%E6%8F%92%E6%A7%BD"><span class="toc-text">具名插槽</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%BA%E5%85%B7%E5%90%8D%E6%8F%92%E6%A7%BD%E6%8F%90%E4%BE%9B%E5%86%85%E5%AE%B9"><span class="toc-text">为具名插槽提供内容</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%9C%E7%94%A8%E5%9F%9F%E6%8F%92%E6%A7%BD"><span class="toc-text">作用域插槽</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -535,25 +581,64 @@
     }
 </style>
 </div>
-            <h1 id="Why-write"><a href="#Why-write" class="headerlink" title="Why write"></a>Why write</h1><h2 id="对博客的理解"><a href="#对博客的理解" class="headerlink" title="对博客的理解"></a>对博客的理解</h2><p>通过博客，我们可以记录自己的生活和成长的轨迹。</p>
-<h2 id="鸡汤1"><a href="#鸡汤1" class="headerlink" title="鸡汤1"></a>鸡汤1</h2><blockquote>
-<p>无人问津也好、技不如人也罢、你都要试着安静下来、去做自己该做的事、而不是让内心烦躁、焦虑、毁掉你本就不多的热情和定力！！！</p>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="什么是插槽"><a href="#什么是插槽" class="headerlink" title="什么是插槽"></a>什么是插槽</h3><blockquote>
+<p>插槽（Slot）是 vue 为<strong>组件的封装者</strong>提供的能力。允许开发者在封装组件时，把<strong>不确定的、希望由用户指定的部分</strong>定义为插槽</p>
 </blockquote>
-<h2 id="鸡汤2"><a href="#鸡汤2" class="headerlink" title="鸡汤2"></a>鸡汤2</h2><blockquote>
-<p>你想要做成什么事情，或者想要得到什么东西，你就按部就班，按自己该做的，安静点也用点心，渴求别那么强烈，慢慢的一段时间后，水到渠成是一件非常自然的事情</p>
+<h4 id="插槽的基础用法"><a href="#插槽的基础用法" class="headerlink" title="插槽的基础用法"></a>插槽的基础用法</h4><blockquote>
+<p>在封装组件时，可以通过<code>&lt;slot&gt;</code>元素<strong>定义插槽</strong>，从而<strong>为用户预留内容占位符</strong>。示例代码如下：</p>
 </blockquote>
-<h2 id="前端路线"><a href="#前端路线" class="headerlink" title="前端路线"></a>前端路线</h2><p>HTML CSS JavaScript Ajax Node.js Vue 小程序 TypeScript React </p>
-<h2 id="词"><a href="#词" class="headerlink" title="词"></a>词</h2><blockquote>
-<p>唤起一天明月，照我满怀冰雪</p>
-</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  <span class="language-xml"><span class="tag">&lt;<span class="name">p</span>&gt;</span>这是 MyCom1 组件的第 1 个 p 标签<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span></span><br><span class="line">  <span class="comment">// 通过 slot 标签，为用户预留内容占位符（插槽）</span></span><br><span class="line">  <span class="language-xml"><span class="tag">&lt;<span class="name">slot</span>&gt;</span><span class="tag">&lt;/<span class="name">slot</span>&gt;</span></span></span><br><span class="line">  <span class="language-xml"><span class="tag">&lt;<span class="name">p</span>&gt;</span>这是 MyCom1 组件的最后一个 p 标签<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span></span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">my-com-1</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">  // 在使用 MyCom1 组件时，为插槽指定具体的内容 </span></span><br><span class="line"><span class="language-xml">  <span class="tag">&lt;<span class="name">p</span>&gt;</span>用户自定义的内容<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span></span><br><span class="line"><span class="language-xml"><span class="tag">&lt;/<span class="name">my-com-1</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
 
-        </article>
-        
-        <p>
-            <a  class="dashang" onclick="dashangToggle()">赏</a>
-        </p>
-        
-        
+<blockquote>
+<p>注意：如果在封装组件时没有预留任何<code>&lt;slot&gt;</code>插槽，则用户提供的任何自定义内容都会被丢弃。</p>
+</blockquote>
+<h4 id="后备内容"><a href="#后备内容" class="headerlink" title="后备内容"></a>后备内容</h4><blockquote>
+<p>封装组件时，可以为预留的<code>&lt;slot&gt;</code>插槽提供<strong>后备内容</strong>（默认内容）。如果组件的使用者没有为插槽提供任何内容，则后备内容会生效。示例代码如下：</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;p&gt;这是 MyCom1 组件的第 1 个 p 标签&lt;/p&gt;</span><br><span class="line">  &lt;slot&gt;这是后备内容&lt;/slot&gt;</span><br><span class="line">  &lt;p&gt;这是 MyCom1 组件的最后一个 p 标签&lt;/p&gt;</span><br><span class="line">&lt;/template&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="具名插槽"><a href="#具名插槽" class="headerlink" title="具名插槽"></a>具名插槽</h3><blockquote>
+<p>如果在封装组件时<strong>需要预留多个插槽节点</strong>，则需要为每个<code>&lt;slot&gt;</code>插槽指定<strong>具体的 name 名称</strong>。这种带有具体名称的插槽叫做“具名插槽”。示例代码如下：</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 封装一个MyCom2组件</span></span><br><span class="line">&lt;template&gt;</span><br><span class="line">  <span class="language-xml"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;container&quot;</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;<span class="name">header</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">slot</span> <span class="attr">name</span>=<span class="string">&quot;header&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">slot</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;/<span class="name">header</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;<span class="name">main</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      // 默认名称 name=&quot;default&quot;</span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">slot</span>&gt;</span><span class="tag">&lt;/<span class="name">slot</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;/<span class="name">main</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;<span class="name">footer</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">slot</span> <span class="attr">name</span>=<span class="string">&quot;footer&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">slot</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;/<span class="name">footer</span>&gt;</span></span></span><br><span class="line"><span class="language-xml"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">&lt;/template&gt;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>注意：没有指定 name 名称的插槽，会有隐含的名称叫做“default”</p>
+</blockquote>
+<h3 id="为具名插槽提供内容"><a href="#为具名插槽提供内容" class="headerlink" title="为具名插槽提供内容"></a>为具名插槽提供内容</h3><blockquote>
+<p>在向具名插槽提供内容的时候，我们可以在一个<code>&lt;template&gt;</code>元素上使用 v-slot 指令，并以 v-slot(必须写到template标签上或组件标签上) 的参数的形式提供其名称。示例代码如下：</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&lt;my-com-<span class="number">2</span>&gt;</span><br><span class="line">  <span class="comment">// v-slot：header 可以被重写为 #header</span></span><br><span class="line">  <span class="language-xml"><span class="tag">&lt;<span class="name">template</span> <span class="attr">v-slot:header</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;<span class="name">h1</span>&gt;</span>滕王阁序<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">  <span class="tag">&lt;/<span class="name">template</span>&gt;</span></span></span><br><span class="line">  <span class="language-xml"><span class="tag">&lt;<span class="name">template</span> <span class="attr">v-slot:default</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>豫章故郡，洪都新府<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>星分翼轸，地接衡庐<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>襟三江而带五湖，控蛮荆而引瓯越<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">  <span class="tag">&lt;/<span class="name">template</span>&gt;</span></span></span><br><span class="line">  <span class="language-xml"><span class="tag">&lt;<span class="name">template</span> <span class="attr">v-slot:footer</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>落款：王勃<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">  <span class="tag">&lt;/<span class="name">template</span>&gt;</span></span></span><br><span class="line">&lt;/my-com-<span class="number">2</span>&gt;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>注意：具名插槽可以简写：同 v-on 和 v-bind 一样，v-slot 也有缩写，即把参数之前的所有内容（v-slot:）替换为字符 #。例如：v-slot：header 可以被重写为 #header</p>
+</blockquote>
+<h3 id="作用域插槽"><a href="#作用域插槽" class="headerlink" title="作用域插槽"></a>作用域插槽</h3><blockquote>
+<p>在封装组件的过程中，可以为预留的<code>&lt;slot&gt;</code>插槽绑定 props 数据，这种带有 props 数据的 <code>&lt;slot&gt;</code> 叫做“作用域插槽”。示例代码如下：</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">&lt;div&gt;</span><br><span class="line">  <span class="language-xml"><span class="tag">&lt;<span class="name">h3</span>&gt;</span>这是 TEST 组件<span class="tag">&lt;/<span class="name">h3</span>&gt;</span></span></span><br><span class="line">  <span class="language-xml"><span class="tag">&lt;<span class="name">slot</span> <span class="attr">:info</span>=<span class="string">&quot;infomation&quot;</span> <span class="attr">:msg</span>=<span class="string">&quot;message&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">slot</span>&gt;</span></span></span><br><span class="line">&lt;/div&gt;</span><br><span class="line"><span class="title function_">data</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> &#123;</span><br><span class="line">    <span class="comment">// 信息数据</span></span><br><span class="line">    <span class="attr">infomation</span>: &#123;</span><br><span class="line">      <span class="attr">phone</span>: <span class="string">&#x27;138xxxx6666&#x27;</span></span><br><span class="line">      <span class="attr">address</span>: <span class="string">&#x27;中国北京&#x27;</span></span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="attr">message</span>: <span class="string">&#x27;abc&#x27;</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 使用自定义组件</span></span><br><span class="line">&lt;my-test&gt;</span><br><span class="line">  <span class="comment">// scope 可以任意命名，但一般都命名为 scope，注意：scope是一个对象（默认是一个空对象）</span></span><br><span class="line">  <span class="comment">// 因为 scope 是一个对象，所以此处可以用解构赋值的形式 例如：v-slot:default=&quot;&#123;&#123; msg &#125;&#125;&quot;，就可以直接使用 msg 了</span></span><br><span class="line">  <span class="language-xml"><span class="tag">&lt;<span class="name">template</span> <span class="attr">v-slot:default</span>=<span class="string">&quot;&#123;&#123; msg, info &#125;&#125;&quot;</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    // &#123;&#123; scope &#125;&#125;  // &#123; &quot;info&quot;: &#123; &quot;phone&quot;:&quot;138xxxx6666&quot;,&quot;address&quot;: &quot;中国北京&quot;&#125;, &quot;msg&quot;: &quot;abc&quot; &#125;</span></span><br><span class="line"><span class="language-xml">    &#123;&#123; msg &#125;&#125; // abc</span></span><br><span class="line"><span class="language-xml">    &#123;&#123; info.address &#125;&#125; // 中国北京</span></span><br><span class="line"><span class="language-xml">  <span class="tag">&lt;/<span class="name">template</span>&gt;</span></span></span><br><span class="line">&lt;/my-test&gt;</span><br></pre></td></tr></table></figure>
+
+      
+       <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达，也可以邮件至 2623461774@qq.com </span>
+    </div>
+</article>
+
+
+<p>
+    <a  class="dashang" onclick="dashangToggle()">💰</a>
+</p>
+
+
+
+
+
+
+    
+
+
+
+
     </div>
     <div class="copyright">
         <p class="footer-entry"><span class="miit">
@@ -566,11 +651,11 @@
 <p class="footer-entry">Built with <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank">3-hexo</a> theme</p>
 
     </div>
-</div>
-<div class="full-toc">
-    <button class="full" data-title="切换全屏 快捷键 s"><span class="min "></span></button>
+    <div class="full-toc">
+        <button class="full" data-title="切换全屏 快捷键 s"><span class="min "></span></button>
 <a class="" id="rocket" ></a>
 
+    </div>
 </div>
 
 <div class="hide_box" onclick="dashangToggle()"></div>

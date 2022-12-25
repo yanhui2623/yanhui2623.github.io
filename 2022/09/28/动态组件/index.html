@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Hexo</title>
-  <meta name="keywords" content="">
-  <meta name="description" content="Hexo">
+  <title>动态组件 | Hexo</title>
+  <meta name="keywords" content=" vue ">
+  <meta name="description" content="动态组件 | Hexo">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="准备工作  安装 node.js（下载地址https:&#x2F;&#x2F;nodejs.org&#x2F;en&#x2F;） git（下载地址https:&#x2F;&#x2F;git-scm.com&#x2F;downloads） win+R 进入 cmd 终端查看是否安装成功 node&#x2F;npm -v , git –version 出现版本号即安装成功  安装 hexo 利用node.js在 cmd 终端直接安装即可 npm install hexo-cli">
 <meta property="og:type" content="article">
@@ -57,7 +57,7 @@
 
 
 <body>
-<aside class="nav mobile">
+<aside class="nav">
     <div class="nav-left">
         <a href="/"
    class="avatar_target">
@@ -517,12 +517,58 @@
         </div>
     </div>
 </aside>
-<div id="post" class="index">
+<div id="post">
     <div class="pjax">
-        <article class="index">
-            <div class="toc-ref">
+        <article id="post-动态组件" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Why-write"><span class="toc-text">Why write</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AF%B9%E5%8D%9A%E5%AE%A2%E7%9A%84%E7%90%86%E8%A7%A3"><span class="toc-text">对博客的理解</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%B8%A1%E6%B1%A41"><span class="toc-text">鸡汤1</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%B8%A1%E6%B1%A42"><span class="toc-text">鸡汤2</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%8D%E7%AB%AF%E8%B7%AF%E7%BA%BF"><span class="toc-text">前端路线</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%8D"><span class="toc-text">词</span></a></li></ol></li></ol>
+        <h1 class="article-title">动态组件</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        <span class="book">
+            <i class="iconfont icon-category"></i>
+            
+            
+            <a  data-rel="Vue3">Vue3</a>
+            
+        </span>
+        
+        
+        <span class="tag">
+            <i class="iconfont icon-tag"></i>
+            
+            <a class="color4">vue</a>
+            
+        </span>
+        
+    </div>
+    <div class="article-meta">
+        
+            Created At : <time class="date" title='Updated At: 2022-09-28 19:19:10'>2022-09-28 18:47</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        
+        <span id="busuanzi_container_page_pv">
+            Views 👀 :<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E5%8A%A8%E6%80%81%E7%BB%84%E4%BB%B6"><span class="toc-text">什么是动态组件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8-keep-alive-%E4%BF%9D%E6%8C%81%E7%8A%B6%E6%80%81"><span class="toc-text">使用 keep-alive 保持状态</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -535,25 +581,45 @@
     }
 </style>
 </div>
-            <h1 id="Why-write"><a href="#Why-write" class="headerlink" title="Why write"></a>Why write</h1><h2 id="对博客的理解"><a href="#对博客的理解" class="headerlink" title="对博客的理解"></a>对博客的理解</h2><p>通过博客，我们可以记录自己的生活和成长的轨迹。</p>
-<h2 id="鸡汤1"><a href="#鸡汤1" class="headerlink" title="鸡汤1"></a>鸡汤1</h2><blockquote>
-<p>无人问津也好、技不如人也罢、你都要试着安静下来、去做自己该做的事、而不是让内心烦躁、焦虑、毁掉你本就不多的热情和定力！！！</p>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="什么是动态组件"><a href="#什么是动态组件" class="headerlink" title="什么是动态组件"></a>什么是动态组件</h3><blockquote>
+<p>动态组件指的是<strong>动态切换组件的显示与隐藏</strong>, vue 提供了一个内置的 <code>&lt;component&gt;</code> 组件,专门用来实现组件的动态渲染</p>
 </blockquote>
-<h2 id="鸡汤2"><a href="#鸡汤2" class="headerlink" title="鸡汤2"></a>鸡汤2</h2><blockquote>
-<p>你想要做成什么事情，或者想要得到什么东西，你就按部就班，按自己该做的，安静点也用点心，渴求别那么强烈，慢慢的一段时间后，水到渠成是一件非常自然的事情</p>
-</blockquote>
-<h2 id="前端路线"><a href="#前端路线" class="headerlink" title="前端路线"></a>前端路线</h2><p>HTML CSS JavaScript Ajax Node.js Vue 小程序 TypeScript React </p>
-<h2 id="词"><a href="#词" class="headerlink" title="词"></a>词</h2><blockquote>
-<p>唤起一天明月，照我满怀冰雪</p>
-</blockquote>
+<ol>
+<li><code>&lt;component&gt;</code> 是组件的占位符</li>
+<li>通过 is 属性动态指定要渲染的组件名称</li>
+<li><code>&lt;component is=&quot;要渲染的组件的名称&quot;&gt;&lt;/component&gt;</code></li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  <span class="comment">// 点击按钮,动态切换组件的名称</span></span><br><span class="line">  <span class="language-xml"><span class="tag">&lt;<span class="name">button</span> @<span class="attr">click</span>=<span class="string">&quot;comName=&#x27;my-dynamic-1&#x27;&quot;</span>&gt;</span>组件1<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span></span><br><span class="line">  <span class="language-xml"><span class="tag">&lt;<span class="name">button</span> @<span class="attr">click</span>=<span class="string">&quot;comName=&#x27;my-dynamic-2&#x27;&quot;</span>&gt;</span>组件2<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span></span><br><span class="line">  <span class="comment">// 通过 is 属性,动态指定要渲染的名称 &lt;component就是一个占位符&gt;</span></span><br><span class="line">  <span class="language-xml"><span class="tag">&lt;<span class="name">component</span> <span class="attr">:is</span>=<span class="string">&quot;comName&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">component</span>&gt;</span></span></span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line"><span class="title function_">data</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> &#123;</span><br><span class="line">    <span class="comment">// 当前要渲染地组件的名称</span></span><br><span class="line">    <span class="attr">comName</span>: <span class="string">&#x27;my-dynamic-1&#x27;</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-        </article>
-        
-        <p>
-            <a  class="dashang" onclick="dashangToggle()">赏</a>
-        </p>
-        
-        
+<h3 id="使用-keep-alive-保持状态"><a href="#使用-keep-alive-保持状态" class="headerlink" title="使用 keep-alive 保持状态"></a>使用 keep-alive 保持状态</h3><blockquote>
+<p>默认情况下,切换动态组件是无法保持组件地状态,此时可以使用 vue 内置地 <code>&lt;keep-alive&gt;</code> 组件保持动态组件的状态.示例代码如下:</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;keep-alive&gt;</span><br><span class="line">  <span class="language-xml"><span class="tag">&lt;<span class="name">component</span> <span class="attr">:is</span>=<span class="string">&quot;comName&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">component</span>&gt;</span></span></span><br><span class="line">&lt;/keep-alive&gt;</span><br></pre></td></tr></table></figure>
+
+
+      
+       <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达，也可以邮件至 2623461774@qq.com </span>
+    </div>
+</article>
+
+
+<p>
+    <a  class="dashang" onclick="dashangToggle()">💰</a>
+</p>
+
+
+
+
+
+
+    
+
+
+
+
     </div>
     <div class="copyright">
         <p class="footer-entry"><span class="miit">
@@ -566,11 +632,11 @@
 <p class="footer-entry">Built with <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank">3-hexo</a> theme</p>
 
     </div>
-</div>
-<div class="full-toc">
-    <button class="full" data-title="切换全屏 快捷键 s"><span class="min "></span></button>
+    <div class="full-toc">
+        <button class="full" data-title="切换全屏 快捷键 s"><span class="min "></span></button>
 <a class="" id="rocket" ></a>
 
+    </div>
 </div>
 
 <div class="hide_box" onclick="dashangToggle()"></div>

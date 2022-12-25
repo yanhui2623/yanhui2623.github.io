@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Hexo</title>
-  <meta name="keywords" content="">
-  <meta name="description" content="Hexo">
+  <title>思科CCNA网络协议 | Hexo</title>
+  <meta name="keywords" content=" 网络安全 ">
+  <meta name="description" content="思科CCNA网络协议 | Hexo">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="准备工作  安装 node.js（下载地址https:&#x2F;&#x2F;nodejs.org&#x2F;en&#x2F;） git（下载地址https:&#x2F;&#x2F;git-scm.com&#x2F;downloads） win+R 进入 cmd 终端查看是否安装成功 node&#x2F;npm -v , git –version 出现版本号即安装成功  安装 hexo 利用node.js在 cmd 终端直接安装即可 npm install hexo-cli">
 <meta property="og:type" content="article">
@@ -57,7 +57,7 @@
 
 
 <body>
-<aside class="nav mobile">
+<aside class="nav">
     <div class="nav-left">
         <a href="/"
    class="avatar_target">
@@ -517,12 +517,58 @@
         </div>
     </div>
 </aside>
-<div id="post" class="index">
+<div id="post">
     <div class="pjax">
-        <article class="index">
-            <div class="toc-ref">
+        <article id="post-思科CCNA网络协议（1）" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Why-write"><span class="toc-text">Why write</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AF%B9%E5%8D%9A%E5%AE%A2%E7%9A%84%E7%90%86%E8%A7%A3"><span class="toc-text">对博客的理解</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%B8%A1%E6%B1%A41"><span class="toc-text">鸡汤1</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%B8%A1%E6%B1%A42"><span class="toc-text">鸡汤2</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%8D%E7%AB%AF%E8%B7%AF%E7%BA%BF"><span class="toc-text">前端路线</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%8D"><span class="toc-text">词</span></a></li></ol></li></ol>
+        <h1 class="article-title">思科CCNA网络协议</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        <span class="book">
+            <i class="iconfont icon-category"></i>
+            
+            
+            <a  data-rel="网络安全">网络安全</a>
+            
+        </span>
+        
+        
+        <span class="tag">
+            <i class="iconfont icon-tag"></i>
+            
+            <a class="color5">网络安全</a>
+            
+        </span>
+        
+    </div>
+    <div class="article-meta">
+        
+            Created At : <time class="date" title='Updated At: 2022-12-07 15:27:36'>2022-12-05 16:39</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        
+        <span id="busuanzi_container_page_pv">
+            Views 👀 :<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%9D%99%E6%80%81%E8%B7%AF%E7%94%B1%E5%8D%8F%E8%AE%AE"><span class="toc-text">静态路由协议</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ARP%E5%8D%8F%E8%AE%AE"><span class="toc-text">ARP协议</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -535,25 +581,58 @@
     }
 </style>
 </div>
-            <h1 id="Why-write"><a href="#Why-write" class="headerlink" title="Why write"></a>Why write</h1><h2 id="对博客的理解"><a href="#对博客的理解" class="headerlink" title="对博客的理解"></a>对博客的理解</h2><p>通过博客，我们可以记录自己的生活和成长的轨迹。</p>
-<h2 id="鸡汤1"><a href="#鸡汤1" class="headerlink" title="鸡汤1"></a>鸡汤1</h2><blockquote>
-<p>无人问津也好、技不如人也罢、你都要试着安静下来、去做自己该做的事、而不是让内心烦躁、焦虑、毁掉你本就不多的热情和定力！！！</p>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="静态路由协议"><a href="#静态路由协议" class="headerlink" title="静态路由协议"></a>静态路由协议</h2><blockquote>
+<p><strong>注意：直连链路的两个接口要配置成相同的局域网，也就是相同的网段</strong></p>
 </blockquote>
-<h2 id="鸡汤2"><a href="#鸡汤2" class="headerlink" title="鸡汤2"></a>鸡汤2</h2><blockquote>
-<p>你想要做成什么事情，或者想要得到什么东西，你就按部就班，按自己该做的，安静点也用点心，渴求别那么强烈，慢慢的一段时间后，水到渠成是一件非常自然的事情</p>
+<ol>
+<li>ip route 目的网段 子网掩码（255.255.255.0） 下一跳 IP 地址<br>ip route 单独目的IP地址 子网掩码（255.255.255.255） 下一跳 IP 地址</li>
+<li>ip route 目的网段 子网掩码（255.255.255.0） 接口<br>ip route 单独目的IP地址 子网掩码（255.255.255.255） 接口</li>
+<li>ip route 目的网段 子网掩码（255.255.255.0） 接口 下一跳 IP 地址<br>ip route 单独目的IP地址 子网掩码（255.255.255.255） 接口 下一跳 IP 地址</li>
+<li>默认路由ip route 0.0.0.0 0.0.0.0 下一跳 IP 地址 <strong>含义是通过下一跳 IP 地址去所有的网络，适用于末梢网络</strong><br>下一跳的 IP 地址必须是当前路由器可达的并且可以转发到目的网络的，也就是直连接口的 IP 地址</li>
+</ol>
+<p>静态路由优缺点</p>
+<p>优点：</p>
+<ol>
+<li>对路由器 CPU 没有管理性开销</li>
+<li>在路由器间没有宽带占用</li>
+<li>增加安全性</li>
+</ol>
+<p>缺点：</p>
+<ol>
+<li>必须真正了解网络</li>
+<li>对于新添网络配置繁琐</li>
+<li>对于大型网络工作量巨大</li>
+</ol>
+<h2 id="ARP协议"><a href="#ARP协议" class="headerlink" title="ARP协议"></a>ARP协议</h2><blockquote>
+<p>ARP : Address Resolution Protocol地址解析协议<br>ARP的作用：将已知的 IP 地址解析为 MAC 地址</p>
 </blockquote>
-<h2 id="前端路线"><a href="#前端路线" class="headerlink" title="前端路线"></a>前端路线</h2><p>HTML CSS JavaScript Ajax Node.js Vue 小程序 TypeScript React </p>
-<h2 id="词"><a href="#词" class="headerlink" title="词"></a>词</h2><blockquote>
-<p>唤起一天明月，照我满怀冰雪</p>
+<blockquote>
+<p>问题：为什么 ping 的时候第一个包会丢失？<br>答案：因为第一个包还没有ARP解析，也就是没有对应的目的mac地址，在尚无mac地址的情况下，数据帧的封装不完整，路由器在一段链路中是使用mac地址的。无目的mac地址的数据包根本就不会发出去，所以不知道目的mac地址，首先先发ARP解析mac地址，同时第一个包还没有发出去就被自己kill了。后续的包因为有了对应的mac地址就顺利的发出去了。</p>
 </blockquote>
 
-        </article>
-        
-        <p>
-            <a  class="dashang" onclick="dashangToggle()">赏</a>
-        </p>
-        
-        
+      
+       <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达，也可以邮件至 2623461774@qq.com </span>
+    </div>
+</article>
+
+
+<p>
+    <a  class="dashang" onclick="dashangToggle()">💰</a>
+</p>
+
+
+
+
+
+
+    
+
+
+
+
     </div>
     <div class="copyright">
         <p class="footer-entry"><span class="miit">
@@ -566,11 +645,11 @@
 <p class="footer-entry">Built with <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank">3-hexo</a> theme</p>
 
     </div>
-</div>
-<div class="full-toc">
-    <button class="full" data-title="切换全屏 快捷键 s"><span class="min "></span></button>
+    <div class="full-toc">
+        <button class="full" data-title="切换全屏 快捷键 s"><span class="min "></span></button>
 <a class="" id="rocket" ></a>
 
+    </div>
 </div>
 
 <div class="hide_box" onclick="dashangToggle()"></div>

@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Hexo</title>
-  <meta name="keywords" content="">
-  <meta name="description" content="Hexo">
+  <title>hexo+github搭建个人博客 | Hexo</title>
+  <meta name="keywords" content=" 其他 ">
+  <meta name="description" content="hexo+github搭建个人博客 | Hexo">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="准备工作  安装 node.js（下载地址https:&#x2F;&#x2F;nodejs.org&#x2F;en&#x2F;） git（下载地址https:&#x2F;&#x2F;git-scm.com&#x2F;downloads） win+R 进入 cmd 终端查看是否安装成功 node&#x2F;npm -v , git –version 出现版本号即安装成功  安装 hexo 利用node.js在 cmd 终端直接安装即可 npm install hexo-cli">
 <meta property="og:type" content="article">
@@ -57,7 +57,7 @@
 
 
 <body>
-<aside class="nav mobile">
+<aside class="nav">
     <div class="nav-left">
         <a href="/"
    class="avatar_target">
@@ -517,12 +517,58 @@
         </div>
     </div>
 </aside>
-<div id="post" class="index">
+<div id="post">
     <div class="pjax">
-        <article class="index">
-            <div class="toc-ref">
+        <article id="post-hexo-github搭建个人博客" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Why-write"><span class="toc-text">Why write</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AF%B9%E5%8D%9A%E5%AE%A2%E7%9A%84%E7%90%86%E8%A7%A3"><span class="toc-text">对博客的理解</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%B8%A1%E6%B1%A41"><span class="toc-text">鸡汤1</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%B8%A1%E6%B1%A42"><span class="toc-text">鸡汤2</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%8D%E7%AB%AF%E8%B7%AF%E7%BA%BF"><span class="toc-text">前端路线</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%8D"><span class="toc-text">词</span></a></li></ol></li></ol>
+        <h1 class="article-title">hexo+github搭建个人博客</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        <span class="book">
+            <i class="iconfont icon-category"></i>
+            
+            
+            <a  data-rel="其他">其他</a>
+            
+        </span>
+        
+        
+        <span class="tag">
+            <i class="iconfont icon-tag"></i>
+            
+            <a class="color3">其他</a>
+            
+        </span>
+        
+    </div>
+    <div class="article-meta">
+        
+            Created At : <time class="date" title='Updated At: 2022-12-25 16:41:02'>2022-12-25 13:14</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        
+        <span id="busuanzi_container_page_pv">
+            Views 👀 :<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C"><span class="toc-text">准备工作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%90%AD%E5%BB%BA%E4%BB%93%E5%BA%93"><span class="toc-text">搭建仓库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%94%9F%E6%88%90-SSH-Keys"><span class="toc-text">生成 SSH Keys</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9C%AC%E5%9C%B0%E7%94%9F%E6%88%90-hexo-%E5%8D%9A%E5%AE%A2"><span class="toc-text">本地生成 hexo 博客</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%91%E5%B8%83%E5%8D%9A%E5%AE%A2%E5%88%B0-github"><span class="toc-text">发布博客到 github</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -535,25 +581,74 @@
     }
 </style>
 </div>
-            <h1 id="Why-write"><a href="#Why-write" class="headerlink" title="Why write"></a>Why write</h1><h2 id="对博客的理解"><a href="#对博客的理解" class="headerlink" title="对博客的理解"></a>对博客的理解</h2><p>通过博客，我们可以记录自己的生活和成长的轨迹。</p>
-<h2 id="鸡汤1"><a href="#鸡汤1" class="headerlink" title="鸡汤1"></a>鸡汤1</h2><blockquote>
-<p>无人问津也好、技不如人也罢、你都要试着安静下来、去做自己该做的事、而不是让内心烦躁、焦虑、毁掉你本就不多的热情和定力！！！</p>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><blockquote>
+<ol>
+<li>安装 node.js（下载地址<a target="_blank" rel="noopener" href="https://nodejs.org/en/%EF%BC%89">https://nodejs.org/en/）</a></li>
+<li>git（下载地址<a target="_blank" rel="noopener" href="https://git-scm.com/downloads%EF%BC%89">https://git-scm.com/downloads）</a></li>
+<li>win+R 进入 cmd 终端查看是否安装成功 node/npm -v , git –version 出现版本号即安装成功 </li>
+<li>安装 hexo 利用node.js在 cmd 终端直接安装即可 npm install hexo-cli -g(-g指全局模式，整个电脑范围内，正常的话只安装在本文件夹下)</li>
+<li>查看 hexo 是否安装成功 hexo -v</li>
+</ol>
 </blockquote>
-<h2 id="鸡汤2"><a href="#鸡汤2" class="headerlink" title="鸡汤2"></a>鸡汤2</h2><blockquote>
-<p>你想要做成什么事情，或者想要得到什么东西，你就按部就班，按自己该做的，安静点也用点心，渴求别那么强烈，慢慢的一段时间后，水到渠成是一件非常自然的事情</p>
+<h2 id="搭建仓库"><a href="#搭建仓库" class="headerlink" title="搭建仓库"></a>搭建仓库</h2><blockquote>
+<ol>
+<li>创建一个 github 账号</li>
+<li>创建一个仓库（相当于一个服务器）, Repository name 格式：用户名.GitHub.io(选项前面的名字就是用户名，因为用户名是全球唯一的，所以仓库名做为你的域名也是全球唯一的)</li>
+<li>勾选 Add a README file选项，会创建一个 README.md 文件，没有什么实质性的作用，只是让你的仓库不会那么空荡</li>
+<li>点击 Create repository 即可成功创建</li>
+</ol>
 </blockquote>
-<h2 id="前端路线"><a href="#前端路线" class="headerlink" title="前端路线"></a>前端路线</h2><p>HTML CSS JavaScript Ajax Node.js Vue 小程序 TypeScript React </p>
-<h2 id="词"><a href="#词" class="headerlink" title="词"></a>词</h2><blockquote>
-<p>唤起一天明月，照我满怀冰雪</p>
+<h2 id="生成-SSH-Keys"><a href="#生成-SSH-Keys" class="headerlink" title="生成 SSH Keys"></a>生成 SSH Keys</h2><blockquote>
+<ol>
+<li>随便进入一个文件夹，鼠标右键点击 Git Bash Here 按下面的命令生成 SSH Keys</li>
+<li>ssh （查看是否安装ssh）</li>
+<li>ssh-keygen -t rsa -C “邮件地址” （敲四次回车在自己的电脑里创建了一个名为 .ssh 的文件夹（C盘用户文件夹可以查看有两个文件分别是id_rsa和id_rsa.pub文件））</li>
+<li>打开 id_rsa.pub 文件复制里面的全部内容</li>
+<li>打开 github 点击头像，点击 Settings，点击 SSH and GPG keys，再点击绿色的按钮 New SSH Key，进入里面 Title 选项随便写，例如个人笔记等，Key选项粘贴刚才复制的内容，最后点击 Add SSH Key即可</li>
+<li>回到 git bash 输入命令ssh -T <a href="mailto:&#103;&#105;&#x74;&#64;&#103;&#105;&#x74;&#104;&#117;&#x62;&#x2e;&#x63;&#111;&#109;">&#103;&#105;&#x74;&#64;&#103;&#105;&#x74;&#104;&#117;&#x62;&#x2e;&#x63;&#111;&#109;</a> （在弹出的语句之后输入 yes 测试 ssh 是否绑定成功）</li>
+<li>显示下面的语句即绑定成功 Hi yanhui2623! You’ve successfully authenticated, but GitHub does not provide shell access.</li>
+</ol>
+</blockquote>
+<h2 id="本地生成-hexo-博客"><a href="#本地生成-hexo-博客" class="headerlink" title="本地生成 hexo 博客"></a>本地生成 hexo 博客</h2><blockquote>
+<ol>
+<li>创建一个新文件夹，双击进入鼠标右键 Git Bash Here 输入命令</li>
+<li>hexo init (进行 hexo 初始化会生成一系列的初始文件例如：常见的 node_modules 包的配置文件夹、package-lock.json等)</li>
+<li>hexo s (启动 hexo 服务器 复制 <a target="_blank" rel="noopener" href="http://localhost:4000/">http://localhost:4000/</a> 即可查看初始 hexo 页面)</li>
+</ol>
+</blockquote>
+<h2 id="发布博客到-github"><a href="#发布博客到-github" class="headerlink" title="发布博客到 github"></a>发布博客到 github</h2><blockquote>
+<ol>
+<li>打开博客的_config.yml（如果看不到打开文件拓展名）文件将最后两行删除并插入下面的代码（一定要复制粘贴，格式不对会报各种错误）之后保存退出即可：<br>deploy:<br>type: ‘git’<br>repository: <a target="_blank" rel="noopener" href="https://github.com/yanhui2623/yanhui2623.github.io.git">https://github.com/yanhui2623/yanhui2623.github.io.git</a> (自己的 Github 仓库地址)<br>branch: main</li>
+<li>打开博客的目录文件夹，鼠标右键打开 Git Bash Here 输入命令 npm install hexo-deployer-git –save </li>
+<li>hexo g（生成网站静态文件到默认设置的 public 文件夹）</li>
+<li>hexo d (将网站静态文件推送到 github，这里应该多试几次直到弹出 openssh 对话框为止，输入用户名，接着输入密码但是我们应该输入的是令牌，生成令牌方法点击头像，点击 Settings，再点击 Developer settings，再找到 Personal access tokens，再点击 Generate new token，再 Note 对话框里随便填，下面的复选框全部选择，这样比较方便，最后点击绿色的按钮 Generate token 即可就会生成一段序列号，输入到 openssh对话框即可)</li>
+<li>即可通过仓库的名字（.github.io）访问网站了！</li>
+</ol>
 </blockquote>
 
-        </article>
-        
-        <p>
-            <a  class="dashang" onclick="dashangToggle()">赏</a>
-        </p>
-        
-        
+      
+       <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达，也可以邮件至 2623461774@qq.com </span>
+    </div>
+</article>
+
+
+<p>
+    <a  class="dashang" onclick="dashangToggle()">💰</a>
+</p>
+
+
+
+
+
+
+    
+
+
+
+
     </div>
     <div class="copyright">
         <p class="footer-entry"><span class="miit">
@@ -566,11 +661,11 @@
 <p class="footer-entry">Built with <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank">3-hexo</a> theme</p>
 
     </div>
-</div>
-<div class="full-toc">
-    <button class="full" data-title="切换全屏 快捷键 s"><span class="min "></span></button>
+    <div class="full-toc">
+        <button class="full" data-title="切换全屏 快捷键 s"><span class="min "></span></button>
 <a class="" id="rocket" ></a>
 
+    </div>
 </div>
 
 <div class="hide_box" onclick="dashangToggle()"></div>
