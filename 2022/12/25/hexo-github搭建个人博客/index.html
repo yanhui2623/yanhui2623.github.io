@@ -14,7 +14,7 @@
 <meta property="og:description" content="准备工作  安装 node.js（下载地址https:&#x2F;&#x2F;nodejs.org&#x2F;en&#x2F;） git（下载地址https:&#x2F;&#x2F;git-scm.com&#x2F;downloads） win+R 进入 cmd 终端查看是否安装成功 node&#x2F;npm -v , git --version 出现版本号即安装成功  安装 hexo 利用node.js在 cmd 终端直接安装即可 npm install hexo-cli">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-12-25T05:14:53.000Z">
-<meta property="article:modified_time" content="2022-12-26T03:37:57.983Z">
+<meta property="article:modified_time" content="2022-12-27T11:09:15.750Z">
 <meta property="article:author" content="颜回">
 <meta property="article:tag" content="其他">
 <meta name="twitter:card" content="summary">
@@ -550,7 +550,7 @@
     </div>
     <div class="article-meta">
         
-            Created At : <time class="date" title='Updated At: 2022-12-26 11:37:57'>2022-12-25 13:14</time>
+            Created At : <time class="date" title='Updated At: 2022-12-27 19:09:15'>2022-12-25 13:14</time>
         
     </div>
     <div class="article-meta">
@@ -602,7 +602,7 @@
 <h2 id="搭建仓库"><a href="#搭建仓库" class="headerlink" title="搭建仓库"></a>搭建仓库</h2><blockquote>
 <ol>
 <li>创建一个 github 账号</li>
-<li>创建一个仓库（相当于一个服务器）, Repository name 格式：用户名.gitHub.io(选项前面的名字就是用户名，因为用户名是全球唯一的，所以仓库名做为你的域名也是全球唯一的)</li>
+<li>创建一个仓库（相当于一个服务器）, Repository name 格式：用户名.github.io(选项前面的名字就是用户名，因为用户名是全球唯一的，所以仓库名做为你的域名也是全球唯一的)</li>
 <li>勾选 Add a README file选项，会创建一个 README.md 文件，没有什么实质性的作用，只是让你的仓库不会那么空荡</li>
 <li>点击 Create repository 即可成功创建</li>
 </ol>
@@ -619,7 +619,11 @@
 </ol>
 </blockquote>
 <blockquote>
-<p>笔记<br>1.SSH 是什么？为什么要配置 SSH 免密登录？<br>SSH 为 Secure Shell 的缩写，SSH 为建在应用层上的安全协议，SSH是目前较可靠，专为远程登录会话和其他网络服务提供安全性的协议。利用 SSH 协议可以有效防止远程管理过程中的信息泄露问题。在提交代码的时候需要你的 github 的权限才可以，但是直接使用用户名和密码太不安全了，所以使用 ssh key 来解决本地和服务器连接的问题，通俗的理解就是给你的电脑访问你的 github 仓库的权限。<br>2. <code>ssh-keygen -t rsa -C &quot;邮件地址&quot;</code>解释？<br>SSH 提供两种安全验证，第一种是基于口令的安全验证：只要你知道自己的账号和口令，就可以登录到远程主机。所有传输的数据都会被加密，但是不能保证你正在连接的服务器就是你想连接的服务器，可能会有别的服务器在冒充真正的服务器，也即是”中间人”的方式。第二种就是基于密钥的安全验证ssh-keygen：-t 指密钥的类型（type）密钥的类型有两种分别是 RSA、DSA，ssh-keygen默认使用的就是-t rsa，所以可以省略，-C 指用于识别这个密钥的注释（comment）“邮件地址”这里因为邮箱地址有唯一性所以一般用这个，里面可以是任何内容。</p>
+<p>笔记</p>
+<ol>
+<li>SSH 是什么？为什么要配置 SSH 免密登录？<br>SSH 为 Secure Shell 的缩写，SSH 为建在应用层上的安全协议，SSH是目前较可靠，专为远程登录会话和其他网络服务提供安全性的协议。利用 SSH 协议可以有效防止远程管理过程中的信息泄露问题。在提交代码的时候需要你的 github 的权限才可以，但是直接使用用户名和密码太不安全了，所以使用 ssh key 来解决本地和服务器连接的问题，通俗的理解就是给你的电脑访问你的 github 仓库的权限。</li>
+<li><code>ssh-keygen -t rsa -C &quot;邮件地址&quot;</code>解释？<br>SSH 提供两种安全验证，第一种是基于口令的安全验证：只要你知道自己的账号和口令，就可以登录到远程主机。所有传输的数据都会被加密，但是不能保证你正在连接的服务器就是你想连接的服务器，可能会有别的服务器在冒充真正的服务器，也即是”中间人”的方式。第二种就是基于密钥的安全验证ssh-keygen：-t 指密钥的类型（type）密钥的类型有两种分别是 RSA、DSA，ssh-keygen默认使用的就是-t rsa，所以可以省略，-C 指用于识别这个密钥的注释（comment）“邮件地址”这里因为邮箱地址有唯一性所以一般用这个，里面可以是任何内容。</li>
+</ol>
 </blockquote>
 <h2 id="本地生成-hexo-博客"><a href="#本地生成-hexo-博客" class="headerlink" title="本地生成 hexo 博客"></a>本地生成 hexo 博客</h2><blockquote>
 <ol>
@@ -630,8 +634,8 @@
 </blockquote>
 <h2 id="发布博客到-github"><a href="#发布博客到-github" class="headerlink" title="发布博客到 github"></a>发布博客到 github</h2><blockquote>
 <ol>
-<li>打开博客的_config.yml（如果看不到打开文件拓展名）文件将最后两行删除并插入下面的代码（一定要复制粘贴，格式不对会报各种错误）之后保存退出即可：<br><code>deploy:</code><br><code>type: &#39;git&#39;</code><br><code>repository: https://github.com/yanhui2623/yanhui2623.github.io.git</code> (自己的 Github 仓库地址)<br><code>branch: main</code></li>
-<li>打开博客的目录文件夹，鼠标右键打开 Git Bash Here 输入命令 <code>npm install hexo-deployer-git --save</code> </li>
+<li>打开博客的目录文件夹，鼠标右键打开 Git Bash Here 输入命令 <code>npm install hexo-deployer-git --save</code></li>
+<li>打开博客的_config.yml（如果看不到打开文件拓展名）文件将最后两行删除并插入下面的代码（一定要复制粘贴，格式不对会报各种错误）之后保存退出即可：<br><code>deploy:</code><br><code>type: &#39;git&#39;</code><br><code>repository: https://github.com/yanhui2623/yanhui2623.github.io.git</code> (自己的 Github 仓库地址)<br><code>branch: main</code> </li>
 <li><code>hexo g</code>（hexo generate的简写，生成网站静态文件到默认设置的 public 文件夹）</li>
 <li><code>hexo d</code> (hexo deploy的简写，将网站静态文件推送到 github，这里应该多试几次直到弹出 openssh 对话框为止，输入用户名，接着输入密码但是我们应该输入的是令牌，生成令牌方法点击头像，点击 Settings，再点击 Developer settings，再找到 Personal access tokens，再点击 Generate new token，再 Note 对话框里随便填，下面的复选框全部选择，这样比较方便，最后点击绿色的按钮 Generate token 即可就会生成一段序列号，输入到 openssh对话框即可)</li>
 <li>即可通过仓库的名字（.github.io）访问网站了！</li>
