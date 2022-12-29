@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>路由高级 | 颜回的个人笔记</title>
-  <meta name="keywords" content=" vue ">
-  <meta name="description" content="路由高级 | 颜回的个人笔记">
+  <title>思科CCNA基础命令集 | 颜回的个人笔记</title>
+  <meta name="keywords" content=" 网络安全 ">
+  <meta name="description" content="思科CCNA基础命令集 | 颜回的个人笔记">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="交换机工作原理 交换机为二层设备，有 mac 地址，也可以学习 Mac 地址，通过学习到的 mac 地址可以实现单播  交换机基于数据的源 mac 地址进行学习 基于数据的目的 mac 地址根据 mac 地址表进行转发 对于数据的目的 mac 地址没有学习过，也就是没有 mac 地址表项，会执行泛洪 交换机的接口可以学习多个 mac 地址 一个 mac 地址只能被一个交换机接口学习，后来者优先 对">
 <meta property="og:type" content="article">
@@ -532,9 +532,9 @@
 </aside>
 <div id="post">
     <div class="pjax">
-        <article id="post-路由高级" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-思科CCNA基础命令集" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">路由高级</h1>
+        <h1 class="article-title">思科CCNA基础命令集</h1>
     
     <div class="article-meta">
         
@@ -544,7 +544,7 @@
             <i class="iconfont icon-category"></i>
             
             
-            <a  data-rel="Vue3">Vue3</a>
+            <a  data-rel="网络安全">网络安全</a>
             
         </span>
         
@@ -552,19 +552,19 @@
         <span class="tag">
             <i class="iconfont icon-tag"></i>
             
-            <a class="color4">vue</a>
+            <a class="color5">网络安全</a>
             
         </span>
         
     </div>
     <div class="article-meta">
         
-            Created At : <time class="date" title='Updated At: 2022-12-01 09:17:39'>2022-10-03 17:36</time>
+            Created At : <time class="date" title='Updated At: 2022-12-29 17:42:36'>2022-12-05 15:25</time>
         
     </div>
     <div class="article-meta">
         
-        <span>Count:0</span>
+        <span>Count:526</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -583,7 +583,7 @@
     
     <div class="toc-ref">
     
-        
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%BB%E8%A6%81%E6%A8%A1%E5%BC%8F%E5%8F%8A%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4"><span class="toc-text">主要模式及基本命令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B8%B8%E8%A7%81%E6%8A%A5%E9%94%99%E5%91%BD%E4%BB%A4"><span class="toc-text">常见报错命令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BF%AB%E6%8D%B7%E9%94%AE"><span class="toc-text">快捷键</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B3%E9%97%AD%E4%BC%9A%E8%AF%9D%E8%B6%85%E6%97%B6%EF%BC%8C%E9%98%B2%E6%AD%A2%E4%B8%80%E6%AE%B5%E6%97%B6%E9%97%B4%E4%B8%8D%E6%93%8D%E4%BD%9C%E8%87%AA%E5%8A%A8%E9%80%80%E5%87%BA"><span class="toc-text">关闭会话超时，防止一段时间不操作自动退出</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -599,7 +599,64 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <h2 id="主要模式及基本命令"><a href="#主要模式及基本命令" class="headerlink" title="主要模式及基本命令"></a>主要模式及基本命令</h2><p>注意：Tab无法补全可以加？即可查看命令库</p>
+<blockquote>
+<ol>
+<li>用户执行模式  “Router&gt;”  ，enable 进入特权模式（测试和查询）</li>
+<li>特权执行模式  “Router#”  ，configure terminal 进入全局配置模式(在全局配置模式下测试和查询需要在命令前加 do)</li>
+<li>全局配置模式  “Router(config)#”  ，interface f0/0(接口号) 进入路由器的接口中，接口号的 f0/0 是 fastEthernet 快速以太网 0号插槽0号接口的意思，s 是 Serial 串行链路口的意思</li>
+<li>接口配置模式  “Router(config-if)#”  ，输入命令行 ip address 192.168.1.1（ip地址） 255.255.255.0（子网掩码）即可配置接口 ip</li>
+<li>no shutdown 激活接口，会显示 changed state to up 即配置成功</li>
+<li>exit 返回上一级  end 直接返回特权模式 “Router#”</li>
+<li>show running-config 查询所有运行的配置</li>
+<li>show ip interface brief 查询所有 IP 接口的情况<br>show ip route 查询路由表<br>show vlan brief 查看vlan<br>show interfaces trunk 查看 trunk 接口 </li>
+<li>hostname r1 设置名字 enable password 123 为进入特权模式设置密码（show running-config可以查看）enable secret 123 同为为进入特权模式设置密码（show running-config<strong>不可以</strong>查看）</li>
+<li>用 no 命令可以删除你想要删除的配置，例如 no enable password（不要加上自己设置的参数） </li>
+</ol>
+</blockquote>
+<h2 id="常见报错命令"><a href="#常见报错命令" class="headerlink" title="常见报错命令"></a>常见报错命令</h2><blockquote>
+<p>% Incomplete command.  // 命令不完整<br>% Invalid input detected at ‘^’ marker.  // 箭头所指字符无法识别<br>% Ambiguous command: “s”  // 未知的输入</p>
+</blockquote>
+<h2 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h2><table>
+<thead>
+<tr>
+<th>快捷键</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Tab</td>
+<td align="center">填写命令或关键字的剩下部分</td>
+</tr>
+<tr>
+<td>Ctrl+R</td>
+<td align="center">重新显示一行</td>
+</tr>
+<tr>
+<td>Ctrl+Z</td>
+<td align="center">退出配置模式并返回到执行模式</td>
+</tr>
+<tr>
+<td>向下箭头</td>
+<td align="center">用于在前面用过的命令的列表中向前滚动</td>
+</tr>
+<tr>
+<td>向上箭头</td>
+<td align="center">用于在前面用过的命令的列表中向后滚动</td>
+</tr>
+<tr>
+<td>Ctrl+Shift+6</td>
+<td align="center">用于中断诸如 ping 或 traceroute 之类的 IOS 进程</td>
+</tr>
+<tr>
+<td>Ctrl+C</td>
+<td align="center">放弃当前命令并退出配置模式</td>
+</tr>
+</tbody></table>
+<h2 id="关闭会话超时，防止一段时间不操作自动退出"><a href="#关闭会话超时，防止一段时间不操作自动退出" class="headerlink" title="关闭会话超时，防止一段时间不操作自动退出"></a>关闭会话超时，防止一段时间不操作自动退出</h2><blockquote>
+<p>line console 0<br>no exec-timeout</p>
+</blockquote>
+
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达，也可以邮件至 2623461774@qq.com </span>
     </div>
