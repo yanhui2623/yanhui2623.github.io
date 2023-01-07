@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>watch监听器 | 颜回的个人笔记</title>
-  <meta name="keywords" content=" vue ">
-  <meta name="description" content="watch监听器 | 颜回的个人笔记">
+  <title>CSS基础 | 颜回的个人笔记</title>
+  <meta name="keywords" content=" 前端 ">
+  <meta name="description" content="CSS基础 | 颜回的个人笔记">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="CSS 选择器   选择器 示例 在 html 标签添加的属性    标签选择器 p {}    类选择器 .类名 {} class&#x3D;”类名”   多类名选择器 .类名 {} class&#x3D;”类名1 类名2”   id 选择器 #id名 {} id&#x3D;”id名”   通配符选择器 * {}    后代选择器 元素1 元素2 {}    子元素选择器 元素1&gt;元素2 {}    并集选择器 元素1">
 <meta property="og:type" content="article">
@@ -568,9 +568,9 @@
 </aside>
 <div id="post">
     <div class="pjax">
-        <article id="post-watch监听器" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-CSS基础" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">watch监听器</h1>
+        <h1 class="article-title">CSS基础</h1>
     
     <div class="article-meta">
         
@@ -580,7 +580,7 @@
             <i class="iconfont icon-category"></i>
             
             
-            <a  data-rel="Vue3">Vue3</a>
+            <a  data-rel="前端">前端</a>
             
         </span>
         
@@ -588,19 +588,19 @@
         <span class="tag">
             <i class="iconfont icon-tag"></i>
             
-            <a class="color4">vue</a>
+            <a class="color3">前端</a>
             
         </span>
         
     </div>
     <div class="article-meta">
         
-            Created At : <time class="date" title='Updated At: 2022-09-27 18:35:26'>2022-09-23 13:08</time>
+            Created At : <time class="date" title='Updated At: 2023-01-07 19:09:10'>2023-01-07 17:37</time>
         
     </div>
     <div class="article-meta">
         
-        <span>Count:665</span>
+        <span>Count:338</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -619,7 +619,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%80%E4%B9%88%E6%98%AFwatch%E7%9B%91%E5%90%AC%E5%99%A8"><span class="toc-text">什么是watch监听器?</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#watch%E4%BE%A6%E5%90%AC%E5%99%A8%E7%9A%84%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95"><span class="toc-text">watch侦听器的基本语法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#immediate-%E9%80%89%E9%A1%B9"><span class="toc-text">immediate 选项</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#deep-%E9%80%89%E9%A1%B9"><span class="toc-text">deep 选项</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%9B%91%E5%90%AC%E5%AF%B9%E8%B1%A1%E5%8D%95%E4%B8%AA%E5%B1%9E%E6%80%A7%E7%9A%84%E5%8F%98%E5%8C%96"><span class="toc-text">监听对象单个属性的变化</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AE%A1%E7%AE%97%E5%B1%9E%E6%80%A7-vs-%E4%BE%A6%E5%90%AC%E5%99%A8"><span class="toc-text">计算属性 vs 侦听器</span></a></li></ol></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#CSS-%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-text">CSS 选择器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%97%E4%BD%93%E5%B1%9E%E6%80%A7"><span class="toc-text">字体属性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%87%E6%9C%AC%E5%B1%9E%E6%80%A7"><span class="toc-text">文本属性</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -635,16 +635,95 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="什么是watch监听器"><a href="#什么是watch监听器" class="headerlink" title="什么是watch监听器?"></a>什么是watch监听器?</h2><p><strong>watch监听器</strong>允许开发者监视数据的变化，从而<strong>针对数据的变化做特定的操作</strong>。例如：监视用户名的变化并发起请求，判断用户名是否可用</p>
-<h2 id="watch侦听器的基本语法"><a href="#watch侦听器的基本语法" class="headerlink" title="watch侦听器的基本语法"></a>watch侦听器的基本语法</h2><p>开发者需要在watch节点下，定义自己的侦听器。示例代码如下：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">  <span class="title function_">data</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">      <span class="attr">username</span>: <span class="string">&#x27;&#x27;</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="attr">watch</span>: &#123;</span><br><span class="line">    <span class="comment">// 监听 username 的值的变化，用属性名直接当作方法名</span></span><br><span class="line">    <span class="comment">// 形参列表中，第一个值是“变化后的新值”，第二个值是“变化之前的旧值”</span></span><br><span class="line">    <span class="title function_">username</span>(<span class="params">newVal.oldVal</span>) &#123;</span><br><span class="line">      <span class="variable language_">console</span>.<span class="title function_">log</span>(newVal, oldVal)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="immediate-选项"><a href="#immediate-选项" class="headerlink" title="immediate 选项"></a>immediate 选项</h4><p>默认情况下，组件在初次加载完毕后不会调用 watch 侦听器，如果想让 watch 侦听器<strong>立即被调用</strong>，则需要使用 <strong>immediate</strong> 选项。实例代码如下</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">watch</span>: &#123;</span><br><span class="line">  <span class="comment">// 用对象格式监听 username 值得变化</span></span><br><span class="line">  <span class="attr">username</span>: &#123;</span><br><span class="line">    <span class="comment">// handler 属性是固定写法：当 username 变化时，调用handler</span></span><br><span class="line">    <span class="title function_">handler</span>(<span class="params">newVal,oldVal</span>) &#123;</span><br><span class="line">      <span class="variable language_">console</span>.<span class="title function_">log</span>(newVal,oldVal)</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 表示组件加载完毕之后立即调用一次当前的 watch 侦听器</span></span><br><span class="line">    <span class="attr">immediate</span>: <span class="literal">true</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="deep-选项"><a href="#deep-选项" class="headerlink" title="deep 选项"></a>deep 选项</h4><p>当 watch 侦听的是一个对象，如果对象中的属性值发生了变化，则无法被监听到。此时需要使用 deep 选项，代码示例如下：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="title function_">data</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> &#123;</span><br><span class="line">    <span class="comment">// 定义一个对象，里面包含了 username 属性</span></span><br><span class="line">    <span class="attr">info</span>: &#123; </span><br><span class="line">      <span class="attr">username</span>: <span class="string">&#x27;admin&#x27;</span> </span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="attr">watch</span>: &#123;</span><br><span class="line">  <span class="attr">info</span>: &#123;</span><br><span class="line">    <span class="title function_">handler</span>(<span class="params">newVal,oldVal</span>) &#123;</span><br><span class="line">      <span class="comment">// 注意：这里的 newVal 和 oldVal 都是一个对象</span></span><br><span class="line">      <span class="variable language_">console</span>.<span class="title function_">log</span>(newVal,oldVal)</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 需要使用 deep 选项，否则 username 值的变化无法被监听到， deep 选项开启深度监听，只要对象中的任何一个属性值变化了，都会触发对象的侦听器</span></span><br><span class="line">    <span class="attr">deep</span>: <span class="literal">true</span>,</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="监听对象单个属性的变化"><a href="#监听对象单个属性的变化" class="headerlink" title="监听对象单个属性的变化"></a>监听对象单个属性的变化</h4><p>deep 选项监听了对象中所有属性的变化，如果只想监听对象中单个属性的变化，则可以按照如下的方式定义 watch 侦听器</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="title function_">data</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> &#123;</span><br><span class="line">    <span class="comment">// 定义一个对象，里面包含了 username 和 password 属性</span></span><br><span class="line">    <span class="attr">info</span>: &#123; </span><br><span class="line">      <span class="attr">username</span>: <span class="string">&#x27;admin&#x27;</span> ,</span><br><span class="line">      <span class="attr">password</span>: <span class="string">&#x27;&#x27;</span></span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="attr">watch</span>: &#123;</span><br><span class="line">  <span class="comment">// 只想监听 info 对象中的 username 属性，必须包裹一层单引号</span></span><br><span class="line">  <span class="string">&#x27;info.username&#x27;</span>: &#123;</span><br><span class="line">    <span class="title function_">handler</span>(<span class="params">newVal,oldVal</span>) &#123;</span><br><span class="line">      <span class="variable language_">console</span>.<span class="title function_">log</span>(newVal,oldVal)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="计算属性-vs-侦听器"><a href="#计算属性-vs-侦听器" class="headerlink" title="计算属性 vs 侦听器"></a>计算属性 vs 侦听器</h4><p>计算属性和侦听器侧重的应用场景不同：<br>计算属性侧重于监听<strong>多个值</strong>的变化，最终计算并<strong>返回一个新值</strong><br>侦听器侧重于监听<strong>单个数据</strong>的变化，最终执行特定的业务处理，<strong>不需要有任何返回值</strong></p>
+        <h2 id="CSS-选择器"><a href="#CSS-选择器" class="headerlink" title="CSS 选择器"></a>CSS 选择器</h2><table>
+<thead>
+<tr>
+<th>选择器</th>
+<th align="center">示例</th>
+<th align="right">在 html 标签添加的属性</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>标签选择器</td>
+<td align="center">p {}</td>
+<td align="right"></td>
+</tr>
+<tr>
+<td>类选择器</td>
+<td align="center">.类名 {}</td>
+<td align="right">class=”类名”</td>
+</tr>
+<tr>
+<td>多类名选择器</td>
+<td align="center">.类名 {}</td>
+<td align="right">class=”类名1 类名2”</td>
+</tr>
+<tr>
+<td>id 选择器</td>
+<td align="center">#id名 {}</td>
+<td align="right">id=”id名”</td>
+</tr>
+<tr>
+<td>通配符选择器</td>
+<td align="center">* {}</td>
+<td align="right"></td>
+</tr>
+<tr>
+<td>后代选择器</td>
+<td align="center">元素1 元素2 {}</td>
+<td align="right"></td>
+</tr>
+<tr>
+<td>子元素选择器</td>
+<td align="center">元素1&gt;元素2 {}</td>
+<td align="right"></td>
+</tr>
+<tr>
+<td>并集选择器</td>
+<td align="center">元素1,元素2 {}</td>
+<td align="right"></td>
+</tr>
+<tr>
+<td>链接伪类选择器</td>
+<td align="center">a:link</td>
+<td align="right">选择所有未被访问的链接</td>
+</tr>
+<tr>
+<td>链接伪类选择器</td>
+<td align="center">a:visited</td>
+<td align="right">选择所有已被访问的链接</td>
+</tr>
+<tr>
+<td>链接伪类选择器</td>
+<td align="center">a:hover</td>
+<td align="right">选择鼠标指针位于其上的链接</td>
+</tr>
+<tr>
+<td>链接伪类选择器</td>
+<td align="center">a:active</td>
+<td align="right">选择鼠标按下未弹起的链接</td>
+</tr>
+<tr>
+<td>伪类选择器</td>
+<td align="center">:focus</td>
+<td align="right">用于获取焦点的表单元素</td>
+</tr>
+</tbody></table>
+<h2 id="字体属性"><a href="#字体属性" class="headerlink" title="字体属性"></a>字体属性</h2><blockquote>
+<ul>
+<li>字体系列font-family: Arial,”Microsoft Yahei”,”微软雅黑”;</li>
+<li>字体大小font-size: 20px;（标题标签需要单独修改）</li>
+<li>字体粗细font-weight: normal(默认) 400/ bold 700;</li>
+<li>字体样式font-style: normal(默认) / italic(斜体);</li>
+<li>字体复合属性font: font-style font-weight font-size/line-height font-family;<br>注意：字体复合属性不能更换属性，后面两项为必须属性</li>
+</ul>
+</blockquote>
+<h2 id="文本属性"><a href="#文本属性" class="headerlink" title="文本属性"></a>文本属性</h2><blockquote>
+<ul>
+<li>文本颜色color: red/#FF0000/rgb(255,0,0);</li>
+<li>文本对齐text-align: center/left(默认)/right;（设置元素内文本内容的水平对齐方式）</li>
+</ul>
+</blockquote>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达，也可以邮件至 2623461774@qq.com </span>
