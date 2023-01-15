@@ -14,7 +14,7 @@
 <meta property="og:description" content="CSS 选择器   选择器 示例 在 html 标签添加的属性    标签选择器 p {}    类选择器 .类名 {} class&#x3D;”类名”   多类名选择器 .类名 {} class&#x3D;”类名1 类名2”   id 选择器 #id名 {} id&#x3D;”id名”   通配符选择器 * {}    后代选择器 元素1 元素2 {}    子元素选择器 元素1&gt;元素2 {}    并集选择器 元素1">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2023-01-07T09:37:20.000Z">
-<meta property="article:modified_time" content="2023-01-07T11:09:10.361Z">
+<meta property="article:modified_time" content="2023-01-15T11:48:32.364Z">
 <meta property="article:author" content="颜回">
 <meta property="article:tag" content="前端">
 <meta name="twitter:card" content="summary">
@@ -270,7 +270,7 @@
     </div>
 </div>
 <input type="hidden" id="yelog_site_posts_number" value="22">
-<input type="hidden" id="yelog_site_word_count" value="18.2k">
+<input type="hidden" id="yelog_site_word_count" value="18.4k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
     <span id="busuanzi_value_site_pv"></span>
@@ -595,12 +595,12 @@
     </div>
     <div class="article-meta">
         
-            Created At : <time class="date" title='Updated At: 2023-01-07 19:09:10'>2023-01-07 17:37</time>
+            Created At : <time class="date" title='Updated At: 2023-01-15 19:48:32'>2023-01-07 17:37</time>
         
     </div>
     <div class="article-meta">
         
-        <span>Count:338</span>
+        <span>Count:577</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -619,7 +619,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#CSS-%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-text">CSS 选择器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%97%E4%BD%93%E5%B1%9E%E6%80%A7"><span class="toc-text">字体属性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%87%E6%9C%AC%E5%B1%9E%E6%80%A7"><span class="toc-text">文本属性</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#CSS-%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-text">CSS 选择器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%97%E4%BD%93%E5%B1%9E%E6%80%A7"><span class="toc-text">字体属性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%87%E6%9C%AC%E5%B1%9E%E6%80%A7"><span class="toc-text">文本属性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CSS-%E5%BC%95%E5%85%A5%E6%96%B9%E5%BC%8F"><span class="toc-text">CSS 引入方式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Emmet-%E8%AF%AD%E6%B3%95"><span class="toc-text">Emmet 语法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9D%97%E5%85%83%E7%B4%A0%E7%89%B9%E7%82%B9"><span class="toc-text">块元素特点</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -722,9 +722,30 @@
 <ul>
 <li>文本颜色color: red/#FF0000/rgb(255,0,0);</li>
 <li>文本对齐text-align: center/left(默认)/right;（设置元素内文本内容的水平对齐方式）</li>
+<li>文本装饰text-decoration: none(默认)/underline(下划线)/overline(上划线)/line-through(删除线);</li>
+<li>文本缩进text-indent: 2em;</li>
+<li>行间距line-height: 26px;（上间距+文本高度+下间距）</li>
 </ul>
 </blockquote>
-
+<h2 id="CSS-引入方式"><a href="#CSS-引入方式" class="headerlink" title="CSS 引入方式"></a>CSS 引入方式</h2><blockquote>
+<ul>
+<li>内部样式表 <code>&lt;style&gt;样式&lt;/style&gt;</code> 只能控制一个页面</li>
+<li>行内样式表 <code>style=&quot;color: red; font-size: 12px;&quot;</code> 只能控制一个标签</li>
+<li>外部样式表 <code>&lt;link rel=&quot;stylesheet&quot; href=&quot;CSS文件路径&quot;&gt;</code> 可以控制多个页面</li>
+</ul>
+</blockquote>
+<h2 id="Emmet-语法"><a href="#Emmet-语法" class="headerlink" title="Emmet 语法"></a>Emmet 语法</h2><blockquote>
+<ul>
+<li>输入标签名按 tab 键即可</li>
+<li>div*3 快速生成 3 个 div</li>
+<li>父子关系用&gt; 例如 ul&gt;li</li>
+<li>兄弟关系用+ 例如div+p</li>
+<li>生成带有类名或者 id 名字的 直接写 .demo 或者 #two 按 tab 键，默认是 div 标签，如果要用其他的标签 则 p.demo</li>
+<li>可以用自增符号 $，例如 p{$}*5</li>
+<li>在生成的标签内部写内容可以用 {} 表示，例如 p{内容}</li>
+</ul>
+</blockquote>
+<h2 id="块元素特点"><a href="#块元素特点" class="headerlink" title="块元素特点"></a>块元素特点</h2>
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达，也可以邮件至 2623461774@qq.com </span>
     </div>
