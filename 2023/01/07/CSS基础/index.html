@@ -6,15 +6,15 @@
   <meta name="keywords" content=" 前端 ">
   <meta name="description" content="CSS基础 | 颜回的个人笔记">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<meta name="description" content="CSS 选择器   选择器 示例 在 html 标签添加的属性    标签选择器 p {}    类选择器 .类名 {} class&#x3D;”类名”   多类名选择器 .类名 {} class&#x3D;”类名1 类名2”   id 选择器 #id名 {} id&#x3D;”id名”   通配符选择器 * {}    后代选择器 元素1 元素2 {}    子元素选择器 元素1&gt;元素2 {}    并集选择器 元素1">
+<meta name="description" content="浮动  多个块级元素纵向排列找标准流，多个块级元素横向排列找浮动 float: none(默认)&#x2F;left&#x2F;right; 浮动的盒子脱离标准流的控制，不再保留原先的位置，下面的会飘上来 多个盒子都设置浮动，它们会一行内显示并且顶端对齐排列，一行位置不够会挤到第二行 任何元素都可以浮动，不管以前是什么模式的元素，添加浮动之后具有行内块元素特性 浮动布局注意点：1.先用标准流的父元素排列上下位置，之后">
 <meta property="og:type" content="article">
-<meta property="og:title" content="CSS基础">
-<meta property="og:url" content="http://example.com/2023/01/07/CSS%E5%9F%BA%E7%A1%80/index.html">
+<meta property="og:title" content="CSS进阶">
+<meta property="og:url" content="http://example.com/2023/01/16/CSS%E8%BF%9B%E9%98%B6/index.html">
 <meta property="og:site_name" content="颜回的个人笔记">
-<meta property="og:description" content="CSS 选择器   选择器 示例 在 html 标签添加的属性    标签选择器 p {}    类选择器 .类名 {} class&#x3D;”类名”   多类名选择器 .类名 {} class&#x3D;”类名1 类名2”   id 选择器 #id名 {} id&#x3D;”id名”   通配符选择器 * {}    后代选择器 元素1 元素2 {}    子元素选择器 元素1&gt;元素2 {}    并集选择器 元素1">
+<meta property="og:description" content="浮动  多个块级元素纵向排列找标准流，多个块级元素横向排列找浮动 float: none(默认)&#x2F;left&#x2F;right; 浮动的盒子脱离标准流的控制，不再保留原先的位置，下面的会飘上来 多个盒子都设置浮动，它们会一行内显示并且顶端对齐排列，一行位置不够会挤到第二行 任何元素都可以浮动，不管以前是什么模式的元素，添加浮动之后具有行内块元素特性 浮动布局注意点：1.先用标准流的父元素排列上下位置，之后">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2023-01-07T09:37:20.000Z">
-<meta property="article:modified_time" content="2023-01-15T11:48:32.364Z">
+<meta property="article:published_time" content="2023-01-16T06:21:48.000Z">
+<meta property="article:modified_time" content="2023-01-16T10:54:50.664Z">
 <meta property="article:author" content="颜回">
 <meta property="article:tag" content="前端">
 <meta name="twitter:card" content="summary">
@@ -153,7 +153,7 @@
     <li>
         <div class="all active" data-rel="All">All
             
-                <small>(22)</small>
+                <small>(23)</small>
             
         </div>
     </li>
@@ -192,7 +192,7 @@
                     <div data-rel="前端">
                         
                         前端
-                        <small>(2)</small>
+                        <small>(3)</small>
                         
                     </div>
                     
@@ -269,8 +269,8 @@
         
     </div>
 </div>
-<input type="hidden" id="yelog_site_posts_number" value="22">
-<input type="hidden" id="yelog_site_word_count" value="18.4k">
+<input type="hidden" id="yelog_site_posts_number" value="23">
+<input type="hidden" id="yelog_site_word_count" value="20.7k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
     <span id="busuanzi_value_site_pv"></span>
@@ -351,6 +351,15 @@
     </div>
     
     <nav id="title-list-nav">
+        
+        
+        <a  class="All 前端 "
+           href="/2023/01/16/CSS%E8%BF%9B%E9%98%B6/"
+           data-tag="前端"
+           data-author="" >
+            <span class="post-title" title="CSS进阶">CSS进阶</span>
+            <span class="post-date" title="2023-01-16 14:21:48">2023/01/16</span>
+        </a>
         
         
         <a  class="All 前端 "
@@ -595,12 +604,12 @@
     </div>
     <div class="article-meta">
         
-            Created At : <time class="date" title='Updated At: 2023-01-15 19:48:32'>2023-01-07 17:37</time>
+            Created At : <time class="date" title='Updated At: 2023-01-16 17:52:39'>2023-01-07 17:37</time>
         
     </div>
     <div class="article-meta">
         
-        <span>Count:577</span>
+        <span>Count:2.1k</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -619,7 +628,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#CSS-%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-text">CSS 选择器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%97%E4%BD%93%E5%B1%9E%E6%80%A7"><span class="toc-text">字体属性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%87%E6%9C%AC%E5%B1%9E%E6%80%A7"><span class="toc-text">文本属性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CSS-%E5%BC%95%E5%85%A5%E6%96%B9%E5%BC%8F"><span class="toc-text">CSS 引入方式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Emmet-%E8%AF%AD%E6%B3%95"><span class="toc-text">Emmet 语法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9D%97%E5%85%83%E7%B4%A0%E7%89%B9%E7%82%B9"><span class="toc-text">块元素特点</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#CSS-%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-text">CSS 选择器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%97%E4%BD%93%E5%B1%9E%E6%80%A7"><span class="toc-text">字体属性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%87%E6%9C%AC%E5%B1%9E%E6%80%A7"><span class="toc-text">文本属性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CSS-%E5%BC%95%E5%85%A5%E6%96%B9%E5%BC%8F"><span class="toc-text">CSS 引入方式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Emmet-%E8%AF%AD%E6%B3%95"><span class="toc-text">Emmet 语法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9D%97%E5%85%83%E7%B4%A0%E7%89%B9%E7%82%B9"><span class="toc-text">块元素特点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A1%8C%E5%86%85%E5%85%83%E7%B4%A0%E7%89%B9%E7%82%B9"><span class="toc-text">行内元素特点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A1%8C%E5%86%85%E5%9D%97%E5%85%83%E7%B4%A0%E7%89%B9%E7%82%B9"><span class="toc-text">行内块元素特点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%98%BE%E7%A4%BA%E6%A8%A1%E5%BC%8F%E7%9A%84%E8%BD%AC%E6%8D%A2"><span class="toc-text">显示模式的转换</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%83%8C%E6%99%AF%E5%B1%9E%E6%80%A7"><span class="toc-text">背景属性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CSS-%E4%B8%89%E5%A4%A7%E7%89%B9%E6%80%A7"><span class="toc-text">CSS 三大特性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B"><span class="toc-text">盒子模型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9C%86%E8%A7%92%E8%BE%B9%E6%A1%86"><span class="toc-text">圆角边框</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%98%B4%E5%BD%B1"><span class="toc-text">阴影</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -662,6 +671,11 @@
 <td>id 选择器</td>
 <td align="center">#id名 {}</td>
 <td align="right">id=”id名”</td>
+</tr>
+<tr>
+<td>属性选择器</td>
+<td align="center">[属性名] {}</td>
+<td align="right">属性名=””</td>
 </tr>
 <tr>
 <td>通配符选择器</td>
@@ -711,21 +725,22 @@
 </tbody></table>
 <h2 id="字体属性"><a href="#字体属性" class="headerlink" title="字体属性"></a>字体属性</h2><blockquote>
 <ul>
-<li>字体系列font-family: Arial,”Microsoft Yahei”,”微软雅黑”;</li>
-<li>字体大小font-size: 20px;（标题标签需要单独修改）</li>
-<li>字体粗细font-weight: normal(默认) 400/ bold 700;</li>
-<li>字体样式font-style: normal(默认) / italic(斜体);</li>
-<li>字体复合属性font: font-style font-weight font-size/line-height font-family;<br>注意：字体复合属性不能更换属性，后面两项为必须属性</li>
+<li>字体系列 <code>font-family: Arial,&quot;Microsoft Yahei&quot;,&quot;微软雅黑&quot;;</code></li>
+<li>字体大小 <code>font-size: 20px;</code>（标题标签需要单独修改）</li>
+<li>字体粗细 <code>font-weight: normal(默认) 400/ bold 700;</code></li>
+<li>字体样式 <code>font-style: normal(默认) / italic(斜体);</code></li>
+<li>字体复合属性 <code>font: font-style font-weight font-size/line-height font-family;</code><br>注意：字体复合属性不能更换属性，后面两项为必须属性</li>
 </ul>
 </blockquote>
 <h2 id="文本属性"><a href="#文本属性" class="headerlink" title="文本属性"></a>文本属性</h2><blockquote>
 <ul>
-<li>文本颜色color: red/#FF0000/rgb(255,0,0);</li>
-<li>文本对齐text-align: center/left(默认)/right;（设置元素内文本内容的水平对齐方式）</li>
-<li>文本装饰text-decoration: none(默认)/underline(下划线)/overline(上划线)/line-through(删除线);</li>
-<li>文本缩进text-indent: 2em;</li>
-<li>行间距line-height: 26px;（上间距+文本高度+下间距）</li>
+<li>文本颜色 <code>color: red/#FF0000/rgb(255,0,0);</code></li>
+<li>文本对齐 <code>text-align: center/left(默认)/right;</code>（设置元素内文本内容的水平对齐方式）</li>
+<li>文本装饰 <code>text-decoration: none(默认)/underline(下划线)/overline(上划线)/line-through(删除线);</code></li>
+<li>文本缩进 <code>text-indent: 2em;</code></li>
+<li>行间距 <code>line-height: 26px;</code>（上间距+文本高度+下间距）</li>
 </ul>
+<p><strong>单行文字垂直居中，就是让文字的行高等于盒子的高度</strong></p>
 </blockquote>
 <h2 id="CSS-引入方式"><a href="#CSS-引入方式" class="headerlink" title="CSS 引入方式"></a>CSS 引入方式</h2><blockquote>
 <ul>
@@ -737,15 +752,197 @@
 <h2 id="Emmet-语法"><a href="#Emmet-语法" class="headerlink" title="Emmet 语法"></a>Emmet 语法</h2><blockquote>
 <ul>
 <li>输入标签名按 tab 键即可</li>
-<li>div*3 快速生成 3 个 div</li>
-<li>父子关系用&gt; 例如 ul&gt;li</li>
-<li>兄弟关系用+ 例如div+p</li>
-<li>生成带有类名或者 id 名字的 直接写 .demo 或者 #two 按 tab 键，默认是 div 标签，如果要用其他的标签 则 p.demo</li>
-<li>可以用自增符号 $，例如 p{$}*5</li>
-<li>在生成的标签内部写内容可以用 {} 表示，例如 p{内容}</li>
+<li><code>div*3</code> 快速生成 3 个 div</li>
+<li>父子关系用&gt; 例如 <code>ul&gt;li</code></li>
+<li>兄弟关系用+ 例如 <code>div+p</code></li>
+<li>生成带有类名或者 id 名字的 直接写 <code>.demo</code> 或者 <code>#two</code> 按 tab 键，默认是 div 标签，如果要用其他的标签 则 <code>p.demo</code></li>
+<li>可以用自增符号 $，例如 <code>p&#123;$&#125;*5</code></li>
+<li>在生成的标签内部写内容可以用 {} 表示，例如 <code>p&#123;内容&#125;</code></li>
 </ul>
 </blockquote>
-<h2 id="块元素特点"><a href="#块元素特点" class="headerlink" title="块元素特点"></a>块元素特点</h2>
+<h2 id="块元素特点"><a href="#块元素特点" class="headerlink" title="块元素特点"></a>块元素特点</h2><blockquote>
+<ul>
+<li>自己独占一行</li>
+<li>高度、宽度、外边距以及内边距都可以控制</li>
+<li>宽度默认是容器的（父级宽度）的 100%，也就是不指定宽度和父亲一样宽（通栏的盒子不指定宽度）</li>
+<li>是一个容器及盒子，里面可以存放行内或者块级元素</li>
+</ul>
+</blockquote>
+<h2 id="行内元素特点"><a href="#行内元素特点" class="headerlink" title="行内元素特点"></a>行内元素特点</h2><blockquote>
+<ul>
+<li>相邻行内元素在一行上，一行可以显示多个</li>
+<li>宽、高直接设置无效</li>
+<li>默认宽度是本身内容的宽度</li>
+<li>只能容纳文本或其他行内元素</li>
+</ul>
+</blockquote>
+<h2 id="行内块元素特点"><a href="#行内块元素特点" class="headerlink" title="行内块元素特点"></a>行内块元素特点</h2><blockquote>
+<ul>
+<li>和相邻行内元素（行内块元素）在一行上，但是它们之间会有空白缝隙</li>
+<li>默认宽度就是它本身内容的宽度（行内元素特点）</li>
+<li>高度、宽度、外边距以及内边距都可以控制（块级元素特点）</li>
+</ul>
+</blockquote>
+<h2 id="显示模式的转换"><a href="#显示模式的转换" class="headerlink" title="显示模式的转换"></a>显示模式的转换</h2><blockquote>
+<ul>
+<li>转换为块级元素 <code>display: block;</code></li>
+<li>转换为行内元素 <code>display: inline;</code></li>
+<li>转换为行内块元素 <code>display: inline-block;</code></li>
+</ul>
+</blockquote>
+<h2 id="背景属性"><a href="#背景属性" class="headerlink" title="背景属性"></a>背景属性</h2><blockquote>
+<ul>
+<li>背景颜色 <code>background-color: red/#FF0000/rgb(255,0,0);</code> 默认值 transparent 透明的</li>
+<li>背景图片 <code>background-image: none/url(地址);</code></li>
+<li>背景平铺 <code>background-repeat: repeat(默认)/no-repeat/repeat-x/repeat-y;</code></li>
+<li>背景位置 <code>background-position: x y;</code> x、y 的值可以是方位名词或者精确单位</li>
+</ul>
+<p><strong>方位名词</strong>：top、center、bottom、left、right如果指定的两个值都是方位名词，则两个值的前后顺序无关，如果只指定了一个方位名词，另一个值省略，第二个值默认是 center<br><strong>精确单位</strong>：像素值，第一个值肯定是 x 坐标，第二个值肯定是 y 坐标，如果只指定一个数值，该数值一定是 x 坐标，另一个默认垂直居中<br><strong>混合单位</strong>：指定两个值是精确单位和方位名词，第一个是 x 坐标，第二个是 y 坐标</p>
+<ul>
+<li>背景固定 <code>background-attachment: scroll(默认)/fixed;</code> 设置背景图像是否随着页面的其余部分滚动</li>
+<li>背景复合写法 <code>background: 背景颜色 背景图片地址 背景平铺 背景图像滚动 背景图片位置;</code></li>
+<li>背景色半透明 <code>background: rgba(0,0,0,0.3);</code></li>
+</ul>
+</blockquote>
+<h2 id="CSS-三大特性"><a href="#CSS-三大特性" class="headerlink" title="CSS 三大特性"></a>CSS 三大特性</h2><blockquote>
+<ul>
+<li>层叠性 相同的选择器设置相同的样式</li>
+<li>继承性 子标签会继承父标签的某些样式，例如 text-、font、line-、及 color 属性</li>
+<li>优先级 如下图</li>
+</ul>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>选择器</th>
+<th align="center">优先级</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>继承或 *</td>
+<td align="center">0,0,0,0</td>
+</tr>
+<tr>
+<td>伪元素选择器或元素选择器</td>
+<td align="center">0,0,0,1</td>
+</tr>
+<tr>
+<td>属性选择器、类选择器或伪类选择器</td>
+<td align="center">0,0,1,0</td>
+</tr>
+<tr>
+<td>ID 选择器</td>
+<td align="center">0,1,0,0</td>
+</tr>
+<tr>
+<td>行内样式 style=””</td>
+<td align="center">1,0,0,0</td>
+</tr>
+<tr>
+<td>!important</td>
+<td align="center">∞无穷大</td>
+</tr>
+</tbody></table>
+<h2 id="盒子模型"><a href="#盒子模型" class="headerlink" title="盒子模型"></a>盒子模型</h2><blockquote>
+<ul>
+<li>边框粗细 <code>border-width: px值;</code></li>
+<li>边框样式 <code>border-style: solid(实线)/dashed(虚线)/dotted(点线);</code></li>
+<li>边框颜色 <code>border-color: red/#FF0000/rgb(255,0,0);</code></li>
+<li>边框复合写法 <code>border: border-width(边框粗细) border-style(边框样式) border-color(边框颜色);</code><br>上边框 border-top 下边框 border-bottom 左边框 border-left 右边框 border-right</li>
+<li>表格细线边框合并 <code>border-collapse: collapse;</code> 表示相邻边框合并在一起</li>
+<li>边框会影响盒子的大小：● 测量盒子大小的时候，不量边框 ● 如果测量的时候包含了边框，则需要减去边框</li>
+<li>内边距 padding-top、padding-bottom、padding-left、padding-right</li>
+<li>外边距 margin-top、margin-bottom、margin-left、margin-right</li>
+<li>复合属性同下</li>
+</ul>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>内边距复合属性</th>
+<th align="center">解释</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>padding: 5px;</td>
+<td align="center">代表上下左右都是 5px 内边距</td>
+</tr>
+<tr>
+<td>padding: 5px 10px;</td>
+<td align="center">代表上下内边距是 5px，左右内边距是 10px</td>
+</tr>
+<tr>
+<td>padding: 5px 10px 20px;</td>
+<td align="center">代表上内边距是 5px，左右内边距 10px，下内边距 20px</td>
+</tr>
+<tr>
+<td>padding: 5px 10px 20px 30px;</td>
+<td align="center">代表上内边距是 5px，右内边距 10px，下内边距 20px，左内边距 30px</td>
+</tr>
+</tbody></table>
+<blockquote>
+<ul>
+<li>padding 会影响盒子实际大小：<strong>让 width/height 减去内边距的大小即可</strong>，如果盒子本身没有指定 width/height 属性，则此时 padding 不会撑开盒子大小</li>
+<li>块级盒子水平居中对齐：首先盒子必须指定了宽度（width），然后盒子的左右外边距都设置为 auto <code>margin-left: auto; margin-right: auto;</code> 或者 <code>margin: auto;</code> 或者 <code>margin: 0 auto;</code></li>
+<li>行内元素或者行内块元素水平居中给其父元素添加 <code>text-align: center</code> 即可</li>
+<li>对于两个嵌套关系（父子）的块元素，父元素有上外边距同时子元素也有上外边距，此时父元素会塌陷较大的外边距值<br>解决方案：1. 可以为父元素定义上边框 2. 可以为父元素定义内边距 3. 可以为父元素添加 <code>overflow: hidden;</code> 4. 有浮动、固定、绝对定位的盒子不会有塌陷问题</li>
+<li>清楚内外边距<br><code>* &#123;   padding: 0;   margin: 0; &#125;</code></li>
+<li>行内元素尽量只设置左右内外边距，不要设置上下内外边距，但是转换为块级或行内块元素就可以了</li>
+<li>去掉 li 前面的项目符号 <code>list-style: none;</code></li>
+</ul>
+</blockquote>
+<h2 id="圆角边框"><a href="#圆角边框" class="headerlink" title="圆角边框"></a>圆角边框</h2><blockquote>
+<ul>
+<li><code>border-radius: px值/百分比;</code></li>
+<li>如果是正方形，想要设置为一个圆，把数值修改为高度或者宽度的一半即可，或直接写 50% <code>border-radius: 50%;</code></li>
+<li>如果是矩形，设置为高度的一半，就可以做圆角矩形</li>
+<li>也可以单独设置各个角的大小 <code>border-radius: 左上角 右上角 右下角 左下角;</code></li>
+<li>分开写 border-top-left-radius、border-top-right-radius、border-bottom-left-radius、border-bottom-right-radius</li>
+</ul>
+</blockquote>
+<h2 id="阴影"><a href="#阴影" class="headerlink" title="阴影"></a>阴影</h2><blockquote>
+<ul>
+<li>盒子阴影 <code>box-shadow: h-shadow v-shadow blur spread color inset;</code></li>
+</ul>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>阴影属性</th>
+<th align="center">备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>h-shadow</td>
+<td align="center">必需，水平阴影的位置，允许负值</td>
+</tr>
+<tr>
+<td>v-shadow</td>
+<td align="center">必需，垂直阴影的位置，允许负值</td>
+</tr>
+<tr>
+<td>blur</td>
+<td align="center">可选，模糊距离（虚实）</td>
+</tr>
+<tr>
+<td>spread</td>
+<td align="center">可选，阴影的尺寸（大小）</td>
+</tr>
+<tr>
+<td>color</td>
+<td align="center">可选，阴影的颜色（rgba）</td>
+</tr>
+<tr>
+<td>inset(默认 outset)</td>
+<td align="center">可选，将外部阴影（outset）改为内部阴影</td>
+</tr>
+</tbody></table>
+<blockquote>
+<ul>
+<li>文字阴影 <code>text-shadow: h-shadow v-shadow blur color;</code></li>
+</ul>
+</blockquote>
+
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达，也可以邮件至 2623461774@qq.com </span>
     </div>
