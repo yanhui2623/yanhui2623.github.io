@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>HTML5</title>
+      <link href="/2023/01/17/HTML5/"/>
+      <url>/2023/01/17/HTML5/</url>
+      
+        <content type="html"><![CDATA[<h2 id="HTML5-新增语义化标签"><a href="#HTML5-新增语义化标签" class="headerlink" title="HTML5 新增语义化标签"></a>HTML5 新增语义化标签</h2><blockquote><ul><li><code>&lt;header&gt;&lt;/header&gt;</code> 头部标签</li><li><code>&lt;nav&gt;&lt;/nav&gt;</code> 导航标签</li><li><code>&lt;article&gt;&lt;/article&gt;</code> 内容标签</li><li><code>&lt;section&gt;&lt;/section&gt;</code> 定义文档某个区域</li><li><code>&lt;aside&gt;&lt;/aside&gt;</code> 侧边栏标签</li><li><code>&lt;footer&gt;&lt;/footer&gt;</code> 尾部标签</li><li><code>&lt;article&gt;&lt;/article&gt;</code> 可以包含多个 <code>&lt;section&gt;&lt;/section&gt;</code></li></ul></blockquote><h2 id="视频标签"><a href="#视频标签" class="headerlink" title="视频标签"></a>视频标签</h2><blockquote><p><code>&lt;video src=&quot;文件地址&quot; controls=&quot;controls&quot;&gt;&lt;/video&gt;</code></p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> 前端 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 前端 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>CSS进阶</title>
       <link href="/2023/01/16/CSS%E8%BF%9B%E9%98%B6/"/>
       <url>/2023/01/16/CSS%E8%BF%9B%E9%98%B6/</url>
