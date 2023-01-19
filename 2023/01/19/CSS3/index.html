@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>思科CCNA交换基础原理 | 颜回的个人笔记</title>
-  <meta name="keywords" content=" 网络安全 ">
-  <meta name="description" content="思科CCNA交换基础原理 | 颜回的个人笔记">
+  <title>CSS3 | 颜回的个人笔记</title>
+  <meta name="keywords" content=" 前端 ">
+  <meta name="description" content="CSS3 | 颜回的个人笔记">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="网站制作流程  客户沟通，制作方案 签订合同 预付定金（总额的 30% 左右） 初稿审核（制作原型图和 psd 效果图） 前台页面设计&#x2F;后台功能开发 测试验收 上线培训 后期维护   favicon.ico 图标制作  制作 favicon 图标：1. 先把目标图片切成 png 图片 2. 把 png 图片转换为 ico 图标，需借助第三方转换网站 http:&#x2F;&#x2F;www.bitbug.net&#x2F; 把">
 <meta property="og:type" content="article">
@@ -604,9 +604,9 @@
 </aside>
 <div id="post">
     <div class="pjax">
-        <article id="post-思科CCNA交换基础原理" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-CSS3" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">思科CCNA交换基础原理</h1>
+        <h1 class="article-title">CSS3</h1>
     
     <div class="article-meta">
         
@@ -616,7 +616,7 @@
             <i class="iconfont icon-category"></i>
             
             
-            <a  data-rel="网络安全">网络安全</a>
+            <a  data-rel="前端">前端</a>
             
         </span>
         
@@ -624,19 +624,19 @@
         <span class="tag">
             <i class="iconfont icon-tag"></i>
             
-            <a class="color5">网络安全</a>
+            <a class="color3">前端</a>
             
         </span>
         
     </div>
     <div class="article-meta">
         
-            Created At : <time class="date" title='Updated At: 2022-12-19 14:41:16'>2022-12-07 16:27</time>
+            Created At : <time class="date" title='Updated At: 2023-01-19 18:44:47'>2023-01-19 17:21</time>
         
     </div>
     <div class="article-meta">
         
-        <span>Count:921</span>
+        <span>Count:612</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -655,7 +655,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%A4%E6%8D%A2%E6%9C%BA%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86"><span class="toc-text">交换机工作原理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#VLAN-Virtual-Lan-%E8%99%9A%E6%8B%9F%E5%B1%80%E5%9F%9F%E7%BD%91"><span class="toc-text">VLAN Virtual Lan 虚拟局域网</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#VLAN-TRUNK"><span class="toc-text">VLAN TRUNK</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#VLAN-%E7%BC%96%E5%8F%B7%EF%BC%88%E4%B8%8D%E5%90%8C-vlan-%E7%9A%84-IP-%E5%9C%B0%E5%9D%80%E5%BA%94%E8%AF%A5%E5%9C%A8%E4%B8%8D%E5%90%8C%E7%BD%91%E6%AE%B5%EF%BC%89"><span class="toc-text">VLAN 编号（不同 vlan 的 IP 地址应该在不同网段）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE%E5%91%BD%E4%BB%A4"><span class="toc-text">配置命令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#VTP-%E5%8D%8F%E8%AE%AE%EF%BC%88%E6%80%9D%E7%A7%91%E4%B8%93%E6%9C%89%EF%BC%89"><span class="toc-text">VTP 协议（思科专有）</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#CSS3-%E5%B1%9E%E6%80%A7%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-text">CSS3 属性选择器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%93%E6%9E%84%E4%BC%AA%E7%B1%BB%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-text">结构伪类选择器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BC%AA%E5%85%83%E7%B4%A0%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-text">伪元素选择器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CSS-%E5%85%B6%E4%BB%96%E6%A0%B7%E5%BC%8F"><span class="toc-text">CSS 其他样式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CSS-%E8%BF%87%E6%B8%A1%EF%BC%88%E4%B8%80%E8%88%AC%E5%92%8C-hover-%E4%B8%80%E8%B5%B7%E6%90%AD%E9%85%8D%E4%BD%BF%E7%94%A8%EF%BC%89"><span class="toc-text">CSS 过渡（一般和 :hover 一起搭配使用）</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -671,30 +671,97 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="交换机工作原理"><a href="#交换机工作原理" class="headerlink" title="交换机工作原理"></a>交换机工作原理</h2><blockquote>
-<p>交换机为二层设备，有 mac 地址，也可以学习 Mac 地址，通过学习到的 mac 地址可以实现单播</p>
-<ol>
-<li>交换机基于数据的源 mac 地址进行学习</li>
-<li>基于数据的目的 mac 地址根据 mac 地址表进行转发</li>
-<li>对于数据的目的 mac 地址没有学习过，也就是没有 mac 地址表项，会执行泛洪</li>
-<li>交换机的接口可以学习多个 mac 地址</li>
-<li>一个 mac 地址只能被一个交换机接口学习，后来者优先</li>
-<li>对于广播和组播的数据，交换机一律采取泛洪的措施</li>
-</ol>
+        <h2 id="CSS3-属性选择器"><a href="#CSS3-属性选择器" class="headerlink" title="CSS3 属性选择器"></a>CSS3 属性选择器</h2><table>
+<thead>
+<tr>
+<th>选择符</th>
+<th align="center">简介</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>E[att]</td>
+<td align="center">选择具有 att 属性的元素</td>
+</tr>
+<tr>
+<td>E[att=”val”]</td>
+<td align="center">选择具有 att 属性且属性值等于 val 的 E 元素</td>
+</tr>
+<tr>
+<td>E[att^=”val”]</td>
+<td align="center">匹配具有 att 属性且属性值以 val 开头的 E 元素</td>
+</tr>
+<tr>
+<td>E[att$=”val”]</td>
+<td align="center">匹配具有 att 属性且属性值以 val 结尾的 E 元素</td>
+</tr>
+<tr>
+<td>E[att*=”val”]</td>
+<td align="center">匹配具有 att 属性且属性值中含有 val 的 E 元素</td>
+</tr>
+</tbody></table>
+<h2 id="结构伪类选择器"><a href="#结构伪类选择器" class="headerlink" title="结构伪类选择器"></a>结构伪类选择器</h2><table>
+<thead>
+<tr>
+<th>选择符</th>
+<th align="center">简介</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>E:first-child</td>
+<td align="center">匹配父元素中第一个子元素 E</td>
+</tr>
+<tr>
+<td>E:last-child</td>
+<td align="center">匹配父元素中最后一个子元素 E</td>
+</tr>
+<tr>
+<td>E:nth-child(n)</td>
+<td align="center">匹配父元素中第 n 个子元素 E</td>
+</tr>
+<tr>
+<td>E:first-of-type</td>
+<td align="center">指定类型 E 的第一个</td>
+</tr>
+<tr>
+<td>E:last-of-type</td>
+<td align="center">指定类型 E 的最后一个</td>
+</tr>
+<tr>
+<td>E:nth-of-type(n)</td>
+<td align="center">指定类型 E 的第 n 个</td>
+</tr>
+</tbody></table>
+<blockquote>
+<ul>
+<li>注意：n 可以是数字、关键字（even偶数、add奇数）、公式：n（选择所有）、2n/2n+1（相当于 even/odd）、n+5（从第五个开始到最后）、-n+5（前五个包含第五个）</li>
+<li>区别：nth-child 会把所有的盒子排列序号，执行的时候先看编号再看元素，nth-of-type 会把指定元素的盒子排列序号，执行的时候先看元素再看序号</li>
+</ul>
 </blockquote>
-<h2 id="VLAN-Virtual-Lan-虚拟局域网"><a href="#VLAN-Virtual-Lan-虚拟局域网" class="headerlink" title="VLAN Virtual Lan 虚拟局域网"></a>VLAN Virtual Lan 虚拟局域网</h2><blockquote>
-<p>同一个交换机的不同 VLAN 不能相互通信<br>不同交换机的相同 VLAN 可以相互通信的,必须把交换机与交换机相连的接口设置为 trunk<br>每个逻辑的 VLAN 就像一个独立的物理桥<br>交换机上的每一个端口都可以分配给不同的 VLAN<br>默认的情况下，所有的端口都属于 VLAN 1（公有），可以解释交换机相连的所有电脑只要配置完 IP 就可以通信<br>trunk 可以承载多个 VLAN 的数据，trunk 使用特殊的封装区分不同的 VLAN<br>当有数据经过 trunk 口的时候，trunk 会给该数据打上 VLAN 标记，到达对方交换机的时候，对方交换机会检查这个 VLAN 标记并摘除，最后发往目的 VLAN（交换机对帧进行 VLAN 标记有两种协议：ISL（思科内部） 和 802.1Q（国际））</p>
+<h2 id="伪元素选择器"><a href="#伪元素选择器" class="headerlink" title="伪元素选择器"></a>伪元素选择器</h2><blockquote>
+<ul>
+<li>利用 CSS 创建新标签元素，而不需要 HTML 标签，从而简化 HTML 结构</li>
+<li>::before 在元素内部的前面插入内容</li>
+<li>::after 在元素内部的后面插入内容</li>
+</ul>
 </blockquote>
-<h2 id="VLAN-TRUNK"><a href="#VLAN-TRUNK" class="headerlink" title="VLAN TRUNK"></a>VLAN TRUNK</h2><blockquote>
-<p>VLAN 干道：对于多个 VLAN 交换机来说，VLAN 干道就是两个交换机之间的连接，它在两个或两个以上的 VALN 之间传输通信。每个交换机必须确定它所收到的帧属于哪个 VLAN<br>一个交换机的任何端口都必须属于且只能属于一个 VLAN ，但当端口配置成 trunk 干道后，该端口就失去了它自身的 VLAN 标识，可以为该交换机内的所有 VLAN 传输数据</p>
-</blockquote>
-<h2 id="VLAN-编号（不同-vlan-的-IP-地址应该在不同网段）"><a href="#VLAN-编号（不同-vlan-的-IP-地址应该在不同网段）" class="headerlink" title="VLAN 编号（不同 vlan 的 IP 地址应该在不同网段）"></a>VLAN 编号（不同 vlan 的 IP 地址应该在不同网段）</h2><blockquote>
-<p>默认情况下交换机只存在 vlan 1，并且所有的接口都属于 vlan 1<br>交换机一功能支持 4096 个 vlan，范围是 0 至 4095 ，0 和 4095 不可用<br>vlan 1、vlan 1002、vlan 1003、vlan 1004、vlan 1005 交换机初始就有的 vlan ，不能被删除<br>vlan 1 可以使用，其他四个 vlan 不能用保留<br>1 到 1001 属于标准 vlan ，1006 到 4094 属于扩展 vlan ，思科 3560以上的型号才支持，vtp 协议的 transparent 模式才可用</p>
-</blockquote>
-<h2 id="配置命令"><a href="#配置命令" class="headerlink" title="配置命令"></a>配置命令</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">show vlan brief 查看vlan的接口表</span><br><span class="line">show interfaces trunk 查看 trunk 接口</span><br><span class="line">// 特权模式下创建 vlan</span><br><span class="line">vlan database</span><br><span class="line">vlan 编号 name 名字</span><br><span class="line">exit（这种方式固定退出并保存）</span><br><span class="line">// 全局模式下创建 vlan</span><br><span class="line">vlan 编号</span><br><span class="line">name 名字</span><br><span class="line">// 划分 vlan</span><br><span class="line">interface 接口</span><br><span class="line">switchport mode access</span><br><span class="line">switchport access vlan 编号</span><br><span class="line">// VLAN 干道接口</span><br><span class="line">interface 接口</span><br><span class="line">switchport mode trunk</span><br><span class="line">// 单臂路由配置</span><br><span class="line">interface 接口(f0/0)</span><br><span class="line">no shutdown</span><br><span class="line">interface 子接口(f0/0.1)</span><br><span class="line">encapsulation dot1Q vlan编号</span><br><span class="line">ip address 网关（x.x.x.1） 子网掩码(255.255.255.0)</span><br><span class="line">// 与单臂路由直连的交换机接口需要配置成 trunk，需要 trunk 标记送到子接口下</span><br><span class="line">interface 直连接口</span><br><span class="line">switchport mode trunk</span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">element<span class="selector-pseudo">::before</span> &#123;</span><br><span class="line">    <span class="comment">/* 设置宽度高度前需要转换为块级或行内块元素，因为伪元素属于行内元素 */</span></span><br><span class="line">    <span class="attribute">content</span>: <span class="string">&quot;&quot;</span>;</span><br><span class="line">    <span class="attribute">display</span>: block;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h2 id="VTP-协议（思科专有）"><a href="#VTP-协议（思科专有）" class="headerlink" title="VTP 协议（思科专有）"></a>VTP 协议（思科专有）</h2><blockquote>
-<p>一个能够宣告 VLAN 配置信息的信息系统<br>通过一个共有的管理域，维持 VLAN 配置信息的一致性<br>VTP 只能在主干端口发送要宣告的信息，支持混合的介质主干连接（快速以太网，FDDI，ATM）</p>
+<h2 id="CSS-其他样式"><a href="#CSS-其他样式" class="headerlink" title="CSS 其他样式"></a>CSS 其他样式</h2><blockquote>
+<ul>
+<li>盒子模型 <code>box-sizing: content-box(默认);</code> 盒子大小等于 width+padding+border</li>
+<li>盒子模型 <code>box-sizing: border-box;</code> 盒子大小等于 width</li>
+<li>滤镜 filter <code>filter: 函数();</code> 例如：<code>filter: blur(5px);</code> 模糊处理，数值越大越模糊</li>
+<li>calc 函数 <code>width: calc(100%-80px);</code></li>
+</ul>
+</blockquote>
+<h2 id="CSS-过渡（一般和-hover-一起搭配使用）"><a href="#CSS-过渡（一般和-hover-一起搭配使用）" class="headerlink" title="CSS 过渡（一般和 :hover 一起搭配使用）"></a>CSS 过渡（一般和 :hover 一起搭配使用）</h2><blockquote>
+<ul>
+<li><code>transition: 要过渡的属性 花费时间 运动曲线 何时开始;</code> 口诀：谁做过渡给谁加</li>
+<li>要过渡的属性：想要变化的 CSS 属性，如果想要所有属性都变化过渡，写一个 all 即可（多个属性可以用逗号分隔）</li>
+<li>花费时间：单位是 s</li>
+<li>运动曲线：默认 ease（逐渐慢下来）、linear（匀速）、ease-in（加速）</li>
+<li>何时开始：延迟触发时间，默认0s</li>
+</ul>
 </blockquote>
 
       
