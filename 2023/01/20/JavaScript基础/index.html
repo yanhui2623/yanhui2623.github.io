@@ -14,7 +14,7 @@
 <meta property="og:description" content="浏览器引擎  浏览器分成两部分：渲染引擎和 JS 引擎 渲染引擎：用来解析 HTML 与 CSS，俗称内核，比如 chrome 浏览器的 blink，老版本的 webkit JS 引擎：也称 JS 解释器，用来读取网页中 JavaScript 代码，对其处理后运行，比如 chrome 浏览器的 v8，浏览器本身并不会执行 JS 代码，而是通过内置 JS 引擎来执行 JS 代码，JS 引擎执行代码时">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2023-01-20T09:01:34.000Z">
-<meta property="article:modified_time" content="2023-01-20T10:38:54.338Z">
+<meta property="article:modified_time" content="2023-01-26T05:16:55.165Z">
 <meta property="article:author" content="颜回">
 <meta property="article:tag" content="前端">
 <meta name="twitter:card" content="summary">
@@ -270,7 +270,7 @@
     </div>
 </div>
 <input type="hidden" id="yelog_site_posts_number" value="28">
-<input type="hidden" id="yelog_site_word_count" value="25.4k">
+<input type="hidden" id="yelog_site_word_count" value="25.6k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
     <span id="busuanzi_value_site_pv"></span>
@@ -649,12 +649,12 @@
     </div>
     <div class="article-meta">
         
-            Created At : <time class="date" title='Updated At: 2023-01-20 18:38:54'>2023-01-20 17:01</time>
+            Created At : <time class="date" title='Updated At: 2023-01-26 13:16:55'>2023-01-20 17:01</time>
         
     </div>
     <div class="article-meta">
         
-        <span>Count:424</span>
+        <span>Count:658</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -673,7 +673,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B5%8F%E8%A7%88%E5%99%A8%E5%BC%95%E6%93%8E"><span class="toc-text">浏览器引擎</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#JavaScript-%E5%BC%95%E5%85%A5%E6%96%B9%E5%BC%8F"><span class="toc-text">JavaScript 引入方式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B3%A8%E9%87%8A"><span class="toc-text">注释</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E8%AF%AD%E5%8F%A5"><span class="toc-text">输入输出语句</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%98%E9%87%8F"><span class="toc-text">变量</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B5%8F%E8%A7%88%E5%99%A8%E5%BC%95%E6%93%8E"><span class="toc-text">浏览器引擎</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#JavaScript-%E5%BC%95%E5%85%A5%E6%96%B9%E5%BC%8F"><span class="toc-text">JavaScript 引入方式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B3%A8%E9%87%8A"><span class="toc-text">注释</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E8%AF%AD%E5%8F%A5"><span class="toc-text">输入输出语句</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%98%E9%87%8F"><span class="toc-text">变量</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-text">数据类型</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -726,6 +726,20 @@
 </ul>
 </blockquote>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> age = <span class="number">18</span>,</span><br><span class="line">    address = <span class="string">&#x27;火影村&#x27;</span>,</span><br><span class="line">    gz = <span class="number">2000</span>;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<ul>
+<li>声明变量特殊情况<br>只声明不赋值 <code>var sex; console.log(sex);</code> 输出 undefined<br>不声明不赋值 <code>console.log(tel);</code> 报错<br>不声明只赋值 <code>qq = 110; console.log(qq);</code> 输出 110</li>
+<li>变量命名规范：由字母，数字，下划线，美元符号（$）组成，不能以数字开头</li>
+</ul>
+</blockquote>
+<h2 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h2><blockquote>
+<ul>
+<li>在计算机中，不同的数据所占用的存储空间是不同的，为了便于把数据分成所需内存大小不同的数据，充分利用存储空间，于是定义了不同的数据类型，在代码运行时，变量的类型是由 js 引擎根据右边变量值来判断的</li>
+<li>javascript 拥有动态类型，意味着相同的变量可作用不同的类型<br><code>var x = 6;</code> x 是数字型<br><code>var x = &#39;Bill;&#39;</code> x 是字符串型</li>
+<li>数据类型的分类<br>简单数据类型：Number、String、Boolean、Undefined、Null<br>复杂数据类型：Object</li>
+</ul>
+</blockquote>
+
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达，也可以邮件至 2623461774@qq.com </span>
     </div>
