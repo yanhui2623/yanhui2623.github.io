@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>CSS2D与3D | 颜回的个人笔记</title>
+  <title>JavaScript对象 | 颜回的个人笔记</title>
   <meta name="keywords" content=" 前端 ">
-  <meta name="description" content="CSS2D与3D | 颜回的个人笔记">
+  <meta name="description" content="JavaScript对象 | 颜回的个人笔记">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="对象  对象由属性和方法组成，保存一个值可以用变量，保存多个值可以用数组，要保存一个人完整信息就用对象 创建对象的三种方式    1234567891011121314151617181920212223242526272829303132333435363738&#x2F;&#x2F; 利用字面量创建对象 var obj &#x3D; &amp;#123;&amp;#125;; 创建了一个空对象var obj &#x3D; &amp;#123;    una">
 <meta property="og:type" content="article">
@@ -640,9 +640,9 @@
 </aside>
 <div id="post">
     <div class="pjax">
-        <article id="post-CSS2D与3D" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-JavaScript对象" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">CSS2D与3D</h1>
+        <h1 class="article-title">JavaScript对象</h1>
     
     <div class="article-meta">
         
@@ -667,12 +667,12 @@
     </div>
     <div class="article-meta">
         
-            Created At : <time class="date" title='Updated At: 2023-01-20 16:29:51'>2023-01-20 11:42</time>
+            Created At : <time class="date" title='Updated At: 2023-01-27 19:30:56'>2023-01-27 18:45</time>
         
     </div>
     <div class="article-meta">
         
-        <span>Count:876</span>
+        <span>Count:734</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -691,7 +691,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#2D-%E8%BD%AC%E6%8D%A2%E4%B9%8B%E4%BD%8D%E7%A7%BB"><span class="toc-text">2D 转换之位移</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2D-%E8%BD%AC%E6%8D%A2%E4%B9%8B%E6%97%8B%E8%BD%AC"><span class="toc-text">2D 转换之旋转</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2D-%E8%BD%AC%E6%8D%A2%E4%B9%8B%E7%BC%A9%E6%94%BE"><span class="toc-text">2D 转换之缩放</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2D-%E8%BD%AC%E6%8D%A2%E7%BB%BC%E5%90%88%E5%86%99%E6%B3%95"><span class="toc-text">2D 转换综合写法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CSS-%E5%8A%A8%E7%94%BB%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8%EF%BC%88animation%EF%BC%89"><span class="toc-text">CSS 动画基本使用（animation）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3D-%E8%BD%AC%E6%8D%A2%E4%B9%8B%E4%BD%8D%E7%A7%BB"><span class="toc-text">3D 转换之位移</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3D-%E8%BD%AC%E6%8D%A2%E4%B9%8B%E6%97%8B%E8%BD%AC%EF%BC%88%E5%B7%A6%E6%89%8B%E5%AE%9A%E5%88%99%EF%BC%89"><span class="toc-text">3D 转换之旋转（左手定则）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3D-%E5%91%88%E7%8E%B0"><span class="toc-text">3D 呈现</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AF%B9%E8%B1%A1"><span class="toc-text">对象</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1"><span class="toc-text">内置对象</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -707,89 +707,45 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <blockquote>
-<p>transform(转换)是 CSS3 中具有颠覆性的特征之一，可以实现元素的位移、旋转、缩放等效果<br>二维坐标系：x 轴水平向右为正方向，y 轴垂直向下为正方向<br>三维坐标系：x 轴水平向右为正方向，y 轴垂直向下为正方向，z 轴垂直屏幕（也就是电脑指向你的方向）为正方向</p>
-</blockquote>
-<h2 id="2D-转换之位移"><a href="#2D-转换之位移" class="headerlink" title="2D 转换之位移"></a>2D 转换之位移</h2><blockquote>
+        <h2 id="对象"><a href="#对象" class="headerlink" title="对象"></a>对象</h2><blockquote>
 <ul>
-<li><code>transform: translate(x,y);</code> 向 x 轴移动 xpx 并向 y 轴移动 ypx</li>
-<li><code>transform: translateX(n);</code> 向 x 轴移动 npx</li>
-<li><code>transform: translateY(n);</code> 向 y 轴移动 npx</li>
-<li><code>transform: translate(50%,50%)</code> translate 中的百分比单位相对于自身元素宽高的 50%</li>
-<li>注意：位移不会影响到其他元素的位置，位移对行内标签没有效果</li>
+<li>对象由属性和方法组成，保存一个值可以用变量，保存多个值可以用数组，要保存一个人完整信息就用对象</li>
+<li><strong>创建对象的三种方式</strong> </li>
 </ul>
 </blockquote>
-<h2 id="2D-转换之旋转"><a href="#2D-转换之旋转" class="headerlink" title="2D 转换之旋转"></a>2D 转换之旋转</h2><blockquote>
-<ul>
-<li><code>transform: rotate(度数);</code> 单位是 deg（度数），角度为正顺时针，角度为负为逆时针</li>
-<li><code>transform-origin: x y;</code> (默认50% 50%) 设置元素转换中心点 可以用精确单位px或方位名词或百分比</li>
-</ul>
-</blockquote>
-<h2 id="2D-转换之缩放"><a href="#2D-转换之缩放" class="headerlink" title="2D 转换之缩放"></a>2D 转换之缩放</h2><blockquote>
-<ul>
-<li><code>transform: scale(x,y);</code></li>
-<li>默认 <code>transform: scale(1,1);</code> 宽和高都放大一倍，相当于没有放大</li>
-<li><code>transform: scale(2);</code> 只写一个参数，默认第二个参数与第一个参数参数相同</li>
-<li><code>transform: scale(0.5,0.5);</code> 缩小</li>
-<li><code>transform-origin: x y;</code> (默认50% 50%) 也可以设置旋转中心点缩放，默认以中心点缩放，不影响其他盒子</li>
-</ul>
-</blockquote>
-<h2 id="2D-转换综合写法"><a href="#2D-转换综合写法" class="headerlink" title="2D 转换综合写法"></a>2D 转换综合写法</h2><blockquote>
-<ul>
-<li><code>transform: translate() rotate() scale();</code></li>
-<li>注意：顺序会影响转换的效果，应将位移放到最前面</li>
-</ul>
-</blockquote>
-<h2 id="CSS-动画基本使用（animation）"><a href="#CSS-动画基本使用（animation）" class="headerlink" title="CSS 动画基本使用（animation）"></a>CSS 动画基本使用（animation）</h2><blockquote>
-<ul>
-<li>使用动画分为两个步骤：1. 先定义动画 2. 再使用动画</li>
-</ul>
-<ol>
-<li>定义动画：用 keyframes（关键帧） 定义动画：0%（from） 是动画的开始，100%（to） 是动画的完成，百分比就是持续时间的划分</li>
-</ol>
-</blockquote>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">@keyframes</span> 动画名称 &#123;</span><br><span class="line">    <span class="number">0%</span> &#123;</span><br><span class="line">        <span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="number">100%</span> &#123;</span><br><span class="line">        <span class="attribute">width</span>: <span class="number">200px</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 利用字面量创建对象 var obj = &#123;&#125;; 创建了一个空对象</span></span><br><span class="line"><span class="keyword">var</span> obj = &#123;</span><br><span class="line">    <span class="attr">uname</span>: <span class="string">&#x27;张三疯&#x27;</span>,</span><br><span class="line">    <span class="attr">age</span>: <span class="number">18</span>,</span><br><span class="line">    <span class="attr">sex</span>: <span class="string">&#x27;男&#x27;</span>,</span><br><span class="line">    <span class="attr">sayHi</span>: <span class="keyword">function</span>(<span class="params"></span>) &#123;  <span class="comment">// 匿名函数</span></span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;hi~&#x27;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 利用 new Object 创建对象</span></span><br><span class="line"><span class="keyword">var</span> obj = <span class="keyword">new</span> <span class="title class_">Object</span>();</span><br><span class="line">obj.<span class="property">uname</span> = <span class="string">&#x27;张三疯&#x27;</span>;</span><br><span class="line">obj.<span class="property">age</span> = <span class="number">18</span>;</span><br><span class="line">obj.<span class="property">sex</span> = <span class="string">&#x27;男&#x27;</span>;</span><br><span class="line">obj.<span class="property">sayHi</span> = <span class="keyword">function</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;Hi~&#x27;</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 利用构造函数创建对象 构造函数名首字母大写，以下为模板</span></span><br><span class="line"><span class="comment">// 利用构造函数创建对象的过程称为对象的实例化</span></span><br><span class="line"><span class="comment">/* function 构造函数名() &#123;</span></span><br><span class="line"><span class="comment">    this.属性 = 值;</span></span><br><span class="line"><span class="comment">    this.方法 = function() &#123;</span></span><br><span class="line"><span class="comment">        代码块;</span></span><br><span class="line"><span class="comment">    &#125;</span></span><br><span class="line"><span class="comment">&#125;</span></span><br><span class="line"><span class="comment">new 构造函数名(); */</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">Star</span>(<span class="params">uname, age, sex</span>) &#123;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">name</span> = uname;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">age</span> = age;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">sex</span> = sex;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">sing</span> = <span class="keyword">function</span>(<span class="params">sang</span>) &#123;</span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">log</span>(sang);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> ldh = <span class="keyword">new</span> <span class="title class_">Star</span>(<span class="string">&#x27;刘德华&#x27;</span>, <span class="number">18</span>, <span class="string">&#x27;男&#x27;</span>);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(ldh.<span class="property">name</span>);  <span class="comment">// 刘德华</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(ldh[<span class="string">&#x27;sex&#x27;</span>]);  <span class="comment">// 男</span></span><br><span class="line">ldh.<span class="title function_">sing</span>(<span class="string">&#x27;冰雨&#x27;</span>);  <span class="comment">// 冰雨</span></span><br></pre></td></tr></table></figure>
 <blockquote>
-<ol start="2">
-<li>使用动画两个必须属性 <code>animation-name: 动画名称; animation-duration: 持续时间;</code></li>
-</ol>
 <ul>
-<li>非必须属性，动画的速度曲线 <code>animation-timing-function: ease/linear;</code> 默认为 ease</li>
-<li>非必须属性，动画何时开始 <code>animation-delay: 0;</code> 默认为 0</li>
-<li>非必须属性，动画播放次数 <code>animation-iteration-count: 1/infinite;</code> 默认为 1</li>
-<li>非必须属性，动画在下一周期是否逆向播放 <code>animation-direction: normal/alternate;</code> 默认为 normal</li>
-<li>非必须属性，动画是否在运行或暂停 <code>animation-play-state: running/paused;</code> 默认为 running</li>
-<li>非必须属性，动画结束后状态 <code>animation-fill-mode: backwards(回到起始)/forwards(保持);</code> 默认为 backwards</li>
-<li><strong>动画简写属性</strong> <code>animation: name duration timing-function delay iteration-count direction fill-mode;</code></li>
+<li><strong>调用对象属性的两种方式</strong>：<br><code>对象名.属性名</code><br><code>对象名[&#39;属性名&#39;]</code></li>
+<li><strong>调用对象方法的方式</strong> <code>对象名.方法名()</code></li>
+<li><strong>new 关键字执行过程</strong>：1. new 构造函数可以在内存中创建一个空对象 2. this 就指向刚才创建的空对象 3. 执行构造函数里面的代码，给这个空对象添加属性和方法 4. 返回这个对象</li>
 </ul>
 </blockquote>
-<h2 id="3D-转换之位移"><a href="#3D-转换之位移" class="headerlink" title="3D 转换之位移"></a>3D 转换之位移</h2><blockquote>
+<blockquote>
 <ul>
-<li><code>transform: translateX(100px);</code> 在 X 轴上移动 100px</li>
-<li><code>transform: translateY(100px);</code> 在 Y 轴上移动 100px</li>
-<li><code>transform: translateZ(100px);</code> 在 Z 轴上移动 100px</li>
-<li><code>transform: translate3d(100px,100px,100px);</code></li>
-<li>透视 <code>perspective: 像素值;</code> 透视写在被观察元素的父元素上面</li>
+<li><strong>遍历对象</strong>：for…in 语句用于数组或者对象的属性进行循环操作 <code>for(变量 in 对象名) &#123;&#125;</code></li>
 </ul>
 </blockquote>
-<h2 id="3D-转换之旋转（左手定则）"><a href="#3D-转换之旋转（左手定则）" class="headerlink" title="3D 转换之旋转（左手定则）"></a>3D 转换之旋转（左手定则）</h2><blockquote>
-<ul>
-<li><code>transform: rotateX(45deg);</code> 沿着 x 轴正方向旋转 45 度</li>
-<li><code>transform: rotateY(45deg);</code> 沿着 Y 轴正方向旋转 45 度</li>
-<li><code>transform: rotateZ(45deg);</code> 沿着 Z 轴正方向旋转 45 度</li>
-<li><code>transform: rotate3d(x,y,z,deg);</code></li>
-<li><code>transform: rotate3d(1,0,0,45deg);</code> 沿着 x 轴正方向旋转 45 度</li>
-<li><code>transform: rotate3d(1,1,0,45deg);</code> 沿着 xy 轴对角线正方向旋转 45 度</li>
-</ul>
-</blockquote>
-<h2 id="3D-呈现"><a href="#3D-呈现" class="headerlink" title="3D 呈现"></a>3D 呈现</h2><blockquote>
-<ul>
-<li><code>transform-style: flat(默认);</code> 控制子元素是否开启三维立体环境，默认 flat 不开启 3d 立体空间</li>
-<li><code>transform-style: preserve-3d;</code> 子元素开启立体空间</li>
-<li>注意：代码写给父级，但是影响的是子盒子</li>
-</ul>
-</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = &#123;</span><br><span class="line">    <span class="attr">name</span>: <span class="string">&#x27;red&#x27;</span>,</span><br><span class="line">    <span class="attr">age</span>: <span class="number">18</span>,</span><br><span class="line">    <span class="attr">sex</span>: <span class="string">&#x27;男&#x27;</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> k <span class="keyword">in</span> obj) &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(k);  <span class="comment">// 属性名</span></span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(obj[k]);  <span class="comment">// 属性值</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
+<h2 id="内置对象"><a href="#内置对象" class="headerlink" title="内置对象"></a>内置对象</h2><blockquote>
+<ul>
+<li>javascript 语言自带的一些对象，供开发者使用</li>
+<li><strong>Math 对象</strong>：不是一个构造函数，不需要 new 来调用，直接使用即可</li>
+</ul>
+<p><strong>圆周率</strong> <code>console.log(Math.PI);</code>  // 3.141592653589793<br><strong>最大值</strong> <code>console.log(Math.max(1, 99, 3));</code>  // 99<br><code>console.log(Math.max(-1, -10));</code>  // -1<br><code>console.log(Math.max(1, 99, &#39;red&#39;));</code>  // NaN<br><code>console.log(Math.max());</code>  // -Infinity<br><strong>绝对值</strong> <code>console.log(Math.abs(-1));</code>  // 1<br><code>console.log(Math.abs(&#39;-1&#39;));</code>  // 1（隐式转换）<br><code>console.log(Math.abs(&#39;red&#39;));</code>  // NaN<br><em>三个取整方法</em><br><strong>Math.floor() 向下取整</strong><br><code>console.log(Math.floor(1.1));</code>  // 1<br><code>console.log(Math.floor(1.9));</code>  // 1<br><strong>Math.ceil() 向上取整</strong><br><code>console.log(Math.ceil(1.1));</code>  // 2<br><code>console.log(Math.ceil(1.9));</code>  // 2<br><strong>Math.round() 四舍五入</strong><br><code>console.log(Math.round(1.1));</code>  // 1<br><code>console.log(Math.round(1.5));</code>  // 2<br><code>console.log(Math.round(1.9));</code>  // 2<br><code>console.log(Math.round(-1.5));</code>  // -1（其他数字正常四舍五入，但是 .5 是往大了取）</p>
+<ul>
+<li><strong>随机数 random()</strong> <code>console.log(Math.random());</code>  // [0,1)</li>
+<li>要得到两个数之间的随机整数并且包含这两个整数</li>
+</ul>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">getRandom</span>(<span class="params">min, max</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="title class_">Math</span>.<span class="title function_">floor</span>(<span class="title class_">Math</span>.<span class="title function_">random</span>() * (max - min + <span class="number">1</span>)) + min;</span><br><span class="line">&#125;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title function_">getRandom</span>(<span class="number">1</span>,<span class="number">10</span>));  <span class="comment">// [1,10]</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<ul>
+<li><strong>日期对象</strong>：是一个构造函数，必须用 new 来创建日期对象</li>
+</ul>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达，也可以邮件至 2623461774@qq.com </span>
     </div>
