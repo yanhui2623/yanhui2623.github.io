@@ -14,7 +14,7 @@
 <meta property="og:description" content="对象  对象由属性和方法组成，保存一个值可以用变量，保存多个值可以用数组，要保存一个人完整信息就用对象 创建对象的三种方式    1234567891011121314151617181920212223242526272829303132333435363738&#x2F;&#x2F; 利用字面量创建对象 var obj &#x3D; &amp;#123;&amp;#125;; 创建了一个空对象var obj &#x3D; &amp;#123;    una">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2023-01-27T10:45:55.000Z">
-<meta property="article:modified_time" content="2023-01-27T11:30:56.751Z">
+<meta property="article:modified_time" content="2023-01-28T10:23:05.185Z">
 <meta property="article:author" content="颜回">
 <meta property="article:tag" content="前端">
 <meta name="twitter:card" content="summary">
@@ -270,7 +270,7 @@
     </div>
 </div>
 <input type="hidden" id="yelog_site_posts_number" value="30">
-<input type="hidden" id="yelog_site_word_count" value="30.6k">
+<input type="hidden" id="yelog_site_word_count" value="32.3k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
     <span id="busuanzi_value_site_pv"></span>
@@ -667,12 +667,12 @@
     </div>
     <div class="article-meta">
         
-            Created At : <time class="date" title='Updated At: 2023-01-27 19:30:56'>2023-01-27 18:45</time>
+            Created At : <time class="date" title='Updated At: 2023-01-28 18:23:05'>2023-01-27 18:45</time>
         
     </div>
     <div class="article-meta">
         
-        <span>Count:734</span>
+        <span>Count:2.5k</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -745,7 +745,148 @@
 <li><strong>日期对象</strong>：是一个构造函数，必须用 new 来创建日期对象</li>
 </ul>
 </blockquote>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 没有参数，返回系统当前时间</span></span><br><span class="line"><span class="keyword">var</span> date = <span class="keyword">new</span> <span class="title class_">Date</span>();  </span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(date);  <span class="comment">// Sat Jan 28 2023 13:49:05 GMT+0800 (中国标准时间)</span></span><br><span class="line"><span class="comment">// 有参数 数字型 2019,10,01,8,8,8 字符串型 &#x27;2019-10-1 8:8:8&#x27;</span></span><br><span class="line"><span class="keyword">var</span> date1 = <span class="keyword">new</span> <span class="title class_">Date</span>(<span class="number">2019</span>,<span class="number">10</span>,<span class="number">01</span>,<span class="number">8</span>,<span class="number">8</span>,<span class="number">8</span>);  </span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(date1);  <span class="comment">// Fri Nov 01 2019 08:08:08 GMT+0800 (中国标准时间)</span></span><br><span class="line"><span class="keyword">var</span> date2 = <span class="keyword">new</span> <span class="title class_">Date</span>(<span class="string">&#x27;2019-10-1 8:8:8&#x27;</span>);  </span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(date2);  <span class="comment">// Tue Oct 01 2019 08:08:08 GMT+0800 (中国标准时间)</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<ul>
+<li><strong>日期格式化</strong></li>
+</ul>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>函数</th>
+<th align="center">解释</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>getFullYear()</td>
+<td align="center">获取当年</td>
+</tr>
+<tr>
+<td>getMonth()</td>
+<td align="center">获取当月（0-11）</td>
+</tr>
+<tr>
+<td>getDate()</td>
+<td align="center">获取当天日期</td>
+</tr>
+<tr>
+<td>getDay()</td>
+<td align="center">获取星期几（周日0到周六6）</td>
+</tr>
+<tr>
+<td>getHours()</td>
+<td align="center">获取当前小时</td>
+</tr>
+<tr>
+<td>getMinutes()</td>
+<td align="center">获取当前分钟</td>
+</tr>
+<tr>
+<td>getSeconds()</td>
+<td align="center">获取当前秒钟</td>
+</tr>
+</tbody></table>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> date = <span class="keyword">new</span> <span class="title class_">Date</span>();  </span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(date.<span class="title function_">getFullYear</span>());  <span class="comment">// 2023</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(date.<span class="title function_">getMonth</span>() + <span class="number">1</span>);  <span class="comment">// 1</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(date.<span class="title function_">getDate</span>());  <span class="comment">// 28</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(date.<span class="title function_">getDay</span>());  <span class="comment">// 6</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<ul>
+<li><strong>获取日期总毫秒形式（时间戳）</strong>：距离 1970 年 1 月 1 日过了多少毫秒数</li>
+</ul>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 1. valueOf()</span></span><br><span class="line"><span class="keyword">var</span> date = <span class="keyword">new</span> <span class="title class_">Date</span>();  </span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(date.<span class="title function_">valueOf</span>());  <span class="comment">// 1674886028838</span></span><br><span class="line"><span class="comment">// 2. getTime()</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(date.<span class="title function_">getTime</span>());  <span class="comment">// 1674886028838</span></span><br><span class="line"><span class="comment">// 3. 最常用的写法</span></span><br><span class="line"><span class="keyword">var</span> date1 = +<span class="keyword">new</span> <span class="title class_">Date</span>();</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(date1);  <span class="comment">// 1674886028838</span></span><br><span class="line"><span class="comment">// 4. H5 新增</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title class_">Date</span>.<span class="title function_">now</span>());  <span class="comment">// 1674886028838</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<ul>
+<li><strong>总毫秒转换为天、时、分、秒（1 秒 = 1000 毫秒）</strong></li>
+</ul>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">d = <span class="built_in">parseInt</span>(总秒数 / <span class="number">60</span> / <span class="number">60</span> / <span class="number">24</span>);  <span class="comment">// 计算天数</span></span><br><span class="line">h = <span class="built_in">parseInt</span>(总秒数 / <span class="number">60</span> / <span class="number">60</span> % <span class="number">24</span>);  <span class="comment">// 计算小时</span></span><br><span class="line">m = <span class="built_in">parseInt</span>(总秒数 / <span class="number">60</span> % <span class="number">60</span>);  <span class="comment">// 计算分钟</span></span><br><span class="line">s = <span class="built_in">parseInt</span>(总秒数 % <span class="number">60</span>);  <span class="comment">// 计算当前秒数</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<ul>
+<li><strong>数组对象</strong>：创建数组</li>
+</ul>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 利用数组字面量</span></span><br><span class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>];</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(arr[<span class="number">0</span>]);  <span class="comment">// 1</span></span><br><span class="line"><span class="comment">// 利用 new Array()：var arr1 = new Array();  // 空数组</span></span><br><span class="line"><span class="keyword">var</span> arr2 = <span class="keyword">new</span> <span class="title class_">Array</span>(<span class="number">2</span>);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(arr2);  <span class="comment">// [empty × 2]</span></span><br><span class="line"><span class="keyword">var</span> arr3 = <span class="keyword">new</span> <span class="title class_">Array</span>(<span class="number">2</span>, <span class="number">3</span>);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(arr3);  <span class="comment">// [2, 3]</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<ul>
+<li><strong>检测是否为数组</strong></li>
+</ul>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 1. instanceof 运算符</span></span><br><span class="line"><span class="keyword">var</span> arr = [];</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(arr <span class="keyword">instanceof</span> <span class="title class_">Array</span>);  <span class="comment">// true</span></span><br><span class="line"><span class="comment">// 2. Array.isArray(参数) H5 新增 ie9 版本以上</span></span><br><span class="line"><span class="keyword">var</span> arr = [];</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title class_">Array</span>.<span class="title function_">isArray</span>(arr));  <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<ul>
+<li><strong>添加数组元素方法</strong></li>
+</ul>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 1. push() 在数组末尾添加一个或多个元素</span></span><br><span class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>];</span><br><span class="line">arr.<span class="title function_">push</span>(<span class="number">4</span>, <span class="string">&#x27;red&#x27;</span>);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(arr);  <span class="comment">// [1, 2, 3, 4, &#x27;red&#x27;]</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(arr.<span class="title function_">push</span>(<span class="number">5</span>));  <span class="comment">// 6（数组长度）</span></span><br><span class="line"><span class="comment">// 2. unshift() 在数组开头添加一个或多个元素 用法同 push()</span></span><br><span class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>];</span><br><span class="line">arr.<span class="title function_">unshift</span>(<span class="number">4</span>, <span class="string">&#x27;red&#x27;</span>);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(arr);  <span class="comment">// [4, &#x27;red&#x27;, 1, 2, 3]</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(arr.<span class="title function_">unshift</span>(<span class="number">5</span>));  <span class="comment">// 6</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<ul>
+<li><strong>删除数组元素方法</strong></li>
+</ul>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 1. pop() 它可以删除数组最后一个元素 一次只能删除一个</span></span><br><span class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="string">&#x27;red&#x27;</span>];</span><br><span class="line">arr.<span class="title function_">pop</span>();</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(arr);  <span class="comment">// [1, 2, 3, 4]</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(arr.<span class="title function_">pop</span>());  <span class="comment">// 4（删除的元素）</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(arr);  <span class="comment">// [1, 2, 3]</span></span><br><span class="line"><span class="comment">// 2. shift() 删除数组第一个元素 一次只能删除一个</span></span><br><span class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="string">&#x27;red&#x27;</span>];</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(arr.<span class="title function_">shift</span>());  <span class="comment">// 1</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(arr);  <span class="comment">// [2, 3, 4, &#x27;red&#x27;];</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<ul>
+<li><strong>数组排序</strong></li>
+</ul>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 翻转</span></span><br><span class="line"><span class="keyword">var</span> arr = [<span class="string">&#x27;pink&#x27;</span>, <span class="string">&#x27;red&#x27;</span>, <span class="string">&#x27;blue&#x27;</span>];</span><br><span class="line">arr.<span class="title function_">reverse</span>();</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(arr);  <span class="comment">// [&#x27;blue&#x27;, &#x27;red&#x27;, &#x27;pink&#x27;]</span></span><br><span class="line"><span class="comment">// 冒泡排序</span></span><br><span class="line"><span class="keyword">var</span> arr = [<span class="number">13</span>, <span class="number">4</span>, <span class="number">77</span>, <span class="number">1</span>, <span class="number">7</span>];</span><br><span class="line">arr.<span class="title function_">sort</span>(<span class="keyword">function</span>(<span class="params">a, b</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> a - b;  <span class="comment">// 升序  return b - a; 降序</span></span><br><span class="line">&#125;)</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(arr);  <span class="comment">// [1, 4, 7, 13, 77]</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<ul>
+<li><strong>数组索引</strong></li>
+</ul>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 1. indexOf(数组元素) 返回该数组元素的索引号</span></span><br><span class="line"><span class="keyword">var</span> arr = [<span class="string">&#x27;red&#x27;</span>, <span class="string">&#x27;green&#x27;</span>, <span class="string">&#x27;blue&#x27;</span>, <span class="string">&#x27;pink&#x27;</span>];</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(arr.<span class="title function_">indexOf</span>(<span class="string">&#x27;blue&#x27;</span>));  <span class="comment">// 2（只返回第一个满足条件的索引号）</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(arr.<span class="title function_">indexOf</span>(<span class="string">&#x27;yellow&#x27;</span>));  <span class="comment">// -1（数组里找不到元素，返回 -1）</span></span><br><span class="line"><span class="comment">// 2. lastIndexOf(数组元素) 返回最后一个符合条件的索引号</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<ul>
+<li><strong>数组转换为字符串</strong></li>
+</ul>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 1. toString() 将数组转换为字符串</span></span><br><span class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>];</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(arr.<span class="title function_">toString</span>());  <span class="comment">// 1,2,3</span></span><br><span class="line"><span class="comment">// 2. join(分隔符) 默认逗号分隔</span></span><br><span class="line"><span class="keyword">var</span> arr = [<span class="string">&#x27;green&#x27;</span>, <span class="string">&#x27;blue&#x27;</span>, <span class="string">&#x27;pink&#x27;</span>];</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(arr.<span class="title function_">join</span>(<span class="string">&#x27;&#x27;</span>));  <span class="comment">// greenbluepink</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(arr.<span class="title function_">join</span>(<span class="string">&#x27; &#x27;</span>));  <span class="comment">// green blue pink</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(arr.<span class="title function_">join</span>());  <span class="comment">// green,blue,pink</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(arr.<span class="title function_">join</span>(<span class="string">&#x27;-&#x27;</span>));  <span class="comment">// green-blue-pink</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<ul>
+<li><strong>数组其他方法</strong></li>
+</ul>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// concat() 用于合并两个或多个数组，不改变现有数组，返回一个新数组</span></span><br><span class="line"><span class="keyword">var</span> array1 = [<span class="string">&#x27;a&#x27;</span>, <span class="string">&#x27;b&#x27;</span>, <span class="string">&#x27;c&#x27;</span>];</span><br><span class="line"><span class="keyword">var</span> array2 = [<span class="string">&#x27;d&#x27;</span>, <span class="string">&#x27;e&#x27;</span>, <span class="string">&#x27;f&#x27;</span>];</span><br><span class="line"><span class="keyword">var</span> array3 = array1.<span class="title function_">concat</span>(array2);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(array3);  <span class="comment">// [&#x27;a&#x27;, &#x27;b&#x27;, &#x27;c&#x27;, &#x27;d&#x27;, &#x27;e&#x27;, &#x27;f&#x27;]</span></span><br><span class="line"><span class="keyword">var</span> array4 = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>];</span><br><span class="line"><span class="keyword">var</span> array5 = array1.<span class="title function_">concat</span>(array2, array4);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(array5);  <span class="comment">// [&#x27;a&#x27;, &#x27;b&#x27;, &#x27;c&#x27;, &#x27;d&#x27;, &#x27;e&#x27;, &#x27;f&#x27;, 1, 2, 3]</span></span><br><span class="line"><span class="comment">// splice() 通过删除或替换现有元素或者原地添加新的元素来修改数组，并以数组的形式返回被修改的内容，此方法会改变原数组</span></span><br><span class="line"><span class="keyword">var</span> myFish = [<span class="string">&#x27;angel&#x27;</span>, <span class="string">&#x27;clown&#x27;</span>, <span class="string">&#x27;mandarin&#x27;</span>, <span class="string">&#x27;sturgeon&#x27;</span>];</span><br><span class="line"><span class="keyword">var</span> removed = myFish.<span class="title function_">splice</span>(<span class="number">2</span>, <span class="number">0</span>, <span class="string">&#x27;drum&#x27;</span>);  <span class="comment">// 从索引 2 的位置开始删除 0 个元素，插入“drum”</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(myFish);  <span class="comment">// [&#x27;angel&#x27;, &#x27;clown&#x27;, &#x27;drum&#x27;, &#x27;mandarin&#x27;, &#x27;sturgeon&#x27;]</span></span><br><span class="line"><span class="keyword">var</span> myFish1 = [<span class="string">&#x27;angel&#x27;</span>, <span class="string">&#x27;clown&#x27;</span>, <span class="string">&#x27;drum&#x27;</span>, <span class="string">&#x27;mandarin&#x27;</span>, <span class="string">&#x27;sturgeon&#x27;</span>];</span><br><span class="line"><span class="keyword">var</span> removed = myFish1.<span class="title function_">splice</span>(<span class="number">3</span>, <span class="number">1</span>);  <span class="comment">// 从索引 3 的位置开始删除 1 个元素</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(myFish1);  <span class="comment">// [&#x27;angel&#x27;, &#x27;clown&#x27;, &#x27;drum&#x27;, &#x27;sturgeon&#x27;]</span></span><br><span class="line"><span class="keyword">var</span> myFish2 = [<span class="string">&#x27;angel&#x27;</span>, <span class="string">&#x27;clown&#x27;</span>, <span class="string">&#x27;mandarin&#x27;</span>, <span class="string">&#x27;sturgeon&#x27;</span>];</span><br><span class="line"><span class="keyword">var</span> removed = myFish2.<span class="title function_">splice</span>(<span class="number">2</span>);  <span class="comment">// 从索引 2 的位置开始删除所有元素</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(myFish2);  <span class="comment">// [&#x27;angel&#x27;, &#x27;clown&#x27;]</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<ul>
+<li><strong>字符串对象</strong></li>
+<li>基本包装类型（String、Number、Boolean），把简单数据类型包装成复杂数据类型，这样基本数据类型就有了属性和方法</li>
+</ul>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> str = <span class="string">&#x27;andy&#x27;</span>;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(str.<span class="property">length</span>);  <span class="comment">// 4</span></span><br><span class="line"><span class="comment">// 简单数据类型为什么会有复杂数据类型才有的属性，在声明 String 时相当于做了以下几步</span></span><br><span class="line"><span class="keyword">var</span> temp = <span class="keyword">new</span> <span class="title class_">String</span>(<span class="string">&#x27;andy&#x27;</span>);</span><br><span class="line">str = temp;</span><br><span class="line">temp = <span class="literal">null</span>;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<ul>
+<li><strong>字符串不可变</strong>：指字符串里面的值不可变，看上去改变了内容，但其实地址变了，在内存中新开辟了一个内存空间</li>
+<li><strong>根据字符返回位置</strong>：字符串的所有方法，都不会修改字符串本身，操作完成会返回一个新字符串</li>
+</ul>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// indexOf(&#x27;要查找的字符&#x27;, &#x27;起始的位置&#x27;)</span></span><br><span class="line"><span class="keyword">var</span> str = <span class="string">&#x27;改革春风吹满地，春天来了&#x27;</span>;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(str.<span class="title function_">indexOf</span>(<span class="string">&#x27;春&#x27;</span>));  <span class="comment">// 2</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(str.<span class="title function_">indexOf</span>(<span class="string">&#x27;春&#x27;</span>, <span class="number">3</span>));  <span class="comment">// 8</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<ul>
+<li><strong>根据位置返回字符</strong></li>
+</ul>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// charAt(index) 返回指定位置的字符，可以遍历所有字符</span></span><br><span class="line"><span class="keyword">var</span> str = <span class="string">&#x27;andy&#x27;</span>;</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; str.<span class="property">length</span>; i++) &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(str.<span class="title function_">charAt</span>(i));  <span class="comment">// a n d y</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// charCodeAt(index) 获取指定位置处字符的 ASCLL 码</span></span><br><span class="line"><span class="keyword">var</span> str = <span class="string">&#x27;andy&#x27;</span>;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(str.<span class="title function_">charCodeAt</span>(<span class="number">0</span>));  <span class="comment">// 97</span></span><br><span class="line"><span class="comment">// str[index] H5新增</span></span><br><span class="line"><span class="keyword">var</span> str = <span class="string">&#x27;andy&#x27;</span>;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(str[<span class="number">0</span>]);  <span class="comment">// a</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<ul>
+<li><strong>字符串拼接</strong></li>
+</ul>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// concat(&#x27;字符串1&#x27;, &#x27;字符串2&#x27;...)</span></span><br><span class="line"><span class="keyword">var</span> str = <span class="string">&#x27;andy&#x27;</span>;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(str.<span class="title function_">concat</span>(<span class="string">&#x27;red&#x27;</span>, <span class="string">&#x27;132&#x27;</span>));  <span class="comment">// andyred132</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<ul>
+<li><strong>替换字符</strong></li>
+</ul>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// replace(&#x27;被替换的字符&#x27;, &#x27;替换为的字符&#x27;) 只替换第一个符合条件的字符</span></span><br><span class="line"><span class="keyword">var</span> str = <span class="string">&#x27;andyandy&#x27;</span>;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(str.<span class="title function_">replace</span>(<span class="string">&#x27;a&#x27;</span>, <span class="string">&#x27;b&#x27;</span>));  <span class="comment">// bndyandy</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<ul>
+<li><strong>字符转为数组</strong></li>
+</ul>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// split(&#x27;分隔符&#x27;)</span></span><br><span class="line"><span class="keyword">var</span> str = <span class="string">&#x27;red,pink,blue&#x27;</span>;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(str.<span class="title function_">split</span>(<span class="string">&#x27;,&#x27;</span>));  <span class="comment">// [&#x27;red&#x27;, &#x27;pink&#x27;, &#x27;blue&#x27;]</span></span><br><span class="line"><span class="keyword">var</span> str1 = <span class="string">&#x27;red&amp;pink&amp;blue&#x27;</span>;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(str1.<span class="title function_">split</span>(<span class="string">&#x27;&amp;&#x27;</span>));  <span class="comment">// [&#x27;red&#x27;, &#x27;pink&#x27;, &#x27;blue&#x27;]</span></span><br><span class="line"><span class="keyword">var</span> str2 = <span class="string">&#x27;请输入用户名&#x27;</span>;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(str2.<span class="title function_">split</span>(<span class="string">&#x27;&#x27;</span>));  <span class="comment">// [&#x27;请&#x27;, &#x27;输&#x27;, &#x27;入&#x27;, &#x27;用&#x27;, &#x27;户&#x27;, &#x27;名&#x27;]</span></span><br></pre></td></tr></table></figure>
+
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达，也可以邮件至 2623461774@qq.com </span>
     </div>
