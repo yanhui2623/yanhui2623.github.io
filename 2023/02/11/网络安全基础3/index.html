@@ -14,7 +14,7 @@
 <meta property="og:description" content="用户管理 用户概述每一个用户登录系统后，拥有不同的操作权限每个账号有自己唯一的 SID（安全标识符 &#x3D; 系统 ID + 用户 ID）用户 SID：S-1-5-21-426206812-2579496042-14852678-500系统 SID：S-1-5-21-426206812-2579496042-14852678Windows 系统管理员 administrator 的 UID 是 500普">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2023-02-11T08:50:05.000Z">
-<meta property="article:modified_time" content="2023-02-11T11:29:11.967Z">
+<meta property="article:modified_time" content="2023-02-13T12:34:03.597Z">
 <meta property="article:author" content="颜回">
 <meta property="article:tag" content="网络安全">
 <meta name="twitter:card" content="summary">
@@ -270,7 +270,7 @@
     </div>
 </div>
 <input type="hidden" id="yelog_site_posts_number" value="33">
-<input type="hidden" id="yelog_site_word_count" value="36.5k">
+<input type="hidden" id="yelog_site_word_count" value="37.5k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
     <span id="busuanzi_value_site_pv"></span>
@@ -694,12 +694,12 @@
     </div>
     <div class="article-meta">
         
-            Created At : <time class="date" title='Updated At: 2023-02-11 19:29:11'>2023-02-11 16:50</time>
+            Created At : <time class="date" title='Updated At: 2023-02-13 20:34:03'>2023-02-11 16:50</time>
         
     </div>
     <div class="article-meta">
         
-        <span>Count:642</span>
+        <span>Count:1.6k</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -718,7 +718,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%94%A8%E6%88%B7%E7%AE%A1%E7%90%86"><span class="toc-text">用户管理</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%94%A8%E6%88%B7%E7%AE%A1%E7%90%86"><span class="toc-text">用户管理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%84%E7%AE%A1%E7%90%86"><span class="toc-text">组管理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%BF%9C%E7%A8%8B%E7%99%BB%E5%BD%95"><span class="toc-text">服务器远程登录</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A0%B4%E8%A7%A3-win-7-%E7%B3%BB%E7%BB%9F%E5%AF%86%E7%A0%81"><span class="toc-text">破解 win 7 系统密码</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -735,7 +735,53 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h2 id="用户管理"><a href="#用户管理" class="headerlink" title="用户管理"></a>用户管理</h2><blockquote>
-<p><strong>用户概述</strong><br>每一个用户登录系统后，拥有不同的操作权限<br>每个账号有自己唯一的 SID（安全标识符 = 系统 ID + 用户 ID）<br>用户 SID：S-1-5-21-426206812-2579496042-14852678-500<br>系统 SID：S-1-5-21-426206812-2579496042-14852678<br>Windows 系统管理员 administrator 的 UID 是 500<br>普通用户的 UID 是 1000 开始<br>不同的账户拥有不同的权限，为不同的账号赋予权限，也就是为不同账户的 SID 赋予权限<br>账号密码存储位置：<code>c:\windows\system32\config\SAM</code><br>windows 系统上，默认密码最长有效期 42 天<br><strong>内置账户</strong><br>给人使用的账户 administrator 管理员账户<br>guest 来宾账户<br>计算机服务组件相关的系统账号<br>system 系统账户（权限至高无上）<br>local services 本地服务账户（权限等于普通用户）<br>network services 网络服务账户（权限等于普通用户）<br>权限大小：system &gt; administrator &gt; local services = network services &gt; guest<br><strong>配置文件</strong><br>每个用户都有自己的配置文件（Linux 的 home 目录），在用户第一次登录时自动产生，路径是：<br>win 7/win 2008 <code>c:\用户\</code><br>xp/win 2003 <code>c:\Documents and Settings\</code><br>实操：点击我的电脑并右键点击管理，找到本地用户和组并点击，可以看到三个账户，分别是 administrator、guest、SUPPORT_388945a0（此文件可以删除没有影响），在空白处右键可以创建新用户<br><strong>常用命令</strong><br><code>net user</code> 列出当前账户列表<br><code>net user 用户名</code> 当前用户的详细信息<br><code>net user 用户名 新密码</code> 给用户更改密码（只有管理员可以更改），如果没有这个用户名则显示找不到用户名<br><code>net user 用户名 密码 /add</code> 新建用户<br><code>net user 用户名 /del</code> 删除用户<br><code>net user 用户名 /active:yes</code> 激活或禁用账户（yes 或 no）<br><strong>组管理</strong><br>组的作用：简化赋予的权限<br>赋权限的方式：用户——组——赋权限、用户——赋权限<br>内置组：内置组的权限默认已经被系统赋予 administrators管理员组、guests来宾组、users普通用户组、network网络配置组、print打印机组、Remote Desktop远程桌面组<br><code>net localgroup</code> 列出当前组列表<br><code>net localgroup administrators</code> 列出当前组的成员<br><code>net localgroup CEO /add</code> 添加新的组 CEO<br><code>net localgroup administrators shimisi /add</code> 添加 shimisi 到管理员组<br><code>net localgroup administrators shimisi /del</code> 删除管理员的 shimisi 账号<br>实操：点击我的电脑并右键点击管理，找到本地用户和组并点击，在点击组即可查看</p>
+<p><strong>用户概述</strong><br>每一个用户登录系统后，拥有不同的操作权限<br>每个账号有自己唯一的 SID（安全标识符 = 系统 ID + 用户 ID）<br>用户 SID：S-1-5-21-426206812-2579496042-14852678-500<br>系统 SID：S-1-5-21-426206812-2579496042-14852678<br>Windows 系统管理员 administrator 的 UID 是 500<br>普通用户的 UID 是 1000 开始<br>不同的账户拥有不同的权限，为不同的账号赋予权限，也就是为不同账户的 SID 赋予权限<br>账号密码存储位置：<code>c:\windows\system32\config\SAM</code><br>windows 系统上，默认密码最长有效期 42 天</p>
+</blockquote>
+<blockquote>
+<p><strong>内置账户</strong><br>给人使用的账户 administrator 管理员账户<br>guest 来宾账户<br>计算机服务组件相关的系统账号<br>system 系统账户（权限至高无上）<br>local services 本地服务账户（权限等于普通用户）<br>network services 网络服务账户（权限等于普通用户）<br>权限大小：system &gt; administrator &gt; local services = network services &gt; guest</p>
+</blockquote>
+<blockquote>
+<p><strong>配置文件</strong><br>每个用户都有自己的配置文件（Linux 的 home 目录），在用户第一次登录时自动产生，路径是：<br>win 7/win 2008 <code>c:\用户\</code><br>xp/win 2003 <code>c:\Documents and Settings\</code><br>实操：点击我的电脑并右键点击管理，找到本地用户和组并点击，可以看到三个账户，分别是 administrator、guest、SUPPORT_388945a0（此文件可以删除没有影响），在空白处右键可以创建新用户</p>
+</blockquote>
+<blockquote>
+<p><strong>常用命令</strong><br><code>net user</code> 列出当前账户列表<br><code>net user 用户名</code> 当前用户的详细信息<br><code>net user 用户名 新密码</code> 给用户更改密码（只有管理员可以更改），如果没有这个用户名则显示找不到用户名<br><code>net user 用户名 密码 /add</code> 新建用户<br><code>net user 用户名 /del</code> 删除用户<br><code>net user 用户名 /active:yes</code> 激活或禁用账户（yes 或 no）</p>
+</blockquote>
+<h2 id="组管理"><a href="#组管理" class="headerlink" title="组管理"></a>组管理</h2><blockquote>
+<p>组的作用：简化赋予的权限<br>赋权限的方式：用户——组——赋权限、用户——赋权限<br>内置组：内置组的权限默认已经被系统赋予 administrators管理员组、guests来宾组、users普通用户组、network网络配置组、print打印机组、Remote Desktop远程桌面组<br><code>net localgroup</code> 列出当前组列表<br><code>net localgroup administrators</code> 列出当前组的成员<br><code>net localgroup CEO /add</code> 添加新的组 CEO<br><code>net localgroup administrators shimisi /add</code> 添加 shimisi 到管理员组<br><code>net localgroup administrators shimisi /del</code> 删除管理员的 shimisi 账号<br>实操：点击我的电脑并右键点击管理，找到本地用户和组并点击，在点击组即可查看</p>
+</blockquote>
+<h2 id="服务器远程登录"><a href="#服务器远程登录" class="headerlink" title="服务器远程登录"></a>服务器远程登录</h2><blockquote>
+<p><strong>远程管理类型</strong><br>Windows 远程管理有两种类型：远程桌面（图形）、telnet（命令行）</p>
+</blockquote>
+<blockquote>
+<p><strong>远程桌面（图形）步骤</strong></p>
+<ol>
+<li>首先将配置网络，并实现客户机与服务器可以互通（连接在一个局域网下即可）</li>
+<li>服务器开启允许被远程控制：点击计算机（xp 或 2003 是点击我的电脑）并右键点击属性——远程设置——选择允许——确定</li>
+<li>客户机上：win + R——输入 mstsc 打开远程连接工具</li>
+<li>在 mstsc 工具上输入服务器的 IP 并点击确定</li>
+<li>输入服务器的账号及密码<br>注意：如果使用非管理员账户登录远程，需要在服务器上将用户加入到远程桌面内置组Remote Desktop Users 中 <code>net localgroup &quot;Remote Desktop Users&quot; 用户名 /add</code> 如果是第一次登录会进行初始化</li>
+</ol>
+</blockquote>
+<blockquote>
+<p><strong>telnet（命令行）步骤</strong></p>
+<ol>
+<li>首先将配置网络，并实现客户机与服务器可以互通（连接在一个局域网下即可）</li>
+<li>win + R 输入 services.msc 打开服务，找到 Telnet 服务并双击，启动类型改为自动，再点击应用并确定即可</li>
+<li>win + R 输入 cmd 打开终端 <code>telnet 目标IP地址</code>，输入账户密码，如果不是管理员账户会显示失去了跟主机的连接，说明该账户权限不够 <code>net localgroup &quot;TelnetClients&quot; 用户名 /add</code> 重新登录即可成功</li>
+</ol>
+</blockquote>
+<blockquote>
+<p><code>netstat -an</code> 可以查看本机开放的所有端口（23 telnet协议 3389 远程桌面协议RDP）</p>
+</blockquote>
+<h2 id="破解-win-7-系统密码"><a href="#破解-win-7-系统密码" class="headerlink" title="破解 win 7 系统密码"></a>破解 win 7 系统密码</h2><blockquote>
+<p>注意：win 7 和 win 10 系统已修补漏洞，则无法利用，cmd 工具路径：<code>c:\windows\system32\cmd</code>，用户账号密码存储位置：<code>c:\windows\system32\config\SAM</code>，修改账户密码命令：<code>net user 用户名 新密码</code></p>
+<ol>
+<li>在账户登录页面连续按五次 shift 键，会弹出一个粘滞键窗口（这个程序路径是 <code>c:\windows\system32\sethc.exe</code>）此操作验证系统是否有这个漏洞，部分 win 7 及 win 10 系统在未进入系统时，可以通过系统修复漏洞篡改系统文件名</li>
+<li>右下角关机再次开机在正在启动 windows 页面看见有windows 图标出来 点击帮助右边的按钮下拉菜单选择重新启动客户机，如果出现 “启动修复（推荐）” 及选项，如果没出现多尝试几次</li>
+<li>出现启动修复的对话框，有还原和取消两个选项，选择取消系统会自动修复等待几分钟后会弹出新的窗口，点击隐藏问题详细信息，将滚动条翻到最下面点击最后一个记事本的连接打开时一个 txt 文件</li>
+<li>点击文件再点击打开会显示所有文件（这时的 D 盘是 C 盘，因为 100M 的系统文件被当作了 C 盘，但是在 system32 目录下找不到 sethc.exe，因为当前显示的都是文件夹当然找不到，只要将下面的文件类型改为所有文件即可找到）找到 sethc（蓝白色图标） 并改名 sethc-bak（任意英文名），再找到 cmd，复制一份 cmd 并粘贴再改名为 sethc，关闭三个窗口剩余一个窗口点击完成</li>
+<li>系统启动完毕后，连续按 5 次 shift 键，将弹出 cmd 工具，使用 <code>net user 用户名 &quot;&quot;</code> 命令可以设置空密码或者将以前的密码改掉，或者另外建立一个用户，<code>net user 新用户 密码 /add</code>，并提升为管理员，<code>net localgroup administrators 新用户 /add</code>，重启一下新用户就生效了，注销后再删除新建的用户，<code>net user 新用户 /del</code>这样的好处是不修改当前用户的密码即可登录系统</li>
+</ol>
 </blockquote>
 
       
