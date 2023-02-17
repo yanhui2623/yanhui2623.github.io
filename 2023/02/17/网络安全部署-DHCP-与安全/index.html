@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>思科CCNA交换基础原理 | 颜回的个人笔记</title>
+  <title>网络安全部署 DHCP 与安全 | 颜回的个人笔记</title>
   <meta name="keywords" content=" 网络安全 ">
-  <meta name="description" content="思科CCNA交换基础原理 | 颜回的个人笔记">
+  <meta name="description" content="网络安全部署 DHCP 与安全 | 颜回的个人笔记">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="DHCP 作用 Dynamic Host Configuration Protocol 为动态主机配置协议，作用是自动分配 IP 地址  DHCP 相关概念 地址池&#x2F;作用域、IP、子网掩码、网关、DNS、租期、DHCP 协议端口是 67&#x2F;68  DHCP 优点 减少工作量，避免 IP 冲突，提高地址利用率  DHCP 原理 也称为 DHCP 租约过程，分为 4 个步骤：  客户机发送 DHCP D">
 <meta property="og:type" content="article">
@@ -694,9 +694,9 @@
 </aside>
 <div id="post">
     <div class="pjax">
-        <article id="post-思科CCNA交换基础原理" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-网络安全部署-DHCP-与安全" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">思科CCNA交换基础原理</h1>
+        <h1 class="article-title">网络安全部署 DHCP 与安全</h1>
     
     <div class="article-meta">
         
@@ -721,12 +721,12 @@
     </div>
     <div class="article-meta">
         
-            Created At : <time class="date" title='Updated At: 2022-12-19 14:41:16'>2022-12-07 16:27</time>
+            Created At : <time class="date" title='Updated At: 2023-02-17 18:21:04'>2023-02-17 12:24</time>
         
     </div>
     <div class="article-meta">
         
-        <span>Count:921</span>
+        <span>Count:1.9k</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -745,7 +745,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%A4%E6%8D%A2%E6%9C%BA%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86"><span class="toc-text">交换机工作原理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#VLAN-Virtual-Lan-%E8%99%9A%E6%8B%9F%E5%B1%80%E5%9F%9F%E7%BD%91"><span class="toc-text">VLAN Virtual Lan 虚拟局域网</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#VLAN-TRUNK"><span class="toc-text">VLAN TRUNK</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#VLAN-%E7%BC%96%E5%8F%B7%EF%BC%88%E4%B8%8D%E5%90%8C-vlan-%E7%9A%84-IP-%E5%9C%B0%E5%9D%80%E5%BA%94%E8%AF%A5%E5%9C%A8%E4%B8%8D%E5%90%8C%E7%BD%91%E6%AE%B5%EF%BC%89"><span class="toc-text">VLAN 编号（不同 vlan 的 IP 地址应该在不同网段）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE%E5%91%BD%E4%BB%A4"><span class="toc-text">配置命令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#VTP-%E5%8D%8F%E8%AE%AE%EF%BC%88%E6%80%9D%E7%A7%91%E4%B8%93%E6%9C%89%EF%BC%89"><span class="toc-text">VTP 协议（思科专有）</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#DHCP-%E4%BD%9C%E7%94%A8"><span class="toc-text">DHCP 作用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#DHCP-%E7%9B%B8%E5%85%B3%E6%A6%82%E5%BF%B5"><span class="toc-text">DHCP 相关概念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#DHCP-%E4%BC%98%E7%82%B9"><span class="toc-text">DHCP 优点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#DHCP-%E5%8E%9F%E7%90%86"><span class="toc-text">DHCP 原理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#DHCP-%E7%BB%AD%E7%BA%A6"><span class="toc-text">DHCP 续约</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%83%A8%E7%BD%B2-DHCP-%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="toc-text">部署 DHCP 服务器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE%E5%91%BD%E4%BB%A4"><span class="toc-text">配置命令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#DHCP-%E4%BF%9D%E7%95%99"><span class="toc-text">DHCP 保留</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%87%E4%BB%BD-DHCP-%E6%95%B0%E6%8D%AE"><span class="toc-text">备份 DHCP 数据</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%80%89%E9%A1%B9%E4%BC%98%E5%85%88%E7%BA%A7"><span class="toc-text">选项优先级</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#DHCP-%E6%94%BB%E5%87%BB%E4%B8%8E%E9%98%B2%E5%BE%A1"><span class="toc-text">DHCP 攻击与防御</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -761,30 +761,58 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="交换机工作原理"><a href="#交换机工作原理" class="headerlink" title="交换机工作原理"></a>交换机工作原理</h2><blockquote>
-<p>交换机为二层设备，有 mac 地址，也可以学习 Mac 地址，通过学习到的 mac 地址可以实现单播</p>
+        <h2 id="DHCP-作用"><a href="#DHCP-作用" class="headerlink" title="DHCP 作用"></a>DHCP 作用</h2><blockquote>
+<p>Dynamic Host Configuration Protocol 为动态主机配置协议，作用是自动分配 IP 地址</p>
+</blockquote>
+<h2 id="DHCP-相关概念"><a href="#DHCP-相关概念" class="headerlink" title="DHCP 相关概念"></a>DHCP 相关概念</h2><blockquote>
+<p>地址池/作用域、IP、子网掩码、网关、DNS、租期、DHCP 协议端口是 67/68</p>
+</blockquote>
+<h2 id="DHCP-优点"><a href="#DHCP-优点" class="headerlink" title="DHCP 优点"></a>DHCP 优点</h2><blockquote>
+<p>减少工作量，避免 IP 冲突，提高地址利用率</p>
+</blockquote>
+<h2 id="DHCP-原理"><a href="#DHCP-原理" class="headerlink" title="DHCP 原理"></a>DHCP 原理</h2><blockquote>
+<p>也称为 DHCP 租约过程，分为 4 个步骤：</p>
 <ol>
-<li>交换机基于数据的源 mac 地址进行学习</li>
-<li>基于数据的目的 mac 地址根据 mac 地址表进行转发</li>
-<li>对于数据的目的 mac 地址没有学习过，也就是没有 mac 地址表项，会执行泛洪</li>
-<li>交换机的接口可以学习多个 mac 地址</li>
-<li>一个 mac 地址只能被一个交换机接口学习，后来者优先</li>
-<li>对于广播和组播的数据，交换机一律采取泛洪的措施</li>
+<li>客户机发送 DHCP Discovery 广播包：客户机广播请求 IP 地址（广播包包含客户机的 MAC 地址，漏洞：利用 kali 伪造大量的 MAC 地址发送广播包，导致 DHCP 服务器的地址池用完从而瘫痪 ）</li>
+<li>服务器响应 DHCP Offer 广播包：可以有很多服务器响应提供 IP 地址（服务器先来着优先，但无子网掩码、网关等参数，漏洞：黑客可以用自己的电脑伪装 DHCP 服务器，同样发送 Offer 包并响应，因为网关不同，连上该服务器的客户机都不能上网）</li>
+<li>客户机发送 DHCP Request 广播包：客户机选择 IP（也可以认为确认使用哪个 IP）</li>
+<li>服务器响应 DHCP ACK（acknowledge） 广播包：服务器确定了租约，并提供网卡等详细参数 IP、子网掩码、网关、DNS、租期等，并且服务器会创建一个表，记录 哪个 MAC 地址租了哪个 IP，表示这个地址已经有人租了</li>
 </ol>
 </blockquote>
-<h2 id="VLAN-Virtual-Lan-虚拟局域网"><a href="#VLAN-Virtual-Lan-虚拟局域网" class="headerlink" title="VLAN Virtual Lan 虚拟局域网"></a>VLAN Virtual Lan 虚拟局域网</h2><blockquote>
-<p>同一个交换机的不同 VLAN 不能相互通信<br>不同交换机的相同 VLAN 可以相互通信的,必须把交换机与交换机相连的接口设置为 trunk<br>每个逻辑的 VLAN 就像一个独立的物理桥<br>交换机上的每一个端口都可以分配给不同的 VLAN<br>默认的情况下，所有的端口都属于 VLAN 1（公有），可以解释交换机相连的所有电脑只要配置完 IP 就可以通信<br>trunk 可以承载多个 VLAN 的数据，trunk 使用特殊的封装区分不同的 VLAN<br>当有数据经过 trunk 口的时候，trunk 会给该数据打上 VLAN 标记，到达对方交换机的时候，对方交换机会检查这个 VLAN 标记并摘除，最后发往目的 VLAN（交换机对帧进行 VLAN 标记有两种协议：ISL（思科内部） 和 802.1Q（国际））</p>
+<h2 id="DHCP-续约"><a href="#DHCP-续约" class="headerlink" title="DHCP 续约"></a>DHCP 续约</h2><blockquote>
+<p>当 50% 过后，客户机会再次发送 DHCP Request 包进行续约（续约成功后重新计时，租期在没有到期之前这个 IP 地址会一直属于你，即使关机），如果服务器无响应，则继续使用并在 87.5% 再次发送 DHCP Request 包进行续约，如仍然没有响应，并释放 IP 地址，及重新发送 DHCP Discovery 广播包来获取 IP 地址（如果还是无响应，网卡会自动分配一个 169.254.xx.xx/16 的地址，这是全球统一的无效地址，这样可以保证局域网内的通信，所有的地址都是 169.254.xx.xx/16）</p>
 </blockquote>
-<h2 id="VLAN-TRUNK"><a href="#VLAN-TRUNK" class="headerlink" title="VLAN TRUNK"></a>VLAN TRUNK</h2><blockquote>
-<p>VLAN 干道：对于多个 VLAN 交换机来说，VLAN 干道就是两个交换机之间的连接，它在两个或两个以上的 VALN 之间传输通信。每个交换机必须确定它所收到的帧属于哪个 VLAN<br>一个交换机的任何端口都必须属于且只能属于一个 VLAN ，但当端口配置成 trunk 干道后，该端口就失去了它自身的 VLAN 标识，可以为该交换机内的所有 VLAN 传输数据</p>
+<h2 id="部署-DHCP-服务器"><a href="#部署-DHCP-服务器" class="headerlink" title="部署 DHCP 服务器"></a>部署 DHCP 服务器</h2><blockquote>
+<ol>
+<li>一台 xp 一台 2003，两台计算机在同一个局域网下，xp 选择自动获取 IP 地址（这时双击本地连接，在选项栏中点击支持，再点击详细信息，会看到 IP 地址就是 169.254.x.x/16 的形式），2003 进行 DHCP 的部署</li>
+<li>在 2003 系统中点击开始菜单找到管理工具并选中会发现找不到因为 DHCP 属于插件必须得安装，这时打开我的电脑，双击 CD 驱动器，会弹出一个窗口选择“安装可选的 Windows 组件”会进入 Windows 组件向导页面，拉滚动条找到网络服务双击打开，会看到一个动态主机配置协议并打勾，依次点击确定、下一步等待安装完成即可，安装完成后会多出两个端口 67 和 68 命令 <code>netstat -an</code> 可以查看（该计算机作为服务器必须使用静态地址）</li>
+<li>在 2003 系统中点击开始菜单找到管理工具并选中这次就是出现 DHCP 的软件并打开，选中服务器并右键点击所有任务可以关闭服务器端口也关闭了（如果关闭或暂停按钮是灰色禁用状态则可能是 sever 服务未开启，win + R 输入 services.msc 找到 Sveer 服务启动即可）</li>
+<li>选中服务器并右键点击新建作用域，名称一般填公司名字，描述可以自由发挥，<strong>起始和结束的 IP 地址必须跟服务器的 IP 在同一个网段</strong>，长度和子网掩码根据情况定，完成后点击下一步会进入到排除地址的页面（没有排除可以直接点下一步），下一步会进入到设置租约时间的页面，依据情况设置合适的时间即可，接着点击下一步会选择配置 DHCP 的选项（DNS、网关等），选择是可以进入配置默认网关的页面（默认网关一般是以 .1 或 .254 结尾），点击下一步会进入配置 DNS 的页面根据实际情况填入当地的 DNS 服务器即可（可以多添加几个备份），点击下一步会进入 wins 配置页面，这个服务器已经淘汰所以直接点击下一步，接着选择现在激活完成配置</li>
+<li>在服务器选项下方会多出几个选项：地址池、地址续约（是客户机组约 IP 地址的情况）、保留（固定 IP 分给 固定客户机：选中保留并右键点击新建保留，支持类型选择两者即可）、作用域选项（显示网关和 DNS的信息）</li>
+<li>配置完 DHCP 服务器再去 xp 计算机查看 IP 地址（选中网上邻居并右键点击属性，再双击在选项栏中选择支持即可查看 IP 地址），如果地址未变化则选中并右键点击停用再启用该计算机会立即发送 DHCP Discovery 请求包，发现 xp 系统的 IP 地址是地址池中的地址后再进入 2003 点击地址续约可查看谁租用了 IP 地址，此时再停用并启用 xp 系统 IP 地址不会换，因为租约还未到期</li>
+<li>如果 xp 系统获取了一个不在你设置的地址池中的地址，则可能是虚拟机 VM 网络自带了 DHCP 服务器，我们要将它关闭：首先在双击打开 VMware 在选项栏中找到编辑并点击，再点击虚拟网络编辑器，再点击更改设置用管理员身份运行，选中需要关闭自带 DHCP 的 VM 网络，将下方的使用本地 DHCP 服务器将 IP 地址分配给虚拟机取消打勾，最后点击确定</li>
+</ol>
 </blockquote>
-<h2 id="VLAN-编号（不同-vlan-的-IP-地址应该在不同网段）"><a href="#VLAN-编号（不同-vlan-的-IP-地址应该在不同网段）" class="headerlink" title="VLAN 编号（不同 vlan 的 IP 地址应该在不同网段）"></a>VLAN 编号（不同 vlan 的 IP 地址应该在不同网段）</h2><blockquote>
-<p>默认情况下交换机只存在 vlan 1，并且所有的接口都属于 vlan 1<br>交换机一功能支持 4096 个 vlan，范围是 0 至 4095 ，0 和 4095 不可用<br>vlan 1、vlan 1002、vlan 1003、vlan 1004、vlan 1005 交换机初始就有的 vlan ，不能被删除<br>vlan 1 可以使用，其他四个 vlan 不能用保留<br>1 到 1001 属于标准 vlan ，1006 到 4094 属于扩展 vlan ，思科 3560以上的型号才支持，vtp 协议的 transparent 模式才可用</p>
+<h2 id="配置命令"><a href="#配置命令" class="headerlink" title="配置命令"></a>配置命令</h2><blockquote>
+<p><code>ipconfig</code> 查看 IP 地址<br><code>ipconfig /all</code> 查看 IP 地址的详细信息<br><code>ipconfig /release</code> 释放 IP 地址<br><code>ipconfig /renew</code> 重新获取 IP 地址（无 IP 地址使用该命令发送 DHCP Discovery 广播包获取 IP 地址等详细信息，有 IP 地址使用该命令发送 DHCP Request 广播包进行续约）<br>释放地址的两种情况：1. 使用命令 <code>ipconfig /release</code> 2. 在“点击使用下面的 IP 地址”并配置完成点击确定后就会释放</p>
 </blockquote>
-<h2 id="配置命令"><a href="#配置命令" class="headerlink" title="配置命令"></a>配置命令</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">show vlan brief 查看vlan的接口表</span><br><span class="line">show interfaces trunk 查看 trunk 接口</span><br><span class="line">// 特权模式下创建 vlan</span><br><span class="line">vlan database</span><br><span class="line">vlan 编号 name 名字</span><br><span class="line">exit（这种方式固定退出并保存）</span><br><span class="line">// 全局模式下创建 vlan</span><br><span class="line">vlan 编号</span><br><span class="line">name 名字</span><br><span class="line">// 划分 vlan</span><br><span class="line">interface 接口</span><br><span class="line">switchport mode access</span><br><span class="line">switchport access vlan 编号</span><br><span class="line">// VLAN 干道接口</span><br><span class="line">interface 接口</span><br><span class="line">switchport mode trunk</span><br><span class="line">// 单臂路由配置</span><br><span class="line">interface 接口(f0/0)</span><br><span class="line">no shutdown</span><br><span class="line">interface 子接口(f0/0.1)</span><br><span class="line">encapsulation dot1Q vlan编号</span><br><span class="line">ip address 网关（x.x.x.1） 子网掩码(255.255.255.0)</span><br><span class="line">// 与单臂路由直连的交换机接口需要配置成 trunk，需要 trunk 标记送到子接口下</span><br><span class="line">interface 直连接口</span><br><span class="line">switchport mode trunk</span><br></pre></td></tr></table></figure>
-
-<h2 id="VTP-协议（思科专有）"><a href="#VTP-协议（思科专有）" class="headerlink" title="VTP 协议（思科专有）"></a>VTP 协议（思科专有）</h2><blockquote>
-<p>一个能够宣告 VLAN 配置信息的信息系统<br>通过一个共有的管理域，维持 VLAN 配置信息的一致性<br>VTP 只能在主干端口发送要宣告的信息，支持混合的介质主干连接（快速以太网，FDDI，ATM）</p>
+<h2 id="DHCP-保留"><a href="#DHCP-保留" class="headerlink" title="DHCP 保留"></a>DHCP 保留</h2><blockquote>
+<p>作用：固定 IP 分给 固定 MAC<br>选中保留并右键点击新建保留，填入想要分配的IP 地址和客户机的 MAC 地址支持类型选择两者即可</p>
+</blockquote>
+<h2 id="备份-DHCP-数据"><a href="#备份-DHCP-数据" class="headerlink" title="备份 DHCP 数据"></a>备份 DHCP 数据</h2><blockquote>
+<ol>
+<li>打开 DHCP 服务器软件并选中服务器并右键点击备份，选择合适的文件夹点击确定即完成了服务器数据的备份</li>
+<li>如果作用域不小心丢失，选中服务器并右键点击还原选择备份的路径即可还原</li>
+</ol>
+</blockquote>
+<h2 id="选项优先级"><a href="#选项优先级" class="headerlink" title="选项优先级"></a>选项优先级</h2><blockquote>
+<p>作用域选项优先级高于服务器选项优先级</p>
+</blockquote>
+<h2 id="DHCP-攻击与防御"><a href="#DHCP-攻击与防御" class="headerlink" title="DHCP 攻击与防御"></a>DHCP 攻击与防御</h2><blockquote>
+<ol>
+<li>攻击 DHCP 服务器：频繁的发送伪装 DHCP 请求，直到将 DHCP 地址池资源耗尽<br>防御：在管理型交换机的端口上做动态 MAC 地址绑定</li>
+<li>伪装 DHCP 服务器攻击：黑客通过将自己部署为 DHCP 服务器，为客户机提供非法 IP 地址<br>防御：在管理型交换机上除合法的 DHCP 服务器所在接口外，全部设置为禁止发送 DHCP Offer 广播包</li>
+</ol>
 </blockquote>
 
       

@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>网络安全部署 DHCP 与安全</title>
+      <link href="/2023/02/17/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E9%83%A8%E7%BD%B2-DHCP-%E4%B8%8E%E5%AE%89%E5%85%A8/"/>
+      <url>/2023/02/17/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E9%83%A8%E7%BD%B2-DHCP-%E4%B8%8E%E5%AE%89%E5%85%A8/</url>
+      
+        <content type="html"><![CDATA[<h2 id="DHCP-作用"><a href="#DHCP-作用" class="headerlink" title="DHCP 作用"></a>DHCP 作用</h2><blockquote><p>Dynamic Host Configuration Protocol 为动态主机配置协议，作用是自动分配 IP 地址</p></blockquote><h2 id="DHCP-相关概念"><a href="#DHCP-相关概念" class="headerlink" title="DHCP 相关概念"></a>DHCP 相关概念</h2><blockquote><p>地址池/作用域、IP、子网掩码、网关、DNS、租期、DHCP 协议端口是 67/68</p></blockquote><h2 id="DHCP-优点"><a href="#DHCP-优点" class="headerlink" title="DHCP 优点"></a>DHCP 优点</h2><blockquote><p>减少工作量，避免 IP 冲突，提高地址利用率</p></blockquote><h2 id="DHCP-原理"><a href="#DHCP-原理" class="headerlink" title="DHCP 原理"></a>DHCP 原理</h2><blockquote><p>也称为 DHCP 租约过程，分为 4 个步骤：</p><ol><li>客户机发送 DHCP Discovery 广播包：客户机广播请求 IP 地址（广播包包含客户机的 MAC 地址，漏洞：利用 kali 伪造大量的 MAC 地址发送广播包，导致 DHCP 服务器的地址池用完从而瘫痪 ）</li><li>服务器响应 DHCP Offer 广播包：可以有很多服务器响应提供 IP 地址（服务器先来着优先，但无子网掩码、网关等参数，漏洞：黑客可以用自己的电脑伪装 DHCP 服务器，同样发送 Offer 包并响应，因为网关不同，连上该服务器的客户机都不能上网）</li><li>客户机发送 DHCP Request 广播包：客户机选择 IP（也可以认为确认使用哪个 IP）</li><li>服务器响应 DHCP ACK（acknowledge） 广播包：服务器确定了租约，并提供网卡等详细参数 IP、子网掩码、网关、DNS、租期等，并且服务器会创建一个表，记录 哪个 MAC 地址租了哪个 IP，表示这个地址已经有人租了</li></ol></blockquote><h2 id="DHCP-续约"><a href="#DHCP-续约" class="headerlink" title="DHCP 续约"></a>DHCP 续约</h2><blockquote><p>当 50% 过后，客户机会再次发送 DHCP Request 包进行续约（续约成功后重新计时，租期在没有到期之前这个 IP 地址会一直属于你，即使关机），如果服务器无响应，则继续使用并在 87.5% 再次发送 DHCP Request 包进行续约，如仍然没有响应，并释放 IP 地址，及重新发送 DHCP Discovery 广播包来获取 IP 地址（如果还是无响应，网卡会自动分配一个 169.254.xx.xx/16 的地址，这是全球统一的无效地址，这样可以保证局域网内的通信，所有的地址都是 169.254.xx.xx/16）</p></blockquote><h2 id="部署-DHCP-服务器"><a href="#部署-DHCP-服务器" class="headerlink" title="部署 DHCP 服务器"></a>部署 DHCP 服务器</h2><blockquote><ol><li>一台 xp 一台 2003，两台计算机在同一个局域网下，xp 选择自动获取 IP 地址（这时双击本地连接，在选项栏中点击支持，再点击详细信息，会看到 IP 地址就是 169.254.x.x/16 的形式），2003 进行 DHCP 的部署</li><li>在 2003 系统中点击开始菜单找到管理工具并选中会发现找不到因为 DHCP 属于插件必须得安装，这时打开我的电脑，双击 CD 驱动器，会弹出一个窗口选择“安装可选的 Windows 组件”会进入 Windows 组件向导页面，拉滚动条找到网络服务双击打开，会看到一个动态主机配置协议并打勾，依次点击确定、下一步等待安装完成即可，安装完成后会多出两个端口 67 和 68 命令 <code>netstat -an</code> 可以查看（该计算机作为服务器必须使用静态地址）</li><li>在 2003 系统中点击开始菜单找到管理工具并选中这次就是出现 DHCP 的软件并打开，选中服务器并右键点击所有任务可以关闭服务器端口也关闭了（如果关闭或暂停按钮是灰色禁用状态则可能是 sever 服务未开启，win + R 输入 services.msc 找到 Sveer 服务启动即可）</li><li>选中服务器并右键点击新建作用域，名称一般填公司名字，描述可以自由发挥，<strong>起始和结束的 IP 地址必须跟服务器的 IP 在同一个网段</strong>，长度和子网掩码根据情况定，完成后点击下一步会进入到排除地址的页面（没有排除可以直接点下一步），下一步会进入到设置租约时间的页面，依据情况设置合适的时间即可，接着点击下一步会选择配置 DHCP 的选项（DNS、网关等），选择是可以进入配置默认网关的页面（默认网关一般是以 .1 或 .254 结尾），点击下一步会进入配置 DNS 的页面根据实际情况填入当地的 DNS 服务器即可（可以多添加几个备份），点击下一步会进入 wins 配置页面，这个服务器已经淘汰所以直接点击下一步，接着选择现在激活完成配置</li><li>在服务器选项下方会多出几个选项：地址池、地址续约（是客户机组约 IP 地址的情况）、保留（固定 IP 分给 固定客户机：选中保留并右键点击新建保留，支持类型选择两者即可）、作用域选项（显示网关和 DNS的信息）</li><li>配置完 DHCP 服务器再去 xp 计算机查看 IP 地址（选中网上邻居并右键点击属性，再双击在选项栏中选择支持即可查看 IP 地址），如果地址未变化则选中并右键点击停用再启用该计算机会立即发送 DHCP Discovery 请求包，发现 xp 系统的 IP 地址是地址池中的地址后再进入 2003 点击地址续约可查看谁租用了 IP 地址，此时再停用并启用 xp 系统 IP 地址不会换，因为租约还未到期</li><li>如果 xp 系统获取了一个不在你设置的地址池中的地址，则可能是虚拟机 VM 网络自带了 DHCP 服务器，我们要将它关闭：首先在双击打开 VMware 在选项栏中找到编辑并点击，再点击虚拟网络编辑器，再点击更改设置用管理员身份运行，选中需要关闭自带 DHCP 的 VM 网络，将下方的使用本地 DHCP 服务器将 IP 地址分配给虚拟机取消打勾，最后点击确定</li></ol></blockquote><h2 id="配置命令"><a href="#配置命令" class="headerlink" title="配置命令"></a>配置命令</h2><blockquote><p><code>ipconfig</code> 查看 IP 地址<br><code>ipconfig /all</code> 查看 IP 地址的详细信息<br><code>ipconfig /release</code> 释放 IP 地址<br><code>ipconfig /renew</code> 重新获取 IP 地址（无 IP 地址使用该命令发送 DHCP Discovery 广播包获取 IP 地址等详细信息，有 IP 地址使用该命令发送 DHCP Request 广播包进行续约）<br>释放地址的两种情况：1. 使用命令 <code>ipconfig /release</code> 2. 在“点击使用下面的 IP 地址”并配置完成点击确定后就会释放</p></blockquote><h2 id="DHCP-保留"><a href="#DHCP-保留" class="headerlink" title="DHCP 保留"></a>DHCP 保留</h2><blockquote><p>作用：固定 IP 分给 固定 MAC<br>选中保留并右键点击新建保留，填入想要分配的IP 地址和客户机的 MAC 地址支持类型选择两者即可</p></blockquote><h2 id="备份-DHCP-数据"><a href="#备份-DHCP-数据" class="headerlink" title="备份 DHCP 数据"></a>备份 DHCP 数据</h2><blockquote><ol><li>打开 DHCP 服务器软件并选中服务器并右键点击备份，选择合适的文件夹点击确定即完成了服务器数据的备份</li><li>如果作用域不小心丢失，选中服务器并右键点击还原选择备份的路径即可还原</li></ol></blockquote><h2 id="选项优先级"><a href="#选项优先级" class="headerlink" title="选项优先级"></a>选项优先级</h2><blockquote><p>作用域选项优先级高于服务器选项优先级</p></blockquote><h2 id="DHCP-攻击与防御"><a href="#DHCP-攻击与防御" class="headerlink" title="DHCP 攻击与防御"></a>DHCP 攻击与防御</h2><blockquote><ol><li>攻击 DHCP 服务器：频繁的发送伪装 DHCP 请求，直到将 DHCP 地址池资源耗尽<br>防御：在管理型交换机的端口上做动态 MAC 地址绑定</li><li>伪装 DHCP 服务器攻击：黑客通过将自己部署为 DHCP 服务器，为客户机提供非法 IP 地址<br>防御：在管理型交换机上除合法的 DHCP 服务器所在接口外，全部设置为禁止发送 DHCP Offer 广播包</li></ol></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> 网络安全 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 网络安全 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>网络安全文件共享服务器(CIFS 协议)</title>
       <link href="/2023/02/15/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E6%96%87%E4%BB%B6%E5%85%B1%E4%BA%AB%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
       <url>/2023/02/15/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E6%96%87%E4%BB%B6%E5%85%B1%E4%BA%AB%E6%9C%8D%E5%8A%A1%E5%99%A8/</url>
