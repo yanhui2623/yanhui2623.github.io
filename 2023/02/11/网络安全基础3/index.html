@@ -6,15 +6,15 @@
   <meta name="keywords" content=" 网络安全 ">
   <meta name="description" content="网络安全 windows 系统基础 | 颜回的个人笔记">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<meta name="description" content="DHCP 作用 Dynamic Host Configuration Protocol 为动态主机配置协议，作用是自动分配 IP 地址  DHCP 相关概念 地址池&#x2F;作用域、IP、子网掩码、网关、DNS、租期、DHCP 协议端口是 67&#x2F;68  DHCP 优点 减少工作量，避免 IP 冲突，提高地址利用率  DHCP 原理 也称为 DHCP 租约过程，分为 4 个步骤：  客户机发送 DHCP D">
+<meta name="description" content="DNS Domain Name Service 域名服务，为客户机提供域名解析服务  域名组成 如 www.sina.com.cn 是一个域名，从严格意义上讲， “sina.com.cn” 才被称为域名（全球唯一），而 “www” 是主机名“主机名.域名” 称为完全限定域名（FQDN：Fully Qualified Domain Name）。一个域名下可以有多个主机，域名全球唯一，那么 “主机名.">
 <meta property="og:type" content="article">
-<meta property="og:title" content="网络安全部署 DHCP 与安全">
-<meta property="og:url" content="http://example.com/2023/02/17/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E9%83%A8%E7%BD%B2-DHCP-%E4%B8%8E%E5%AE%89%E5%85%A8/index.html">
+<meta property="og:title" content="网络安全 DNS 部署与安全">
+<meta property="og:url" content="http://example.com/2023/02/18/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8-DNS-%E9%83%A8%E7%BD%B2%E4%B8%8E%E5%AE%89%E5%85%A8/index.html">
 <meta property="og:site_name" content="颜回的个人笔记">
-<meta property="og:description" content="DHCP 作用 Dynamic Host Configuration Protocol 为动态主机配置协议，作用是自动分配 IP 地址  DHCP 相关概念 地址池&#x2F;作用域、IP、子网掩码、网关、DNS、租期、DHCP 协议端口是 67&#x2F;68  DHCP 优点 减少工作量，避免 IP 冲突，提高地址利用率  DHCP 原理 也称为 DHCP 租约过程，分为 4 个步骤：  客户机发送 DHCP D">
+<meta property="og:description" content="DNS Domain Name Service 域名服务，为客户机提供域名解析服务  域名组成 如 www.sina.com.cn 是一个域名，从严格意义上讲， “sina.com.cn” 才被称为域名（全球唯一），而 “www” 是主机名“主机名.域名” 称为完全限定域名（FQDN：Fully Qualified Domain Name）。一个域名下可以有多个主机，域名全球唯一，那么 “主机名.">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2023-02-17T04:24:40.000Z">
-<meta property="article:modified_time" content="2023-02-17T10:21:04.441Z">
+<meta property="article:published_time" content="2023-02-18T05:23:03.000Z">
+<meta property="article:modified_time" content="2023-02-18T05:42:16.765Z">
 <meta property="article:author" content="颜回">
 <meta property="article:tag" content="网络安全">
 <meta name="twitter:card" content="summary">
@@ -153,7 +153,7 @@
     <li>
         <div class="all active" data-rel="All">All
             
-                <small>(36)</small>
+                <small>(37)</small>
             
         </div>
     </li>
@@ -206,7 +206,7 @@
                     <div data-rel="网络安全">
                         
                         网络安全
-                        <small>(12)</small>
+                        <small>(13)</small>
                         
                     </div>
                     
@@ -269,8 +269,8 @@
         
     </div>
 </div>
-<input type="hidden" id="yelog_site_posts_number" value="36">
-<input type="hidden" id="yelog_site_word_count" value="42k">
+<input type="hidden" id="yelog_site_posts_number" value="37">
+<input type="hidden" id="yelog_site_word_count" value="42.4k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
     <span id="busuanzi_value_site_pv"></span>
@@ -351,6 +351,15 @@
     </div>
     
     <nav id="title-list-nav">
+        
+        
+        <a  class="All 网络安全 "
+           href="/2023/02/18/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8-DNS-%E9%83%A8%E7%BD%B2%E4%B8%8E%E5%AE%89%E5%85%A8/"
+           data-tag="网络安全"
+           data-author="" >
+            <span class="post-title" title="网络安全 DNS 部署与安全">网络安全 DNS 部署与安全</span>
+            <span class="post-date" title="2023-02-18 13:23:03">2023/02/18</span>
+        </a>
         
         
         <a  class="All 网络安全 "
@@ -721,12 +730,12 @@
     </div>
     <div class="article-meta">
         
-            Created At : <time class="date" title='Updated At: 2023-02-16 20:33:34'>2023-02-11 16:50</time>
+            Created At : <time class="date" title='Updated At: 2023-02-17 20:18:48'>2023-02-11 16:50</time>
         
     </div>
     <div class="article-meta">
         
-        <span>Count:2k</span>
+        <span>Count:2.1k</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -768,13 +777,13 @@
 <p><strong>内置账户</strong><br>给人使用的账户：administrator 管理员账户、guest 来宾账户<br>计算机服务组件相关的系统账号：、system 系统账户（权限至高无上）、local services 本地服务账户（权限等于普通用户）、network services 网络服务账户（权限等于普通用户）<br>权限大小：system &gt; administrator &gt; local services = network services &gt; guest</p>
 </blockquote>
 <blockquote>
-<p><strong>配置文件</strong><br>每个用户都有自己的配置文件（Linux 的 home 目录），在用户第一次登录时自动产生，路径是：<br>win 7/win 2008 <code>c:\用户\</code><br>xp/win 2003 <code>c:\Documents and Settings\</code><br>实操：点击我的电脑并右键点击管理，找到本地用户和组并点击，可以看到三个账户，分别是 administrator、guest、SUPPORT_388945a0（此文件可以删除没有影响），在空白处右键可以创建新用户</p>
+<p><strong>配置文件</strong><br>每个用户都有自己的配置文件（Linux 的 home 目录），在用户第一次登录时自动产生，路径是：<br>win 7/win 2008 <code>c:\用户\</code><br>xp/win 2003 <code>c:\Documents and Settings\</code><br>实操：点击我的电脑并右键点击管理，找到本地用户和组并点击，可以看到三个账户，分别是 Administrator、Guest、SUPPORT_388945a0（此文件可以删除没有影响），在空白处右键可以创建新用户</p>
 </blockquote>
 <blockquote>
 <p><strong>常用命令</strong><br><code>net user</code> 列出当前账户列表<br><code>net user 用户名</code> 当前用户的详细信息<br><code>net user 用户名 新密码</code> 给用户更改密码（只有管理员可以更改），如果没有这个用户名则显示找不到用户名<br><code>net user 用户名 密码 /add</code> 新建用户（每个新建的用户都属于 Users 组，只有读取和运行、列出文件夹目录、读取权限、特别的权限）<br><code>net user 用户名 /del</code> 删除用户<br><code>net user 用户名 /active:yes</code> 激活或禁用账户（yes 或 no）</p>
 </blockquote>
 <h2 id="组管理"><a href="#组管理" class="headerlink" title="组管理"></a>组管理</h2><blockquote>
-<p>组的作用：简化赋予的权限<br>赋权限的方式：用户——组——赋权限、用户——赋权限<br>内置组：内置组的权限默认已经被系统赋予 administrators管理员组、guests来宾组、users普通用户组、network网络配置组、print打印机组、Remote Desktop远程桌面组<br><code>net localgroup</code> 列出当前组列表<br><code>net localgroup administrators</code> 列出当前组的成员<br><code>net localgroup CEO /add</code> 添加新的组 CEO<br><code>net localgroup administrators shimisi /add</code> 添加 shimisi 到管理员组<br><code>net localgroup administrators shimisi /del</code> 删除管理员的 shimisi 账号<br>实操：点击我的电脑并右键点击管理，找到本地用户和组并点击，在点击组即可查看</p>
+<p>组的作用：简化赋予的权限<br>赋权限的方式：用户——组——赋权限、用户——赋权限<br>内置组：内置组的权限默认已经被系统赋予 Administrators管理员组、guests来宾组、users普通用户组、network网络配置组、print打印机组、Remote Desktop Users远程桌面组<br><code>net localgroup</code> 列出当前组列表<br><code>net localgroup administrators</code> 列出当前组的成员<br><code>net localgroup CEO /add</code> 添加新的组 CEO<br><code>net localgroup administrators shimisi /add</code> 添加 shimisi 到管理员组<br><code>net localgroup administrators shimisi /del</code> 删除管理员的 shimisi 账号<br>实操：点击我的电脑并右键点击管理，找到本地用户和组并点击，在点击组即可查看</p>
 </blockquote>
 <h2 id="服务器远程登录"><a href="#服务器远程登录" class="headerlink" title="服务器远程登录"></a>服务器远程登录</h2><blockquote>
 <p><strong>远程管理类型</strong><br>Windows 远程管理有两种类型：远程桌面（图形）、telnet（命令行）</p>
@@ -793,7 +802,7 @@
 <p><strong>telnet（命令行）步骤</strong></p>
 <ol>
 <li>首先将配置网络，并实现客户机与服务器可以互通（连接在一个局域网下即可）</li>
-<li>win + R 输入 services.msc 打开服务，找到 Telnet 服务并双击，启动类型改为自动，再点击应用并确定即可</li>
+<li>win + R 输入 services.msc 打开服务，找到 Telnet 服务并双击，启动类型改为自动，再点击应用并确定即可（win 2008：找到服务器管理器打开——功能——添加功能——选择 telnet 客户端/服务器再去启动 telnet 服务。 win7：控制面板——程序——打开或关闭 Windows 功能——telnet 客户端/服务器再去启动 telnet 服务）</li>
 <li>win + R 输入 cmd 打开终端 <code>telnet 目标IP地址</code>，输入账户密码，如果不是管理员账户会显示失去了跟主机的连接，说明该账户权限不够 <code>net localgroup &quot;TelnetClients&quot; 用户名 /add</code> 重新登录即可成功</li>
 </ol>
 </blockquote>
