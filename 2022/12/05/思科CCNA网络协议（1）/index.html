@@ -272,7 +272,7 @@
     </div>
 </div>
 <input type="hidden" id="yelog_site_posts_number" value="40">
-<input type="hidden" id="yelog_site_word_count" value="47.4k">
+<input type="hidden" id="yelog_site_word_count" value="48.3k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
     <span id="busuanzi_value_site_pv"></span>
@@ -759,12 +759,12 @@
     </div>
     <div class="article-meta">
         
-            Created At : <time class="date" title='Updated At: 2022-12-31 15:08:38'>2022-12-05 16:39</time>
+            Created At : <time class="date" title='Updated At: 2023-03-21 11:40:19'>2022-12-05 16:39</time>
         
     </div>
     <div class="article-meta">
         
-        <span>Count:497</span>
+        <span>Count:1.1k</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -826,6 +826,9 @@
 </blockquote>
 <blockquote>
 <p>问题：为什么 ping 的时候第一个包会丢失？<br>答案：因为第一个包还没有ARP解析，也就是没有对应的目的mac地址，在尚无mac地址的情况下，数据帧的封装不完整，路由器在一段链路中是使用mac地址的。无目的mac地址的数据包根本就不会发出去，所以不知道目的mac地址，首先先发ARP解析mac地址，同时第一个包还没有发出去就被自己kill了。后续的包因为有了对应的mac地址就顺利的发出去了。</p>
+</blockquote>
+<blockquote>
+<p><strong>ARP工作过程</strong><br>假设主机A和B在同一个网段，主机A要向主机B发送信息，具体的地址解析过程如下：<br>主机A首先查看自己的ARP缓存表，确定其中是否包含有主机B对应的ARP表项。如果找到了对应的MAC地址，则主机A直接利用ARP表中的MAC地址，对IP数据包进行帧封装，并将数据包发送给主机B。<br>如果主机A在ARP表中找不到对应的MAC地址，则将缓存该数据报文，然后以广播方式发送一个ARP请求报文。ARP请求报文中的发送端IP地址和发送端MAC地址为主机A的IP地址和MAC地址，目标IP地址和目标MAC地址为主机B的IP地址和全0的MAC地址。由于ARP请求报文以广播方式发送，该网段上的所有主机都可以接收到该请求，但只有被请求的主机（即主机B）会对该请求进行处理。<br>主机B比较自己的IP地址和ARP请求报文中的目标IP地址，当两者相同时进行如下处理：将ARP请求报文中的发送端（即主机A）的IP地址和MAC地址存入自己的ARP表中。之后以单播方式发送ARP响应报文给主机A，其中包含了自己的MAC地址。<br>主机A收到ARP响应报文后，将主机B的MAC地址加入到自己的ARP表中以用于后续报文的转发，同时将IP数据包进行封装后发送出去。<br>当主机A和主机B不在同一网段时：<br>主机A就会先向网关发出ARP请求，ARP请求报文中的目标IP地址为网关的IP地址。当主机A从收到的响应报文中获得网关的MAC地址后，将报文封装并发给网关。如果网关没有主机B的ARP表项，网关会广播ARP请求，目标IP地址为主机B的IP地址，当网关从收到的响应报文中获得主机B的MAC地址后，就可以将报文发给主机B；如果网关已经有主机B的ARP表项，网关直接把报文发给主机B。</p>
 </blockquote>
 
       

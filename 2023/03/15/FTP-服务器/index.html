@@ -272,7 +272,7 @@
     </div>
 </div>
 <input type="hidden" id="yelog_site_posts_number" value="40">
-<input type="hidden" id="yelog_site_word_count" value="47.4k">
+<input type="hidden" id="yelog_site_word_count" value="48.3k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
     <span id="busuanzi_value_site_pv"></span>
@@ -759,12 +759,12 @@
     </div>
     <div class="article-meta">
         
-            Created At : <time class="date" title='Updated At: 2023-03-15 16:45:57'>2023-03-15 14:32</time>
+            Created At : <time class="date" title='Updated At: 2023-03-21 17:05:41'>2023-03-15 14:32</time>
         
     </div>
     <div class="article-meta">
         
-        <span>Count:138</span>
+        <span>Count:413</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -808,8 +808,16 @@
 </ul>
 </blockquote>
 <h2 id="部署-FTP-服务器"><a href="#部署-FTP-服务器" class="headerlink" title="部署 FTP 服务器"></a>部署 FTP 服务器</h2><blockquote>
-<ol>
+<ul>
 <li>打开 windows 2003 服务器，我的电脑，CD 驱动器，安装可选的 Windows 组件，双击打开应用程序服务器（不是打勾），双击打开 Internet 信息服务（IIS），将文件传输协议（FTP）服务打勾，确定，确定，下一步，等待安装完成，此时用客户机服务器的 <a href="ftp://ip地址/">ftp://IP地址</a> 即可查看</li>
+</ul>
+</blockquote>
+<blockquote>
+<ol>
+<li> 点击 FTP 站点并右键点击新建 FTP 站点，下一步，描述随便写，配置 IP 地址和端口下一步，选择不隔离用户下一步，选择共享文件夹的路径，权限读取和下入都打勾，完成</li>
+<li>点击刚才新建的 FTP 站点，并右键点击属性，再点击安全账户，将允许匿名连接取消勾选，在弹出的对话框中点击是，最后点击确定</li>
+<li>新建两个用户打算分配不同的权限 <code>net user user_2022 123.com /add</code> <code>net user admin_2022 123.com /add</code></li>
+<li>进入到共享文件夹的路径下，选择文件夹并右键点击属性，再点击安全，点击高级，将允许父项的继承权限传播到该对象和所有子对象这项取消勾选，点击确定，将 Users 组删除，再添加想要添加的用户，并给予合适的权限即可（注意：用户最终权限为 FTP 权限与 NTFS 权限取交集 建议：FTP 权限全部勾选，然后具体的在 NTFS 里设置权限）</li>
 </ol>
 </blockquote>
 
