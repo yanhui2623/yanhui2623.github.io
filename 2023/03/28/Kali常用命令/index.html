@@ -14,7 +14,7 @@
 <meta property="og:description" content="kali的常用命令1.常用命令 sudo dpkg-reconfigure locales 设置语言sudo reboot 重启passwd 修改开机密码passwd root 修改root用户密码date 显示系统日期sudo 后面加命令 就可以调用管理权限apt-get update 更新软件列表，这个命令，会访问源列表里的每个网址，并读取软件列表，然后保存在本地电脑。我们在新立得软件包管理器">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2023-03-28T09:00:40.000Z">
-<meta property="article:modified_time" content="2023-03-28T09:50:11.686Z">
+<meta property="article:modified_time" content="2023-03-28T09:51:42.249Z">
 <meta property="article:author" content="颜回">
 <meta property="article:tag" content="网络安全">
 <meta name="twitter:card" content="summary">
@@ -766,7 +766,7 @@
     </div>
     <div class="article-meta">
         
-            Created At : <time class="date" title='Updated At: 2023-03-28 17:50:11'>2023-03-28 17:00</time>
+            Created At : <time class="date" title='Updated At: 2023-03-28 17:51:42'>2023-03-28 17:00</time>
         
     </div>
     <div class="article-meta">
@@ -807,7 +807,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h1 id="kali的常用命令"><a href="#kali的常用命令" class="headerlink" title="kali的常用命令"></a>kali的常用命令</h1><h2 id="1-常用命令"><a href="#1-常用命令" class="headerlink" title="1.常用命令"></a>1.常用命令</h2><blockquote>
-<p><code>sudo dpkg-reconfigure locales</code> 设置语言<br><code>sudo reboot</code> 重启<br><code>passwd</code> 修改开机密码<br><code>passwd root</code> 修改root用户密码<br><code>date</code> 显示系统日期<br><code>sudo 后面加命令</code> 就可以调用管理权限<br><code>apt-get update</code> 更新软件列表，这个命令，会访问源列表里的每个网址，并读取软件列表，然后保存在本地电脑。我们在新立得软件包管理器里看到的软件列表，都是通过update命令更新的<br><code>apt-get upgrade</code> 更新软件，这个命令，会把本地已安装的软件，与刚下载的软件列表里对应软件进行对比，如果发现已安装的软件版本太低，就会提示你更新。如果你的软件都是最新版本，会提示： 升级了 0 个软件包，新安装了 0 个软件包，要卸载 0 个软件包，有 0 个软件包未被升级。<br><code>apt-get dist-upgrade</code> 更新软件<br>apt-get upgrade 与 apt-get dist-upgrade 的区别<br>upgrade:系统将现有的Package升级,如果有相依性的问题,而此相依性需要安装其它新的Package或影响到其它Package的相依性时,此Package就不会被升级,会保留下来.<br>dist-upgrade:可以聪明的解决相依性的问题,如果有相依性问题,需要安装/移除新的Package,就会试着去安装/移除它.<br>(所以通常这个会被认为是有点风险的升级),apt-get upgrade 和 apt-get dist-upgrade 本质上是没有什么不同的。只不过，dist-upgrade 会识别出当依赖关系改变的情形并作出处理，而 upgrade 对此情形不处理。<br>例如软件包 a 原先依赖 b c d，但是在源里面可能已经升级了，现在是 a 依赖 b c e。这种情况下，dist-upgrade 会删除 d 安装 e，并把 a 软件包升级，而 upgrade 会认为依赖关系改变而拒绝升级 a 软件包。<br><code>clear</code> 清屏<br><code>sudo gpedit</code> 特权调用 gpedit 编辑器<br><code>reboot</code> 重启<br><code>apt-get install XXXXX</code> 安装缺少的依赖包，（XXX）里面输入缺少依赖包的名字<br><code>apt-get autoremove –purge 软件名</code> 删除包及其依赖的软件包+配置文件等<br><code>apt-get install +模块名</code> 这种方法也可以安装模块,或者apt-get install python-模块名<br><code>firefox</code> 浏览器打开<br><code>shutdown -h now</code> 关闭系统(1)<br><code>init 0</code> 关闭系统(2)<br><code>telinit 0</code> 关闭系统(3)<br><code>shutdown -h hours:minutes &amp;</code> 按预定时间关闭系统<br><code>shutdown -c</code> 取消按预定时间关闭系统<br><code>shutdown -r now</code> 重启(1)<br><code>reboot</code> 重启(2)<br><code>su -l</code> 切换登陆用户<br><code>logout</code> 注销用户登陆<br><code>pwd</code> 当前路径</p>
+<p><code>sudo dpkg-reconfigure locales</code> 设置语言<br><code>sudo reboot</code> 重启<br><code>passwd</code> 修改开机密码<br><code>passwd root</code> 修改root用户密码<br><code>date</code> 显示系统日期<br><code>sudo 后面加命令</code> 就可以调用管理权限<br><code>apt-get update</code> 更新软件列表，这个命令，会访问源列表里的每个网址，并读取软件列表，然后保存在本地电脑。我们在新立得软件包管理器里看到的软件列表，都是通过update命令更新的<br><code>apt-get upgrade</code> 更新软件，这个命令，会把本地已安装的软件，与刚下载的软件列表里对应软件进行对比，如果发现已安装的软件版本太低，就会提示你更新。如果你的软件都是最新版本，会提示： 升级了 0 个软件包，新安装了 0 个软件包，要卸载 0 个软件包，有 0 个软件包未被升级。<br><code>apt-get dist-upgrade</code> 更新软件<br>apt-get upgrade 与 apt-get dist-upgrade 的区别<br>upgrade:系统将现有的Package升级,如果有相依性的问题,而此相依性需要安装其它新的Package或影响到其它Package的相依性时,此Package就不会被升级,会保留下来.<br>dist-upgrade:可以聪明的解决相依性的问题,如果有相依性问题,需要安装/移除新的Package,就会试着去安装/移除它.<br>(所以通常这个会被认为是有点风险的升级),apt-get upgrade 和 apt-get dist-upgrade 本质上是没有什么不同的。只不过，dist-upgrade 会识别出当依赖关系改变的情形并作出处理，而 upgrade 对此情形不处理。<br>例如软件包 a 原先依赖 b c d，但是在源里面可能已经升级了，现在是 a 依赖 b c e。这种情况下，dist-upgrade 会删除 d 安装 e，并把 a 软件包升级，而 upgrade 会认为依赖关系改变而拒绝升级 a 软件包。<br><code>clear</code> 清屏<br><code>sudo gpedit</code> 特权调用 gpedit 编辑器<br><code>reboot</code> 重启<br><code>apt-get install XXXXX</code> 安装缺少的依赖包，（XXX）里面输入缺少依赖包的名字<br><code>apt-get autoremove –purge 软件名</code> 删除包及其依赖的软件包+配置文件等<br><code>apt-get install +模块名</code> 这种方法也可以安装模块,或者apt-get install python-模块名<br><code>firefox</code> 浏览器打开<br><code>shutdown -h now</code> 关闭系统(1)<br><code>init 0</code> 关闭系统(2)<br><code>telinit 0</code> 关闭系统(3)<br><code>shutdown -h hours:minutes</code> 按预定时间关闭系统<br><code>shutdown -c</code> 取消按预定时间关闭系统<br><code>shutdown -r now</code> 重启(1)<br><code>reboot</code> 重启(2)<br><code>su -l</code> 切换登陆用户<br><code>logout</code> 注销用户登陆<br><code>pwd</code> 当前路径</p>
 </blockquote>
 <h2 id="2-文件夹或文本操作"><a href="#2-文件夹或文本操作" class="headerlink" title="2.文件夹或文本操作"></a>2.文件夹或文本操作</h2><p>cd .. 返回上一级目录</p>
 <p>cd ../.. 返回上级两级目录</p>
