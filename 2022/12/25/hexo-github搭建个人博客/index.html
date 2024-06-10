@@ -6,18 +6,20 @@
   <meta name="keywords" content=" 其他 ">
   <meta name="description" content="hexo+github搭建个人博客 | Yanhui Security">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<meta name="description" content="准备工作  安装 node.js（下载地址https:&#x2F;&#x2F;nodejs.org&#x2F;en&#x2F; ） git（下载地址https:&#x2F;&#x2F;git-scm.com&#x2F;downloads ） win+R 进入 cmd 终端查看是否安装成功 node&#x2F;npm -v , git --version 出现版本号即安装成功  安装 hexo 利用node.js在 cmd 终端直接安装即可 npm install hexo-c">
+<meta name="description" content="SSRF和URL跳转的区别 SSRF：服务端请求伪造，攻击者通过前端的输入使服务器产生了一个向该服务器内网或其他网站的请求URL跳转：攻击者通过往URL里写入一个链接，然后发给受害者，受害者打开后跳转带了攻击者设置好的钓鱼网站  误区 因为在URL跳转漏洞在测试过程中，需要把存在URL的地方替换成其他网站。可能在测试过程中会产生没有向其他网站跳转，但通过浏览器本地，向外产生了一个请求，这时候，新手">
 <meta property="og:type" content="article">
-<meta property="og:title" content="hexo+github搭建个人博客">
-<meta property="og:url" content="http://example.com/2022/12/25/hexo-github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/index.html">
+<meta property="og:title" content="SSRF和URL跳转的误区及测试插件介绍">
+<meta property="og:url" content="http://example.com/2024/06/10/SSRF%E5%92%8CURL%E8%B7%B3%E8%BD%AC%E7%9A%84%E8%AF%AF%E5%8C%BA%E5%8F%8A%E6%B5%8B%E8%AF%95%E6%8F%92%E4%BB%B6%E4%BB%8B%E7%BB%8D/index.html">
 <meta property="og:site_name" content="Yanhui Security">
-<meta property="og:description" content="准备工作  安装 node.js（下载地址https:&#x2F;&#x2F;nodejs.org&#x2F;en&#x2F; ） git（下载地址https:&#x2F;&#x2F;git-scm.com&#x2F;downloads ） win+R 进入 cmd 终端查看是否安装成功 node&#x2F;npm -v , git --version 出现版本号即安装成功  安装 hexo 利用node.js在 cmd 终端直接安装即可 npm install hexo-c">
+<meta property="og:description" content="SSRF和URL跳转的区别 SSRF：服务端请求伪造，攻击者通过前端的输入使服务器产生了一个向该服务器内网或其他网站的请求URL跳转：攻击者通过往URL里写入一个链接，然后发给受害者，受害者打开后跳转带了攻击者设置好的钓鱼网站  误区 因为在URL跳转漏洞在测试过程中，需要把存在URL的地方替换成其他网站。可能在测试过程中会产生没有向其他网站跳转，但通过浏览器本地，向外产生了一个请求，这时候，新手">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2022-12-25T05:14:53.000Z">
-<meta property="article:modified_time" content="2024-06-10T13:16:24.395Z">
+<meta property="og:image" content="http://example.com/">
+<meta property="article:published_time" content="2024-06-10T13:32:29.000Z">
+<meta property="article:modified_time" content="2024-06-10T15:00:14.854Z">
 <meta property="article:author" content="颜回">
-<meta property="article:tag" content="其他">
+<meta property="article:tag" content="WEB安全">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/">
 
 
 <link rel="icon" href="/img/avatar.jpg">
@@ -116,7 +118,7 @@
     <li>
         <div class="all active" data-rel="All">All
             
-                <small>(1)</small>
+                <small>(2)</small>
             
         </div>
     </li>
@@ -128,6 +130,21 @@
         <div data-rel="其他">
             
             其他
+            <small>(1)</small>
+        </div>
+        
+    </li>
+
+            
+        
+    
+        
+            
+                
+    <li>
+        <div data-rel="WEB安全">
+            
+            WEB安全
             <small>(1)</small>
         </div>
         
@@ -149,8 +166,8 @@
         
     </div>
 </div>
-<input type="hidden" id="yelog_site_posts_number" value="1">
-<input type="hidden" id="yelog_site_word_count" value="1.4k">
+<input type="hidden" id="yelog_site_posts_number" value="2">
+<input type="hidden" id="yelog_site_word_count" value="1.9k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
     <span id="busuanzi_value_site_pv"></span>
@@ -199,12 +216,25 @@
                 <i class="iconfont icon-tag"></i><a>其他</a>
             </li>
         
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>WEB安全</a>
+            </li>
+        
     </div>
 
 </div>
 
     
     <nav id="title-list-nav">
+        
+        
+        <a  class="All WEB安全 "
+           href="/2024/06/10/SSRF%E5%92%8CURL%E8%B7%B3%E8%BD%AC%E7%9A%84%E8%AF%AF%E5%8C%BA%E5%8F%8A%E6%B5%8B%E8%AF%95%E6%8F%92%E4%BB%B6%E4%BB%8B%E7%BB%8D/"
+           data-tag="WEB安全"
+           data-author="" >
+            <span class="post-title" title="SSRF和URL跳转的误区及测试插件介绍">SSRF和URL跳转的误区及测试插件介绍</span>
+            <span class="post-date" title="2024-06-10 21:32:29">2024/06/10</span>
+        </a>
         
         
         <a  class="All 其他 "
@@ -260,12 +290,12 @@
     </div>
     <div class="article-meta">
         
-            Created At : <time class="date" title='Updated At: 2024-06-10 21:16:24'>2022-12-25 13:14</time>
+            Created At : <time class="date" title='Updated At: 2024-06-10 21:30:56'>2022-12-25 13:14</time>
         
     </div>
     <div class="article-meta">
         
-        <span>Count:1.4k</span>
+        <span>Count:1.5k</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -347,7 +377,7 @@
 <li>打开博客的目录文件夹，鼠标右键打开 Git Bash Here 输入命令 <code>npm install hexo-deployer-git --save</code></li>
 <li>打开博客的_config.yml（如果看不到打开文件拓展名）文件将最后两行删除并插入下面的代码（一定要复制粘贴，格式不对会报各种错误）之后保存退出即可：<br><code>deploy:</code><br>  <code>type: &#39;git&#39;</code><br>  <code>repository: https://github.com/yanhui2623/yanhui2623.github.io.git</code> (自己的 Github 仓库地址)<br>  <code>branch: main</code> </li>
 <li><code>hexo g</code>（hexo generate的简写，生成网站静态文件到默认设置的 public 文件夹）</li>
-<li><code>hexo d</code> (hexo deploy的简写，将网站静态文件推送到 github，这里应该多试几次直到弹出 openssh 对话框为止，输入用户名，接着输入密码但是我们应该输入的是令牌，生成令牌方法点击头像，点击 Settings，再点击 Developer settings，再找到 Personal access tokens，再点击 Generate new token，再 Note 对话框里随便填，下面的复选框全部选择，这样比较方便，最后点击绿色的按钮 Generate token 即可就会生成一段序列号，输入到 openssh对话框即可)</li>
+<li><code>hexo d</code> (hexo deploy的简写，将网站静态文件推送到 github，这里应该多试几次直到弹出 openssh 对话框为止，输入用户名，接着输入密码但是我们应该输入的是令牌，生成令牌方法点击头像，点击 Settings，再点击 Developer settings，再找到 Personal access tokens，再点击 Generate new token，再 Note 对话框里随便填，下面的复选框全部选择，这样比较方便，最后点击绿色的按钮 Generate token 即可就会生成一段序列号，输入到 openssh对话框即可)<br>第一次使用git推代码还需要配置一下基本信息：<br><code>git config --global user.email &quot;2623461774@qq.com&quot;</code><br><code>git config --global user.name &quot;Yanhui&quot;</code></li>
 <li>即可通过仓库的名字（.github.io）访问网站了！</li>
 <li><code>hexo new &quot;文章题目&quot;</code>（新建一个页面就可以写自己的内容了！）</li>
 <li>将自己写好的文章推送到 github 的时候也就是 hexo d 如果推送不成功在之前应首先输入命令 <code>hexo clean</code>（清楚生成的 public 文件夹）</li>
@@ -355,7 +385,7 @@
 </blockquote>
 
       
-       <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 jaytp@qq.com </span>
+       <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 2623461774@qq.com </span>
     </div>
 </article>
 
